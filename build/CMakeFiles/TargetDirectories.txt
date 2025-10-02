@@ -1,0 +1,3 @@
+/home/dinesh/capstone_server/build/CMakeFiles/bridge_server.dir
+/home/dinesh/capstone_server/build/CMakeFiles/edit_cache.dir
+/home/dinesh/capstone_server/build/CMakeFiles/rebuild_cache.dir
