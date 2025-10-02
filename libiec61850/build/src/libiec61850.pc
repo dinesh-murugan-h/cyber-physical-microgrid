@@ -1,0 +1,13 @@
+prefix=/home/dinesh/capstone_server/libiec61850/install
+exec_prefix=/home/dinesh/capstone_server/libiec61850/install/bin
+libdir=/home/dinesh/capstone_server/libiec61850/install/lib
+sharedlibdir=/home/dinesh/capstone_server/libiec61850/install/lib
+includedir=/home/dinesh/capstone_server/libiec61850/install/include
+
+Name: libiec61850
+Description: 
+Version: 1.6.1
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -liec61850
+Cflags: -I${includedir}
