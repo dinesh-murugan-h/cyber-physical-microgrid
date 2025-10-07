@@ -1,7 +1,8 @@
 CMakeFiles/bridge_server.dir/src/static_model.c.o: \
- /home/dinesh/capstone_server/src/static_model.c \
+ /home/dinesh/cyber-physical-microgrid/src/static_model.c \
  /usr/include/stdc-predef.h \
- /home/dinesh/capstone_server/src/static_model.h /usr/include/stdlib.h \
+ /home/dinesh/cyber-physical-microgrid/src/static_model.h \
+ /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -41,9 +42,9 @@ CMakeFiles/bridge_server.dir/src/static_model.c.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /home/dinesh/capstone_server/libiec61850/install/include/libiec61850/iec61850_model.h \
- /home/dinesh/capstone_server/libiec61850/install/include/libiec61850/iec61850_common.h \
- /home/dinesh/capstone_server/libiec61850/install/include/libiec61850/libiec61850_common_api.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/install/include/libiec61850/iec61850_model.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/install/include/libiec61850/iec61850_common.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/install/include/libiec61850/libiec61850_common_api.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
@@ -53,10 +54,10 @@ CMakeFiles/bridge_server.dir/src/static_model.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/strings.h \
- /home/dinesh/capstone_server/libiec61850/install/include/libiec61850/hal_time.h \
- /home/dinesh/capstone_server/libiec61850/install/include/libiec61850/hal_base.h \
- /home/dinesh/capstone_server/libiec61850/install/include/libiec61850/mms_value.h \
- /home/dinesh/capstone_server/libiec61850/install/include/libiec61850/mms_common.h \
- /home/dinesh/capstone_server/libiec61850/install/include/libiec61850/mms_types.h \
- /home/dinesh/capstone_server/libiec61850/install/include/libiec61850/logging_api.h \
- /home/dinesh/capstone_server/libiec61850/install/include/libiec61850/linked_list.h
+ /home/dinesh/cyber-physical-microgrid/libiec61850/install/include/libiec61850/hal_time.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/install/include/libiec61850/hal_base.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/install/include/libiec61850/mms_value.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/install/include/libiec61850/mms_common.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/install/include/libiec61850/mms_types.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/install/include/libiec61850/logging_api.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/install/include/libiec61850/linked_list.h

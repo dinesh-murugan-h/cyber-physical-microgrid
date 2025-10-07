@@ -1,0 +1,14 @@
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/StaticModelGenerator/bin/Release/netstandard2.0/StaticModelGenerator.deps.json
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/StaticModelGenerator/bin/Release/netstandard2.0/StaticModelGenerator.dll
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/StaticModelGenerator/bin/Release/netstandard2.0/StaticModelGenerator.pdb
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/StaticModelGenerator/bin/Release/netstandard2.0/SCLParser.dll
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/StaticModelGenerator/bin/Release/netstandard2.0/SCLParser.pdb
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/StaticModelGenerator/obj/Release/netstandard2.0/StaticModelGenerator.csproj.AssemblyReference.cache
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/StaticModelGenerator/obj/Release/netstandard2.0/StaticModelGenerator.GeneratedMSBuildEditorConfig.editorconfig
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/StaticModelGenerator/obj/Release/netstandard2.0/StaticModelGenerator.AssemblyInfoInputs.cache
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/StaticModelGenerator/obj/Release/netstandard2.0/StaticModelGenerator.AssemblyInfo.cs
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/StaticModelGenerator/obj/Release/netstandard2.0/StaticModelGenerator.csproj.CoreCompileInputs.cache
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/StaticModelGenerator/obj/Release/netstandard2.0/StaticModelGenerator.sourcelink.json
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/StaticModelGenerator/obj/Release/netstandard2.0/StaticModelGenerator.csproj.CopyComplete
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/StaticModelGenerator/obj/Release/netstandard2.0/StaticModelGenerator.dll
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/StaticModelGenerator/obj/Release/netstandard2.0/StaticModelGenerator.pdb

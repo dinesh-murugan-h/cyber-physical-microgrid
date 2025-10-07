@@ -1,4 +1,4 @@
-# Install script for directory: /home/dinesh/capstone_server
+# Install script for directory: /home/dinesh/cyber-physical-microgrid
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/dinesh/capstone_server/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/dinesh/cyber-physical-microgrid/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

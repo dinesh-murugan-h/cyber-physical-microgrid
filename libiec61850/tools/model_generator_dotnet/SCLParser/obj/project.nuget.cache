@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "afmCh8gW2FMP+2NEU7IcFVG1XVJ/dtYojf4Obo4R8CAtaUZG2G+9Br3mhnsEJXUHRYZBCNhTpFAmlkwp9FwURg==",
+  "success": true,
+  "projectFilePath": "/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/SCLParser/SCLParser.csproj",
+  "expectedPackageFiles": [
+    "/home/dinesh/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/home/dinesh/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

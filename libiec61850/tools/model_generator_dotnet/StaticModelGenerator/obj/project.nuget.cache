@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "jZLfXEJhQO1LWVbRS4/zI7jKlTIWPXmSd02wXRnIejFSuwgY5H3xHAG/u4hPmLCJIbh1NUfW5O9wtV7FE3g1oQ==",
+  "success": true,
+  "projectFilePath": "/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/StaticModelGenerator/StaticModelGenerator.csproj",
+  "expectedPackageFiles": [
+    "/home/dinesh/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/home/dinesh/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

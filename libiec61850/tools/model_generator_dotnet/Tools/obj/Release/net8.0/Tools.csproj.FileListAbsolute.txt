@@ -1,0 +1,6 @@
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/Tools/obj/Release/net8.0/Tools.csproj.AssemblyReference.cache
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/Tools/obj/Release/net8.0/Tools.GeneratedMSBuildEditorConfig.editorconfig
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/Tools/obj/Release/net8.0/Tools.AssemblyInfoInputs.cache
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/Tools/obj/Release/net8.0/Tools.AssemblyInfo.cs
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/Tools/obj/Release/net8.0/Tools.csproj.CoreCompileInputs.cache
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/Tools/obj/Release/net8.0/Tools.sourcelink.json

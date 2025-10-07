@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dinesh/capstone_server
+CMAKE_SOURCE_DIR = /home/dinesh/cyber-physical-microgrid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dinesh/capstone_server/build
+CMAKE_BINARY_DIR = /home/dinesh/cyber-physical-microgrid/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/bridge_server.dir/depend.make
@@ -70,32 +70,32 @@ include CMakeFiles/bridge_server.dir/progress.make
 include CMakeFiles/bridge_server.dir/flags.make
 
 CMakeFiles/bridge_server.dir/src/bridge_server.c.o: CMakeFiles/bridge_server.dir/flags.make
-CMakeFiles/bridge_server.dir/src/bridge_server.c.o: /home/dinesh/capstone_server/src/bridge_server.c
+CMakeFiles/bridge_server.dir/src/bridge_server.c.o: /home/dinesh/cyber-physical-microgrid/src/bridge_server.c
 CMakeFiles/bridge_server.dir/src/bridge_server.c.o: CMakeFiles/bridge_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/capstone_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/bridge_server.dir/src/bridge_server.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/bridge_server.dir/src/bridge_server.c.o -MF CMakeFiles/bridge_server.dir/src/bridge_server.c.o.d -o CMakeFiles/bridge_server.dir/src/bridge_server.c.o -c /home/dinesh/capstone_server/src/bridge_server.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/cyber-physical-microgrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/bridge_server.dir/src/bridge_server.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/bridge_server.dir/src/bridge_server.c.o -MF CMakeFiles/bridge_server.dir/src/bridge_server.c.o.d -o CMakeFiles/bridge_server.dir/src/bridge_server.c.o -c /home/dinesh/cyber-physical-microgrid/src/bridge_server.c
 
 CMakeFiles/bridge_server.dir/src/bridge_server.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/bridge_server.dir/src/bridge_server.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/capstone_server/src/bridge_server.c > CMakeFiles/bridge_server.dir/src/bridge_server.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/cyber-physical-microgrid/src/bridge_server.c > CMakeFiles/bridge_server.dir/src/bridge_server.c.i
 
 CMakeFiles/bridge_server.dir/src/bridge_server.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/bridge_server.dir/src/bridge_server.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/capstone_server/src/bridge_server.c -o CMakeFiles/bridge_server.dir/src/bridge_server.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/cyber-physical-microgrid/src/bridge_server.c -o CMakeFiles/bridge_server.dir/src/bridge_server.c.s
 
 CMakeFiles/bridge_server.dir/src/static_model.c.o: CMakeFiles/bridge_server.dir/flags.make
-CMakeFiles/bridge_server.dir/src/static_model.c.o: /home/dinesh/capstone_server/src/static_model.c
+CMakeFiles/bridge_server.dir/src/static_model.c.o: /home/dinesh/cyber-physical-microgrid/src/static_model.c
 CMakeFiles/bridge_server.dir/src/static_model.c.o: CMakeFiles/bridge_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/capstone_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/bridge_server.dir/src/static_model.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/bridge_server.dir/src/static_model.c.o -MF CMakeFiles/bridge_server.dir/src/static_model.c.o.d -o CMakeFiles/bridge_server.dir/src/static_model.c.o -c /home/dinesh/capstone_server/src/static_model.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/cyber-physical-microgrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/bridge_server.dir/src/static_model.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/bridge_server.dir/src/static_model.c.o -MF CMakeFiles/bridge_server.dir/src/static_model.c.o.d -o CMakeFiles/bridge_server.dir/src/static_model.c.o -c /home/dinesh/cyber-physical-microgrid/src/static_model.c
 
 CMakeFiles/bridge_server.dir/src/static_model.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/bridge_server.dir/src/static_model.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/capstone_server/src/static_model.c > CMakeFiles/bridge_server.dir/src/static_model.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/cyber-physical-microgrid/src/static_model.c > CMakeFiles/bridge_server.dir/src/static_model.c.i
 
 CMakeFiles/bridge_server.dir/src/static_model.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/bridge_server.dir/src/static_model.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/capstone_server/src/static_model.c -o CMakeFiles/bridge_server.dir/src/static_model.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/cyber-physical-microgrid/src/static_model.c -o CMakeFiles/bridge_server.dir/src/static_model.c.s
 
 # Object files for target bridge_server
 bridge_server_OBJECTS = \
@@ -109,7 +109,7 @@ bridge_server: CMakeFiles/bridge_server.dir/src/bridge_server.c.o
 bridge_server: CMakeFiles/bridge_server.dir/src/static_model.c.o
 bridge_server: CMakeFiles/bridge_server.dir/build.make
 bridge_server: CMakeFiles/bridge_server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dinesh/capstone_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable bridge_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dinesh/cyber-physical-microgrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable bridge_server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bridge_server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +121,6 @@ CMakeFiles/bridge_server.dir/clean:
 .PHONY : CMakeFiles/bridge_server.dir/clean
 
 CMakeFiles/bridge_server.dir/depend:
-	cd /home/dinesh/capstone_server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dinesh/capstone_server /home/dinesh/capstone_server /home/dinesh/capstone_server/build /home/dinesh/capstone_server/build /home/dinesh/capstone_server/build/CMakeFiles/bridge_server.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/dinesh/cyber-physical-microgrid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dinesh/cyber-physical-microgrid /home/dinesh/cyber-physical-microgrid /home/dinesh/cyber-physical-microgrid/build /home/dinesh/cyber-physical-microgrid/build /home/dinesh/cyber-physical-microgrid/build/CMakeFiles/bridge_server.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/bridge_server.dir/depend
 

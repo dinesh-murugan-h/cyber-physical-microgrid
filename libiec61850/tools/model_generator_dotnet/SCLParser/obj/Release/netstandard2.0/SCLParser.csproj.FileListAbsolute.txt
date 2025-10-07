@@ -1,0 +1,11 @@
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/SCLParser/bin/Release/netstandard2.0/SCLParser.deps.json
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/SCLParser/bin/Release/netstandard2.0/SCLParser.dll
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/SCLParser/bin/Release/netstandard2.0/SCLParser.pdb
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/SCLParser/obj/Release/netstandard2.0/SCLParser.csproj.AssemblyReference.cache
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/SCLParser/obj/Release/netstandard2.0/SCLParser.GeneratedMSBuildEditorConfig.editorconfig
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/SCLParser/obj/Release/netstandard2.0/SCLParser.AssemblyInfoInputs.cache
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/SCLParser/obj/Release/netstandard2.0/SCLParser.AssemblyInfo.cs
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/SCLParser/obj/Release/netstandard2.0/SCLParser.csproj.CoreCompileInputs.cache
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/SCLParser/obj/Release/netstandard2.0/SCLParser.sourcelink.json
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/SCLParser/obj/Release/netstandard2.0/SCLParser.dll
+/home/dinesh/cyber-physical-microgrid/libiec61850/tools/model_generator_dotnet/SCLParser/obj/Release/netstandard2.0/SCLParser.pdb

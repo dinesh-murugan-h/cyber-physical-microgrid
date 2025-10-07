@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/dinesh/capstone_server/libiec61850/install/include/libiec61850 -I/home/dinesh/capstone_server/libmodbus/install/include/modbus
+C_INCLUDES = -I/home/dinesh/cyber-physical-microgrid/libiec61850/install/include/libiec61850 -I/home/dinesh/cyber-physical-microgrid/libmodbus/install/include/modbus -I/home/dinesh/cyber-physical-microgrid/libiec61850/src/iec61850/inc_private
 
 C_FLAGS = -std=gnu11
 

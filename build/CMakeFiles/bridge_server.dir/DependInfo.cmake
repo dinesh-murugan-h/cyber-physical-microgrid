@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/dinesh/capstone_server/src/bridge_server.c" "CMakeFiles/bridge_server.dir/src/bridge_server.c.o" "gcc" "CMakeFiles/bridge_server.dir/src/bridge_server.c.o.d"
-  "/home/dinesh/capstone_server/src/static_model.c" "CMakeFiles/bridge_server.dir/src/static_model.c.o" "gcc" "CMakeFiles/bridge_server.dir/src/static_model.c.o.d"
+  "/home/dinesh/cyber-physical-microgrid/src/bridge_server.c" "CMakeFiles/bridge_server.dir/src/bridge_server.c.o" "gcc" "CMakeFiles/bridge_server.dir/src/bridge_server.c.o.d"
+  "/home/dinesh/cyber-physical-microgrid/src/static_model.c" "CMakeFiles/bridge_server.dir/src/static_model.c.o" "gcc" "CMakeFiles/bridge_server.dir/src/static_model.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
