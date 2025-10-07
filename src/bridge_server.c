@@ -13,6 +13,28 @@
 #include <hal_thread.h>
 #include "static_model.h"
 
+/* --- Control handler for GGIO1.SPCSO1 (accept Operate from MATLAB) --- */
+static ControlHandlerResult controlHandler_SPCSO1(ControlAction action, void* parameter, MmsValue* value, bool test)
+{
+    if (test)
+        return CONTROL_RESULT_OK;
+
+    bool newState = MmsValue_getBoolean(value);
+    uint64_t now = Hal_getTimeInMs();
+
+    printf("Received Operate() for GGIO1.SPCSO1 -> %s\n", newState ? "ON" : "OFF");
+
+    IedServer_updateBooleanAttributeValue((IedServer)parameter,
+        IEDMODEL_GenericIO_GGIO1_SPCSO1_stVal, newState);
+    IedServer_updateUTCTimeAttributeValue((IedServer)parameter,
+        IEDMODEL_GenericIO_GGIO1_SPCSO1_t, now);
+    IedServer_updateQuality((IedServer)parameter,
+        IEDMODEL_GenericIO_GGIO1_SPCSO1_q, QUALITY_VALIDITY_GOOD);
+
+    return CONTROL_RESULT_OK;
+}
+
+
 static bool running = true;
 
 // Helper to read IEEE754 double (64-bit) from 4 Modbus registers (23-26)
@@ -129,8 +151,17 @@ IedServer start_ied_server(void) {
     IedServer_setWriteAccessPolicy(iedServer, IEC61850_FC_CO, ACCESS_POLICY_ALLOW);
     IedServer_setWriteAccessPolicy(iedServer, IEC61850_FC_DC, ACCESS_POLICY_ALLOW);
     IedServer_setWriteAccessPolicy(iedServer, IEC61850_FC_SP, ACCESS_POLICY_ALLOW);
+    IedServer_setWriteAccessPolicy(iedServer, IEC61850_FC_CF, ACCESS_POLICY_ALLOW);
 
     IedServer_setConnectionIndicationHandler(iedServer, connectionHandler, NULL);
+
+    IedServer_setControlHandler(
+    iedServer,
+    IEDMODEL_GenericIO_GGIO1_SPCSO1,
+    (ControlHandler)controlHandler_SPCSO1,
+    iedServer);
+
+    
 
     IedServer_start(iedServer, 102);
     if (!IedServer_isRunning(iedServer)) {
@@ -242,6 +273,22 @@ int main(void) {
 
         /* IEC 61850 data processing */
         IedServer_lockDataModel(iedServer);
+
+         /* --- Read SPCSO1.stVal (breaker/switch state) written by MATLAB operate() --- */
+        MmsValue* stValVal = IedServer_getAttributeValue(iedServer, IEDMODEL_GenericIO_GGIO1_SPCSO1_stVal);
+        if (stValVal != NULL) {
+            bool newState = MmsValue_getBoolean(stValVal);
+
+            printf("GGIO1.SPCSO1.stVal = %s\n", newState ? "ON (1)" : "OFF (0)");
+
+            /* Update timestamp and quality just like beagle_demo.c */
+            uint64_t now = Hal_getTimeInMs();
+            IedServer_updateUTCTimeAttributeValue(iedServer, IEDMODEL_GenericIO_GGIO1_SPCSO1_t, now);
+            IedServer_updateQuality(iedServer, IEDMODEL_GenericIO_GGIO1_SPCSO1_q, QUALITY_VALIDITY_GOOD);
+        }
+
+
+
 
         MmsValue* vendorVal = IedServer_getAttributeValue(
             iedServer,
