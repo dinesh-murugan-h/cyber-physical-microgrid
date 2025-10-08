@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/dinesh/capstone_server/libiec61850/examples/goose_subscriber/goose_subscriber_example.c" "examples/goose_subscriber/CMakeFiles/goose_subscriber_example.dir/goose_subscriber_example.c.o" "gcc" "examples/goose_subscriber/CMakeFiles/goose_subscriber_example.dir/goose_subscriber_example.c.o.d"
+  "/home/dinesh/cyber-physical-microgrid/libiec61850/examples/goose_subscriber/goose_subscriber_example.c" "examples/goose_subscriber/CMakeFiles/goose_subscriber_example.dir/goose_subscriber_example.c.o" "gcc" "examples/goose_subscriber/CMakeFiles/goose_subscriber_example.dir/goose_subscriber_example.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

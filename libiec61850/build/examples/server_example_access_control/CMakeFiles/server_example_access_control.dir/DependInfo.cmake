@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/dinesh/capstone_server/libiec61850/examples/server_example_access_control/server_example_access_control.c" "examples/server_example_access_control/CMakeFiles/server_example_access_control.dir/server_example_access_control.c.o" "gcc" "examples/server_example_access_control/CMakeFiles/server_example_access_control.dir/server_example_access_control.c.o.d"
-  "/home/dinesh/capstone_server/libiec61850/examples/server_example_access_control/static_model.c" "examples/server_example_access_control/CMakeFiles/server_example_access_control.dir/static_model.c.o" "gcc" "examples/server_example_access_control/CMakeFiles/server_example_access_control.dir/static_model.c.o.d"
+  "/home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_access_control/server_example_access_control.c" "examples/server_example_access_control/CMakeFiles/server_example_access_control.dir/server_example_access_control.c.o" "gcc" "examples/server_example_access_control/CMakeFiles/server_example_access_control.dir/server_example_access_control.c.o.d"
+  "/home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_access_control/static_model.c" "examples/server_example_access_control/CMakeFiles/server_example_access_control.dir/static_model.c.o" "gcc" "examples/server_example_access_control/CMakeFiles/server_example_access_control.dir/static_model.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

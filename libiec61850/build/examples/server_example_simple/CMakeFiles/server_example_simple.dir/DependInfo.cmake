@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/dinesh/capstone_server/libiec61850/examples/server_example_simple/server_example_simple.c" "examples/server_example_simple/CMakeFiles/server_example_simple.dir/server_example_simple.c.o" "gcc" "examples/server_example_simple/CMakeFiles/server_example_simple.dir/server_example_simple.c.o.d"
-  "/home/dinesh/capstone_server/libiec61850/examples/server_example_simple/static_model.c" "examples/server_example_simple/CMakeFiles/server_example_simple.dir/static_model.c.o" "gcc" "examples/server_example_simple/CMakeFiles/server_example_simple.dir/static_model.c.o.d"
+  "/home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_simple/server_example_simple.c" "examples/server_example_simple/CMakeFiles/server_example_simple.dir/server_example_simple.c.o" "gcc" "examples/server_example_simple/CMakeFiles/server_example_simple.dir/server_example_simple.c.o.d"
+  "/home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_simple/static_model.c" "examples/server_example_simple/CMakeFiles/server_example_simple.dir/static_model.c.o" "gcc" "examples/server_example_simple/CMakeFiles/server_example_simple.dir/static_model.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

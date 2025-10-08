@@ -1,8 +1,8 @@
 hal/CMakeFiles/hal.dir/socket/linux/socket_linux.c.o: \
- /home/dinesh/capstone_server/libiec61850/hal/socket/linux/socket_linux.c \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/socket/linux/socket_linux.c \
  /usr/include/stdc-predef.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_socket.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_base.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_socket.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_base.h \
  /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -115,12 +115,12 @@ hal/CMakeFiles/hal.dir/socket/linux/socket_linux.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_thread.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/lib_memory.h \
- /home/dinesh/capstone_server/libiec61850/src/common/inc/linked_list.h \
- /home/dinesh/capstone_server/libiec61850/src/common/inc/libiec61850_common_api.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_time.h \
- /home/dinesh/capstone_server/libiec61850/src/mms/inc/mms_value.h \
- /home/dinesh/capstone_server/libiec61850/src/common/inc/libiec61850_common_api.h \
- /home/dinesh/capstone_server/libiec61850/src/mms/inc/mms_common.h \
- /home/dinesh/capstone_server/libiec61850/src/mms/inc/mms_types.h
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_thread.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/lib_memory.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/common/inc/linked_list.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/common/inc/libiec61850_common_api.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_time.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/mms/inc/mms_value.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/common/inc/libiec61850_common_api.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/mms/inc/mms_common.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/mms/inc/mms_types.h

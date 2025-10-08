@@ -1,8 +1,8 @@
-prefix=/home/dinesh/capstone_server/libiec61850/install
-exec_prefix=/home/dinesh/capstone_server/libiec61850/install/bin
-libdir=/home/dinesh/capstone_server/libiec61850/install/lib
-sharedlibdir=/home/dinesh/capstone_server/libiec61850/install/lib
-includedir=/home/dinesh/capstone_server/libiec61850/install/include
+prefix=/usr/local
+exec_prefix=/usr/local/bin
+libdir=/usr/local/lib
+sharedlibdir=/usr/local/lib
+includedir=/usr/local/include
 
 Name: libiec61850
 Description: 

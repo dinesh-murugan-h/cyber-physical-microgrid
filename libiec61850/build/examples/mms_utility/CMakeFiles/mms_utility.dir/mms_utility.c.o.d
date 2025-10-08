@@ -1,5 +1,5 @@
 examples/mms_utility/CMakeFiles/mms_utility.dir/mms_utility.c.o: \
- /home/dinesh/capstone_server/libiec61850/examples/mms_utility/mms_utility.c \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/examples/mms_utility/mms_utility.c \
  /usr/include/stdc-predef.h /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -55,8 +55,8 @@ examples/mms_utility/CMakeFiles/mms_utility.dir/mms_utility.c.o: \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /home/dinesh/capstone_server/libiec61850/src/common/inc/string_utilities.h \
- /home/dinesh/capstone_server/libiec61850/src/common/inc/libiec61850_common_api.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/common/inc/string_utilities.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/common/inc/libiec61850_common_api.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
@@ -65,20 +65,20 @@ examples/mms_utility/CMakeFiles/mms_utility.dir/mms_utility.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/strings.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_time.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_base.h \
- /home/dinesh/capstone_server/libiec61850/src/mms/inc/mms_value.h \
- /home/dinesh/capstone_server/libiec61850/src/common/inc/libiec61850_common_api.h \
- /home/dinesh/capstone_server/libiec61850/src/mms/inc/mms_common.h \
- /home/dinesh/capstone_server/libiec61850/src/mms/inc/mms_types.h \
- /home/dinesh/capstone_server/libiec61850/src/common/inc/linked_list.h \
- /home/dinesh/capstone_server/libiec61850/src/iec61850/inc/iec61850_common.h \
- /home/dinesh/capstone_server/libiec61850/src/logging/logging_api.h \
- /home/dinesh/capstone_server/libiec61850/src/common/inc/linked_list.h \
- /home/dinesh/capstone_server/libiec61850/src/mms/inc/mms_client_connection.h \
- /home/dinesh/capstone_server/libiec61850/src/mms/inc/mms_type_spec.h \
- /home/dinesh/capstone_server/libiec61850/src/mms/inc/mms_value.h \
- /home/dinesh/capstone_server/libiec61850/src/mms/inc/iso_connection_parameters.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/tls_config.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/tls_ciphers.h \
- /home/dinesh/capstone_server/libiec61850/src/common/inc/conversions.h
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_time.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_base.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/mms/inc/mms_value.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/common/inc/libiec61850_common_api.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/mms/inc/mms_common.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/mms/inc/mms_types.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/common/inc/linked_list.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/iec61850/inc/iec61850_common.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/logging/logging_api.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/common/inc/linked_list.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/mms/inc/mms_client_connection.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/mms/inc/mms_type_spec.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/mms/inc/mms_value.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/mms/inc/iso_connection_parameters.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/tls_config.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/tls_ciphers.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/common/inc/conversions.h

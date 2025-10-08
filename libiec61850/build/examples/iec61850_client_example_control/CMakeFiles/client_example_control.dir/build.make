@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dinesh/capstone_server/libiec61850
+CMAKE_SOURCE_DIR = /home/dinesh/cyber-physical-microgrid/libiec61850
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dinesh/capstone_server/libiec61850/build
+CMAKE_BINARY_DIR = /home/dinesh/cyber-physical-microgrid/libiec61850/build
 
 # Include any dependencies generated for this target.
 include examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/depend.make
@@ -70,18 +70,18 @@ include examples/iec61850_client_example_control/CMakeFiles/client_example_contr
 include examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/flags.make
 
 examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/client_example_control.c.o: examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/flags.make
-examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/client_example_control.c.o: /home/dinesh/capstone_server/libiec61850/examples/iec61850_client_example_control/client_example_control.c
+examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/client_example_control.c.o: /home/dinesh/cyber-physical-microgrid/libiec61850/examples/iec61850_client_example_control/client_example_control.c
 examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/client_example_control.c.o: examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/capstone_server/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/client_example_control.c.o"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/iec61850_client_example_control && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/client_example_control.c.o -MF CMakeFiles/client_example_control.dir/client_example_control.c.o.d -o CMakeFiles/client_example_control.dir/client_example_control.c.o -c /home/dinesh/capstone_server/libiec61850/examples/iec61850_client_example_control/client_example_control.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/client_example_control.c.o"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/iec61850_client_example_control && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/client_example_control.c.o -MF CMakeFiles/client_example_control.dir/client_example_control.c.o.d -o CMakeFiles/client_example_control.dir/client_example_control.c.o -c /home/dinesh/cyber-physical-microgrid/libiec61850/examples/iec61850_client_example_control/client_example_control.c
 
 examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/client_example_control.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/client_example_control.dir/client_example_control.c.i"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/iec61850_client_example_control && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/capstone_server/libiec61850/examples/iec61850_client_example_control/client_example_control.c > CMakeFiles/client_example_control.dir/client_example_control.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/iec61850_client_example_control && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/cyber-physical-microgrid/libiec61850/examples/iec61850_client_example_control/client_example_control.c > CMakeFiles/client_example_control.dir/client_example_control.c.i
 
 examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/client_example_control.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/client_example_control.dir/client_example_control.c.s"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/iec61850_client_example_control && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/capstone_server/libiec61850/examples/iec61850_client_example_control/client_example_control.c -o CMakeFiles/client_example_control.dir/client_example_control.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/iec61850_client_example_control && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/cyber-physical-microgrid/libiec61850/examples/iec61850_client_example_control/client_example_control.c -o CMakeFiles/client_example_control.dir/client_example_control.c.s
 
 # Object files for target client_example_control
 client_example_control_OBJECTS = \
@@ -95,18 +95,18 @@ examples/iec61850_client_example_control/client_example_control: examples/iec618
 examples/iec61850_client_example_control/client_example_control: src/libiec61850.a
 examples/iec61850_client_example_control/client_example_control: hal/libhal.a
 examples/iec61850_client_example_control/client_example_control: examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dinesh/capstone_server/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable client_example_control"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/iec61850_client_example_control && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client_example_control.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable client_example_control"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/iec61850_client_example_control && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client_example_control.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/build: examples/iec61850_client_example_control/client_example_control
 .PHONY : examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/build
 
 examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/clean:
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/iec61850_client_example_control && $(CMAKE_COMMAND) -P CMakeFiles/client_example_control.dir/cmake_clean.cmake
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/iec61850_client_example_control && $(CMAKE_COMMAND) -P CMakeFiles/client_example_control.dir/cmake_clean.cmake
 .PHONY : examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/clean
 
 examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/depend:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dinesh/capstone_server/libiec61850 /home/dinesh/capstone_server/libiec61850/examples/iec61850_client_example_control /home/dinesh/capstone_server/libiec61850/build /home/dinesh/capstone_server/libiec61850/build/examples/iec61850_client_example_control /home/dinesh/capstone_server/libiec61850/build/examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dinesh/cyber-physical-microgrid/libiec61850 /home/dinesh/cyber-physical-microgrid/libiec61850/examples/iec61850_client_example_control /home/dinesh/cyber-physical-microgrid/libiec61850/build /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/iec61850_client_example_control /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : examples/iec61850_client_example_control/CMakeFiles/client_example_control.dir/depend
 

@@ -1,8 +1,8 @@
 hal/CMakeFiles/hal.dir/time/unix/time.c.o: \
- /home/dinesh/capstone_server/libiec61850/hal/time/unix/time.c \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/time/unix/time.c \
  /usr/include/stdc-predef.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_time.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_base.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_time.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_base.h \
  /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

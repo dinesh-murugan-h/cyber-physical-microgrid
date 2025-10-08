@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dinesh/capstone_server/libiec61850
+CMAKE_SOURCE_DIR = /home/dinesh/cyber-physical-microgrid/libiec61850
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dinesh/capstone_server/libiec61850/build
+CMAKE_BINARY_DIR = /home/dinesh/cyber-physical-microgrid/libiec61850/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/dinesh/capstone_server/libiec61850/build
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool..."
-	cd /home/dinesh/capstone_server/libiec61850/build && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool for source..."
-	cd /home/dinesh/capstone_server/libiec61850/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/dinesh/capstone_server/libiec61850/build/CPackSourceConfig.cmake
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/dinesh/cyber-physical-microgrid/libiec61850/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -162,14 +162,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/dinesh/capstone_server/libiec61850/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/dinesh/capstone_server/libiec61850/build/CMakeFiles /home/dinesh/capstone_server/libiec61850/build/examples/goose_observer//CMakeFiles/progress.marks
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/goose_observer/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dinesh/capstone_server/libiec61850/build/CMakeFiles 0
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/goose_observer//CMakeFiles/progress.marks
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/goose_observer/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/goose_observer/clean
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/goose_observer/clean
 .PHONY : clean
 
 # The main clean target
@@ -178,22 +178,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/goose_observer/preinstall
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/goose_observer/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/goose_observer/preinstall
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/goose_observer/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 examples/goose_observer/CMakeFiles/goose_observer.dir/rule:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/goose_observer/CMakeFiles/goose_observer.dir/rule
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/goose_observer/CMakeFiles/goose_observer.dir/rule
 .PHONY : examples/goose_observer/CMakeFiles/goose_observer.dir/rule
 
 # Convenience name for target.
@@ -202,7 +202,7 @@ goose_observer: examples/goose_observer/CMakeFiles/goose_observer.dir/rule
 
 # fast build rule for target.
 goose_observer/fast:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/goose_observer/CMakeFiles/goose_observer.dir/build.make examples/goose_observer/CMakeFiles/goose_observer.dir/build
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/goose_observer/CMakeFiles/goose_observer.dir/build.make examples/goose_observer/CMakeFiles/goose_observer.dir/build
 .PHONY : goose_observer/fast
 
 goose_observer.o: goose_observer.c.o
@@ -210,7 +210,7 @@ goose_observer.o: goose_observer.c.o
 
 # target to build an object file
 goose_observer.c.o:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/goose_observer/CMakeFiles/goose_observer.dir/build.make examples/goose_observer/CMakeFiles/goose_observer.dir/goose_observer.c.o
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/goose_observer/CMakeFiles/goose_observer.dir/build.make examples/goose_observer/CMakeFiles/goose_observer.dir/goose_observer.c.o
 .PHONY : goose_observer.c.o
 
 goose_observer.i: goose_observer.c.i
@@ -218,7 +218,7 @@ goose_observer.i: goose_observer.c.i
 
 # target to preprocess a source file
 goose_observer.c.i:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/goose_observer/CMakeFiles/goose_observer.dir/build.make examples/goose_observer/CMakeFiles/goose_observer.dir/goose_observer.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/goose_observer/CMakeFiles/goose_observer.dir/build.make examples/goose_observer/CMakeFiles/goose_observer.dir/goose_observer.c.i
 .PHONY : goose_observer.c.i
 
 goose_observer.s: goose_observer.c.s
@@ -226,7 +226,7 @@ goose_observer.s: goose_observer.c.s
 
 # target to generate assembly for a file
 goose_observer.c.s:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/goose_observer/CMakeFiles/goose_observer.dir/build.make examples/goose_observer/CMakeFiles/goose_observer.dir/goose_observer.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/goose_observer/CMakeFiles/goose_observer.dir/build.make examples/goose_observer/CMakeFiles/goose_observer.dir/goose_observer.c.s
 .PHONY : goose_observer.c.s
 
 # Help Target
@@ -259,6 +259,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/dinesh/capstone_server/libiec61850
+# Install script for directory: /home/dinesh/cyber-physical-microgrid/libiec61850
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/dinesh/capstone_server/libiec61850/install")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,46 +44,46 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Development" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/libiec61850" TYPE FILE FILES
-    "/home/dinesh/capstone_server/libiec61850/hal/inc/hal_base.h"
-    "/home/dinesh/capstone_server/libiec61850/hal/inc/hal_time.h"
-    "/home/dinesh/capstone_server/libiec61850/hal/inc/hal_thread.h"
-    "/home/dinesh/capstone_server/libiec61850/hal/inc/hal_filesystem.h"
-    "/home/dinesh/capstone_server/libiec61850/hal/inc/hal_ethernet.h"
-    "/home/dinesh/capstone_server/libiec61850/hal/inc/hal_socket.h"
-    "/home/dinesh/capstone_server/libiec61850/hal/inc/tls_config.h"
-    "/home/dinesh/capstone_server/libiec61850/hal/inc/tls_ciphers.h"
-    "/home/dinesh/capstone_server/libiec61850/src/common/inc/libiec61850_common_api.h"
-    "/home/dinesh/capstone_server/libiec61850/src/common/inc/linked_list.h"
-    "/home/dinesh/capstone_server/libiec61850/src/common/inc/sntp_client.h"
-    "/home/dinesh/capstone_server/libiec61850/src/iec61850/inc/iec61850_client.h"
-    "/home/dinesh/capstone_server/libiec61850/src/iec61850/inc/iec61850_common.h"
-    "/home/dinesh/capstone_server/libiec61850/src/iec61850/inc/iec61850_server.h"
-    "/home/dinesh/capstone_server/libiec61850/src/iec61850/inc/iec61850_model.h"
-    "/home/dinesh/capstone_server/libiec61850/src/iec61850/inc/iec61850_cdc.h"
-    "/home/dinesh/capstone_server/libiec61850/src/iec61850/inc/iec61850_dynamic_model.h"
-    "/home/dinesh/capstone_server/libiec61850/src/iec61850/inc/iec61850_config_file_parser.h"
-    "/home/dinesh/capstone_server/libiec61850/src/mms/inc/mms_value.h"
-    "/home/dinesh/capstone_server/libiec61850/src/mms/inc/mms_common.h"
-    "/home/dinesh/capstone_server/libiec61850/src/mms/inc/mms_types.h"
-    "/home/dinesh/capstone_server/libiec61850/src/mms/inc/mms_type_spec.h"
-    "/home/dinesh/capstone_server/libiec61850/src/mms/inc/mms_client_connection.h"
-    "/home/dinesh/capstone_server/libiec61850/src/mms/inc/mms_server.h"
-    "/home/dinesh/capstone_server/libiec61850/src/mms/inc/iso_connection_parameters.h"
-    "/home/dinesh/capstone_server/libiec61850/src/goose/goose_subscriber.h"
-    "/home/dinesh/capstone_server/libiec61850/src/goose/goose_receiver.h"
-    "/home/dinesh/capstone_server/libiec61850/src/goose/goose_publisher.h"
-    "/home/dinesh/capstone_server/libiec61850/src/sampled_values/sv_subscriber.h"
-    "/home/dinesh/capstone_server/libiec61850/src/sampled_values/sv_publisher.h"
-    "/home/dinesh/capstone_server/libiec61850/src/r_session/r_session.h"
-    "/home/dinesh/capstone_server/libiec61850/src/logging/logging_api.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_base.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_time.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_thread.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_filesystem.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_ethernet.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_socket.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/tls_config.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/tls_ciphers.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/common/inc/libiec61850_common_api.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/common/inc/linked_list.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/common/inc/sntp_client.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/iec61850/inc/iec61850_client.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/iec61850/inc/iec61850_common.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/iec61850/inc/iec61850_server.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/iec61850/inc/iec61850_model.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/iec61850/inc/iec61850_cdc.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/iec61850/inc/iec61850_dynamic_model.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/iec61850/inc/iec61850_config_file_parser.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/mms/inc/mms_value.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/mms/inc/mms_common.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/mms/inc/mms_types.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/mms/inc/mms_type_spec.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/mms/inc/mms_client_connection.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/mms/inc/mms_server.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/mms/inc/iso_connection_parameters.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/goose/goose_subscriber.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/goose/goose_receiver.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/goose/goose_publisher.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/sampled_values/sv_subscriber.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/sampled_values/sv_publisher.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/r_session/r_session.h"
+    "/home/dinesh/cyber-physical-microgrid/libiec61850/src/logging/logging_api.h"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/dinesh/capstone_server/libiec61850/build/hal/cmake_install.cmake")
-  include("/home/dinesh/capstone_server/libiec61850/build/examples/cmake_install.cmake")
-  include("/home/dinesh/capstone_server/libiec61850/build/src/cmake_install.cmake")
+  include("/home/dinesh/cyber-physical-microgrid/libiec61850/build/hal/cmake_install.cmake")
+  include("/home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/cmake_install.cmake")
+  include("/home/dinesh/cyber-physical-microgrid/libiec61850/build/src/cmake_install.cmake")
 
 endif()
 
@@ -95,5 +95,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/dinesh/capstone_server/libiec61850/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/dinesh/cyber-physical-microgrid/libiec61850/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

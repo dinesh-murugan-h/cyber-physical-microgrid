@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/dinesh/capstone_server/libiec61850/examples/server_example_61400_25/server_example_61400_25.c" "examples/server_example_61400_25/CMakeFiles/server_example_61400_25.dir/server_example_61400_25.c.o" "gcc" "examples/server_example_61400_25/CMakeFiles/server_example_61400_25.dir/server_example_61400_25.c.o.d"
-  "/home/dinesh/capstone_server/libiec61850/examples/server_example_61400_25/static_model.c" "examples/server_example_61400_25/CMakeFiles/server_example_61400_25.dir/static_model.c.o" "gcc" "examples/server_example_61400_25/CMakeFiles/server_example_61400_25.dir/static_model.c.o.d"
+  "/home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_61400_25/server_example_61400_25.c" "examples/server_example_61400_25/CMakeFiles/server_example_61400_25.dir/server_example_61400_25.c.o" "gcc" "examples/server_example_61400_25/CMakeFiles/server_example_61400_25.dir/server_example_61400_25.c.o.d"
+  "/home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_61400_25/static_model.c" "examples/server_example_61400_25/CMakeFiles/server_example_61400_25.dir/static_model.c.o" "gcc" "examples/server_example_61400_25/CMakeFiles/server_example_61400_25.dir/static_model.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

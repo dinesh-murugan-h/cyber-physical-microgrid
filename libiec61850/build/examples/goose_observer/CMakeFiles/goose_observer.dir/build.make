@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dinesh/capstone_server/libiec61850
+CMAKE_SOURCE_DIR = /home/dinesh/cyber-physical-microgrid/libiec61850
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dinesh/capstone_server/libiec61850/build
+CMAKE_BINARY_DIR = /home/dinesh/cyber-physical-microgrid/libiec61850/build
 
 # Include any dependencies generated for this target.
 include examples/goose_observer/CMakeFiles/goose_observer.dir/depend.make
@@ -70,18 +70,18 @@ include examples/goose_observer/CMakeFiles/goose_observer.dir/progress.make
 include examples/goose_observer/CMakeFiles/goose_observer.dir/flags.make
 
 examples/goose_observer/CMakeFiles/goose_observer.dir/goose_observer.c.o: examples/goose_observer/CMakeFiles/goose_observer.dir/flags.make
-examples/goose_observer/CMakeFiles/goose_observer.dir/goose_observer.c.o: /home/dinesh/capstone_server/libiec61850/examples/goose_observer/goose_observer.c
+examples/goose_observer/CMakeFiles/goose_observer.dir/goose_observer.c.o: /home/dinesh/cyber-physical-microgrid/libiec61850/examples/goose_observer/goose_observer.c
 examples/goose_observer/CMakeFiles/goose_observer.dir/goose_observer.c.o: examples/goose_observer/CMakeFiles/goose_observer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/capstone_server/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/goose_observer/CMakeFiles/goose_observer.dir/goose_observer.c.o"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/goose_observer && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/goose_observer/CMakeFiles/goose_observer.dir/goose_observer.c.o -MF CMakeFiles/goose_observer.dir/goose_observer.c.o.d -o CMakeFiles/goose_observer.dir/goose_observer.c.o -c /home/dinesh/capstone_server/libiec61850/examples/goose_observer/goose_observer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/goose_observer/CMakeFiles/goose_observer.dir/goose_observer.c.o"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/goose_observer && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/goose_observer/CMakeFiles/goose_observer.dir/goose_observer.c.o -MF CMakeFiles/goose_observer.dir/goose_observer.c.o.d -o CMakeFiles/goose_observer.dir/goose_observer.c.o -c /home/dinesh/cyber-physical-microgrid/libiec61850/examples/goose_observer/goose_observer.c
 
 examples/goose_observer/CMakeFiles/goose_observer.dir/goose_observer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/goose_observer.dir/goose_observer.c.i"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/goose_observer && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/capstone_server/libiec61850/examples/goose_observer/goose_observer.c > CMakeFiles/goose_observer.dir/goose_observer.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/goose_observer && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/cyber-physical-microgrid/libiec61850/examples/goose_observer/goose_observer.c > CMakeFiles/goose_observer.dir/goose_observer.c.i
 
 examples/goose_observer/CMakeFiles/goose_observer.dir/goose_observer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/goose_observer.dir/goose_observer.c.s"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/goose_observer && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/capstone_server/libiec61850/examples/goose_observer/goose_observer.c -o CMakeFiles/goose_observer.dir/goose_observer.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/goose_observer && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/cyber-physical-microgrid/libiec61850/examples/goose_observer/goose_observer.c -o CMakeFiles/goose_observer.dir/goose_observer.c.s
 
 # Object files for target goose_observer
 goose_observer_OBJECTS = \
@@ -95,18 +95,18 @@ examples/goose_observer/goose_observer: examples/goose_observer/CMakeFiles/goose
 examples/goose_observer/goose_observer: src/libiec61850.a
 examples/goose_observer/goose_observer: hal/libhal.a
 examples/goose_observer/goose_observer: examples/goose_observer/CMakeFiles/goose_observer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dinesh/capstone_server/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable goose_observer"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/goose_observer && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/goose_observer.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable goose_observer"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/goose_observer && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/goose_observer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 examples/goose_observer/CMakeFiles/goose_observer.dir/build: examples/goose_observer/goose_observer
 .PHONY : examples/goose_observer/CMakeFiles/goose_observer.dir/build
 
 examples/goose_observer/CMakeFiles/goose_observer.dir/clean:
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/goose_observer && $(CMAKE_COMMAND) -P CMakeFiles/goose_observer.dir/cmake_clean.cmake
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/goose_observer && $(CMAKE_COMMAND) -P CMakeFiles/goose_observer.dir/cmake_clean.cmake
 .PHONY : examples/goose_observer/CMakeFiles/goose_observer.dir/clean
 
 examples/goose_observer/CMakeFiles/goose_observer.dir/depend:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dinesh/capstone_server/libiec61850 /home/dinesh/capstone_server/libiec61850/examples/goose_observer /home/dinesh/capstone_server/libiec61850/build /home/dinesh/capstone_server/libiec61850/build/examples/goose_observer /home/dinesh/capstone_server/libiec61850/build/examples/goose_observer/CMakeFiles/goose_observer.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dinesh/cyber-physical-microgrid/libiec61850 /home/dinesh/cyber-physical-microgrid/libiec61850/examples/goose_observer /home/dinesh/cyber-physical-microgrid/libiec61850/build /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/goose_observer /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/goose_observer/CMakeFiles/goose_observer.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : examples/goose_observer/CMakeFiles/goose_observer.dir/depend
 

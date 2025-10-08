@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/dinesh/capstone_server/libiec61850/examples/mms_utility/mms_utility.c" "examples/mms_utility/CMakeFiles/mms_utility.dir/mms_utility.c.o" "gcc" "examples/mms_utility/CMakeFiles/mms_utility.dir/mms_utility.c.o.d"
+  "/home/dinesh/cyber-physical-microgrid/libiec61850/examples/mms_utility/mms_utility.c" "examples/mms_utility/CMakeFiles/mms_utility.dir/mms_utility.c.o" "gcc" "examples/mms_utility/CMakeFiles/mms_utility.dir/mms_utility.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -1,5 +1,5 @@
 hal/CMakeFiles/hal-shared.dir/thread/linux/thread_linux.c.o: \
- /home/dinesh/capstone_server/libiec61850/hal/thread/linux/thread_linux.c \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/thread/linux/thread_linux.c \
  /usr/include/stdc-predef.h /usr/include/pthread.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -53,8 +53,8 @@ hal/CMakeFiles/hal-shared.dir/thread/linux/thread_linux.c.o: \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_thread.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_base.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_thread.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_base.h \
  /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
@@ -69,4 +69,4 @@ hal/CMakeFiles/hal-shared.dir/thread/linux/thread_linux.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h /usr/include/string.h \
  /usr/include/strings.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/lib_memory.h
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/lib_memory.h

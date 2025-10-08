@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dinesh/capstone_server/libiec61850
+CMAKE_SOURCE_DIR = /home/dinesh/cyber-physical-microgrid/libiec61850
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dinesh/capstone_server/libiec61850/build
+CMAKE_BINARY_DIR = /home/dinesh/cyber-physical-microgrid/libiec61850/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/dinesh/capstone_server/libiec61850/build
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool..."
-	cd /home/dinesh/capstone_server/libiec61850/build && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool for source..."
-	cd /home/dinesh/capstone_server/libiec61850/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/dinesh/capstone_server/libiec61850/build/CPackSourceConfig.cmake
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/dinesh/cyber-physical-microgrid/libiec61850/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -162,14 +162,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/dinesh/capstone_server/libiec61850/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/dinesh/capstone_server/libiec61850/build/CMakeFiles /home/dinesh/capstone_server/libiec61850/build/examples/server_example_config_file//CMakeFiles/progress.marks
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/server_example_config_file/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dinesh/capstone_server/libiec61850/build/CMakeFiles 0
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_config_file//CMakeFiles/progress.marks
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/server_example_config_file/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/server_example_config_file/clean
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/server_example_config_file/clean
 .PHONY : clean
 
 # The main clean target
@@ -178,22 +178,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/server_example_config_file/preinstall
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/server_example_config_file/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/server_example_config_file/preinstall
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/server_example_config_file/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 examples/server_example_config_file/CMakeFiles/server_example_config_file.dir/rule:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/server_example_config_file/CMakeFiles/server_example_config_file.dir/rule
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/server_example_config_file/CMakeFiles/server_example_config_file.dir/rule
 .PHONY : examples/server_example_config_file/CMakeFiles/server_example_config_file.dir/rule
 
 # Convenience name for target.
@@ -202,7 +202,7 @@ server_example_config_file: examples/server_example_config_file/CMakeFiles/serve
 
 # fast build rule for target.
 server_example_config_file/fast:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/server_example_config_file/CMakeFiles/server_example_config_file.dir/build.make examples/server_example_config_file/CMakeFiles/server_example_config_file.dir/build
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/server_example_config_file/CMakeFiles/server_example_config_file.dir/build.make examples/server_example_config_file/CMakeFiles/server_example_config_file.dir/build
 .PHONY : server_example_config_file/fast
 
 server_example_config_file.o: server_example_config_file.c.o
@@ -210,7 +210,7 @@ server_example_config_file.o: server_example_config_file.c.o
 
 # target to build an object file
 server_example_config_file.c.o:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/server_example_config_file/CMakeFiles/server_example_config_file.dir/build.make examples/server_example_config_file/CMakeFiles/server_example_config_file.dir/server_example_config_file.c.o
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/server_example_config_file/CMakeFiles/server_example_config_file.dir/build.make examples/server_example_config_file/CMakeFiles/server_example_config_file.dir/server_example_config_file.c.o
 .PHONY : server_example_config_file.c.o
 
 server_example_config_file.i: server_example_config_file.c.i
@@ -218,7 +218,7 @@ server_example_config_file.i: server_example_config_file.c.i
 
 # target to preprocess a source file
 server_example_config_file.c.i:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/server_example_config_file/CMakeFiles/server_example_config_file.dir/build.make examples/server_example_config_file/CMakeFiles/server_example_config_file.dir/server_example_config_file.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/server_example_config_file/CMakeFiles/server_example_config_file.dir/build.make examples/server_example_config_file/CMakeFiles/server_example_config_file.dir/server_example_config_file.c.i
 .PHONY : server_example_config_file.c.i
 
 server_example_config_file.s: server_example_config_file.c.s
@@ -226,7 +226,7 @@ server_example_config_file.s: server_example_config_file.c.s
 
 # target to generate assembly for a file
 server_example_config_file.c.s:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/server_example_config_file/CMakeFiles/server_example_config_file.dir/build.make examples/server_example_config_file/CMakeFiles/server_example_config_file.dir/server_example_config_file.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/server_example_config_file/CMakeFiles/server_example_config_file.dir/build.make examples/server_example_config_file/CMakeFiles/server_example_config_file.dir/server_example_config_file.c.s
 .PHONY : server_example_config_file.c.s
 
 # Help Target
@@ -259,6 +259,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/dinesh/capstone_server/libiec61850/examples/iec61850_sv_client_example/sv_client_example.c" "examples/iec61850_sv_client_example/CMakeFiles/iec61850_sv_client_example.dir/sv_client_example.c.o" "gcc" "examples/iec61850_sv_client_example/CMakeFiles/iec61850_sv_client_example.dir/sv_client_example.c.o.d"
+  "/home/dinesh/cyber-physical-microgrid/libiec61850/examples/iec61850_sv_client_example/sv_client_example.c" "examples/iec61850_sv_client_example/CMakeFiles/iec61850_sv_client_example.dir/sv_client_example.c.o" "gcc" "examples/iec61850_sv_client_example/CMakeFiles/iec61850_sv_client_example.dir/sv_client_example.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

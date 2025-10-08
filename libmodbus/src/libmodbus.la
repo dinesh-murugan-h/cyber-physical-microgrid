@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/home/dinesh/capstone_server/libmodbus/install/lib'
+libdir='/home/dinesh/cyber-physical-microgrid/libmodbus/build/lib'

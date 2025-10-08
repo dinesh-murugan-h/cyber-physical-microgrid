@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dinesh/capstone_server/libiec61850
+CMAKE_SOURCE_DIR = /home/dinesh/cyber-physical-microgrid/libiec61850
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dinesh/capstone_server/libiec61850/build
+CMAKE_BINARY_DIR = /home/dinesh/cyber-physical-microgrid/libiec61850/build
 
 # Include any dependencies generated for this target.
 include examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/depend.make
@@ -70,32 +70,32 @@ include examples/server_example_write_handler/CMakeFiles/server_example_write_ha
 include examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/flags.make
 
 examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/server_example_write_handler.c.o: examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/flags.make
-examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/server_example_write_handler.c.o: /home/dinesh/capstone_server/libiec61850/examples/server_example_write_handler/server_example_write_handler.c
+examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/server_example_write_handler.c.o: /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_write_handler/server_example_write_handler.c
 examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/server_example_write_handler.c.o: examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/capstone_server/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/server_example_write_handler.c.o"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/server_example_write_handler && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/server_example_write_handler.c.o -MF CMakeFiles/server_example_write_handler.dir/server_example_write_handler.c.o.d -o CMakeFiles/server_example_write_handler.dir/server_example_write_handler.c.o -c /home/dinesh/capstone_server/libiec61850/examples/server_example_write_handler/server_example_write_handler.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/server_example_write_handler.c.o"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_write_handler && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/server_example_write_handler.c.o -MF CMakeFiles/server_example_write_handler.dir/server_example_write_handler.c.o.d -o CMakeFiles/server_example_write_handler.dir/server_example_write_handler.c.o -c /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_write_handler/server_example_write_handler.c
 
 examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/server_example_write_handler.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/server_example_write_handler.dir/server_example_write_handler.c.i"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/server_example_write_handler && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/capstone_server/libiec61850/examples/server_example_write_handler/server_example_write_handler.c > CMakeFiles/server_example_write_handler.dir/server_example_write_handler.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_write_handler && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_write_handler/server_example_write_handler.c > CMakeFiles/server_example_write_handler.dir/server_example_write_handler.c.i
 
 examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/server_example_write_handler.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/server_example_write_handler.dir/server_example_write_handler.c.s"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/server_example_write_handler && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/capstone_server/libiec61850/examples/server_example_write_handler/server_example_write_handler.c -o CMakeFiles/server_example_write_handler.dir/server_example_write_handler.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_write_handler && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_write_handler/server_example_write_handler.c -o CMakeFiles/server_example_write_handler.dir/server_example_write_handler.c.s
 
 examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/static_model.c.o: examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/flags.make
-examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/static_model.c.o: /home/dinesh/capstone_server/libiec61850/examples/server_example_write_handler/static_model.c
+examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/static_model.c.o: /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_write_handler/static_model.c
 examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/static_model.c.o: examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/capstone_server/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/static_model.c.o"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/server_example_write_handler && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/static_model.c.o -MF CMakeFiles/server_example_write_handler.dir/static_model.c.o.d -o CMakeFiles/server_example_write_handler.dir/static_model.c.o -c /home/dinesh/capstone_server/libiec61850/examples/server_example_write_handler/static_model.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/static_model.c.o"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_write_handler && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/static_model.c.o -MF CMakeFiles/server_example_write_handler.dir/static_model.c.o.d -o CMakeFiles/server_example_write_handler.dir/static_model.c.o -c /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_write_handler/static_model.c
 
 examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/static_model.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/server_example_write_handler.dir/static_model.c.i"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/server_example_write_handler && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/capstone_server/libiec61850/examples/server_example_write_handler/static_model.c > CMakeFiles/server_example_write_handler.dir/static_model.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_write_handler && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_write_handler/static_model.c > CMakeFiles/server_example_write_handler.dir/static_model.c.i
 
 examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/static_model.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/server_example_write_handler.dir/static_model.c.s"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/server_example_write_handler && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/capstone_server/libiec61850/examples/server_example_write_handler/static_model.c -o CMakeFiles/server_example_write_handler.dir/static_model.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_write_handler && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_write_handler/static_model.c -o CMakeFiles/server_example_write_handler.dir/static_model.c.s
 
 # Object files for target server_example_write_handler
 server_example_write_handler_OBJECTS = \
@@ -111,18 +111,18 @@ examples/server_example_write_handler/server_example_write_handler: examples/ser
 examples/server_example_write_handler/server_example_write_handler: src/libiec61850.a
 examples/server_example_write_handler/server_example_write_handler: hal/libhal.a
 examples/server_example_write_handler/server_example_write_handler: examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dinesh/capstone_server/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable server_example_write_handler"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/server_example_write_handler && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server_example_write_handler.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable server_example_write_handler"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_write_handler && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server_example_write_handler.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/build: examples/server_example_write_handler/server_example_write_handler
 .PHONY : examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/build
 
 examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/clean:
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/server_example_write_handler && $(CMAKE_COMMAND) -P CMakeFiles/server_example_write_handler.dir/cmake_clean.cmake
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_write_handler && $(CMAKE_COMMAND) -P CMakeFiles/server_example_write_handler.dir/cmake_clean.cmake
 .PHONY : examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/clean
 
 examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/depend:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dinesh/capstone_server/libiec61850 /home/dinesh/capstone_server/libiec61850/examples/server_example_write_handler /home/dinesh/capstone_server/libiec61850/build /home/dinesh/capstone_server/libiec61850/build/examples/server_example_write_handler /home/dinesh/capstone_server/libiec61850/build/examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dinesh/cyber-physical-microgrid/libiec61850 /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_write_handler /home/dinesh/cyber-physical-microgrid/libiec61850/build /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_write_handler /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : examples/server_example_write_handler/CMakeFiles/server_example_write_handler.dir/depend
 

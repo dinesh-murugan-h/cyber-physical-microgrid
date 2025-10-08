@@ -2,6 +2,7 @@
     "files.associations": {
         "hal_thread.h": "c",
         "iec61850_client.h": "c",
-        "iec61850_server.h": "c"
+        "iec61850_server.h": "c",
+        "iec61850_model.h": "c"
     }
 }

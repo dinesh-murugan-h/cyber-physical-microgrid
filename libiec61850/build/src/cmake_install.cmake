@@ -1,8 +1,8 @@
-# Install script for directory: /home/dinesh/capstone_server/libiec61850/src
+# Install script for directory: /home/dinesh/cyber-physical-microgrid/libiec61850/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/dinesh/capstone_server/libiec61850/install")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,18 +44,18 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/dinesh/capstone_server/libiec61850/install/share/pkgconfig/libiec61850.pc")
+   "/usr/local/share/pkgconfig/libiec61850.pc")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/dinesh/capstone_server/libiec61850/install/share/pkgconfig" TYPE FILE FILES "/home/dinesh/capstone_server/libiec61850/build/src/libiec61850.pc")
+  file(INSTALL DESTINATION "/usr/local/share/pkgconfig" TYPE FILE FILES "/home/dinesh/cyber-physical-microgrid/libiec61850/build/src/libiec61850.pc")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Libraries" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/dinesh/capstone_server/libiec61850/build/src/libiec61850.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/dinesh/cyber-physical-microgrid/libiec61850/build/src/libiec61850.a")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Libraries" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -65,7 +65,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Libraries" OR NOT CMAKE_INSTALL_COMPONENT)
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libiec61850.so.1.6.1"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/dinesh/capstone_server/libiec61850/build/src/libiec61850.so.1.6.1")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/dinesh/cyber-physical-microgrid/libiec61850/build/src/libiec61850.so.1.6.1")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libiec61850.so.1.6.1" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libiec61850.so.1.6.1")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -75,6 +75,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Libraries" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Libraries" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/dinesh/capstone_server/libiec61850/build/src/libiec61850.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/dinesh/cyber-physical-microgrid/libiec61850/build/src/libiec61850.so")
 endif()
 

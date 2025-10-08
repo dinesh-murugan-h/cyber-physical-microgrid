@@ -1,5 +1,5 @@
 hal/CMakeFiles/hal-shared.dir/ethernet/linux/ethernet_linux.c.o: \
- /home/dinesh/capstone_server/libiec61850/hal/ethernet/linux/ethernet_linux.c \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/ethernet/linux/ethernet_linux.c \
  /usr/include/stdc-predef.h /usr/include/x86_64-linux-gnu/sys/socket.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -94,8 +94,8 @@ hal/CMakeFiles/hal-shared.dir/ethernet/linux/ethernet_linux.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/strings.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/lib_memory.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_base.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/lib_memory.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_base.h \
  /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
@@ -103,4 +103,4 @@ hal/CMakeFiles/hal-shared.dir/ethernet/linux/ethernet_linux.c.o: \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_ethernet.h
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_ethernet.h

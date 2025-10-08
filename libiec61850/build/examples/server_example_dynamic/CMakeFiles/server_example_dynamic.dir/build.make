@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dinesh/capstone_server/libiec61850
+CMAKE_SOURCE_DIR = /home/dinesh/cyber-physical-microgrid/libiec61850
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dinesh/capstone_server/libiec61850/build
+CMAKE_BINARY_DIR = /home/dinesh/cyber-physical-microgrid/libiec61850/build
 
 # Include any dependencies generated for this target.
 include examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/depend.make
@@ -70,18 +70,18 @@ include examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/pr
 include examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/flags.make
 
 examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/server_example_dynamic.c.o: examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/flags.make
-examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/server_example_dynamic.c.o: /home/dinesh/capstone_server/libiec61850/examples/server_example_dynamic/server_example_dynamic.c
+examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/server_example_dynamic.c.o: /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_dynamic/server_example_dynamic.c
 examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/server_example_dynamic.c.o: examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/capstone_server/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/server_example_dynamic.c.o"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/server_example_dynamic && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/server_example_dynamic.c.o -MF CMakeFiles/server_example_dynamic.dir/server_example_dynamic.c.o.d -o CMakeFiles/server_example_dynamic.dir/server_example_dynamic.c.o -c /home/dinesh/capstone_server/libiec61850/examples/server_example_dynamic/server_example_dynamic.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/server_example_dynamic.c.o"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_dynamic && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/server_example_dynamic.c.o -MF CMakeFiles/server_example_dynamic.dir/server_example_dynamic.c.o.d -o CMakeFiles/server_example_dynamic.dir/server_example_dynamic.c.o -c /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_dynamic/server_example_dynamic.c
 
 examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/server_example_dynamic.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/server_example_dynamic.dir/server_example_dynamic.c.i"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/server_example_dynamic && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/capstone_server/libiec61850/examples/server_example_dynamic/server_example_dynamic.c > CMakeFiles/server_example_dynamic.dir/server_example_dynamic.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_dynamic && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_dynamic/server_example_dynamic.c > CMakeFiles/server_example_dynamic.dir/server_example_dynamic.c.i
 
 examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/server_example_dynamic.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/server_example_dynamic.dir/server_example_dynamic.c.s"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/server_example_dynamic && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/capstone_server/libiec61850/examples/server_example_dynamic/server_example_dynamic.c -o CMakeFiles/server_example_dynamic.dir/server_example_dynamic.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_dynamic && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_dynamic/server_example_dynamic.c -o CMakeFiles/server_example_dynamic.dir/server_example_dynamic.c.s
 
 # Object files for target server_example_dynamic
 server_example_dynamic_OBJECTS = \
@@ -95,18 +95,18 @@ examples/server_example_dynamic/server_example_dynamic: examples/server_example_
 examples/server_example_dynamic/server_example_dynamic: src/libiec61850.a
 examples/server_example_dynamic/server_example_dynamic: hal/libhal.a
 examples/server_example_dynamic/server_example_dynamic: examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dinesh/capstone_server/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable server_example_dynamic"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/server_example_dynamic && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server_example_dynamic.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable server_example_dynamic"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_dynamic && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server_example_dynamic.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/build: examples/server_example_dynamic/server_example_dynamic
 .PHONY : examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/build
 
 examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/clean:
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/server_example_dynamic && $(CMAKE_COMMAND) -P CMakeFiles/server_example_dynamic.dir/cmake_clean.cmake
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_dynamic && $(CMAKE_COMMAND) -P CMakeFiles/server_example_dynamic.dir/cmake_clean.cmake
 .PHONY : examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/clean
 
 examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/depend:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dinesh/capstone_server/libiec61850 /home/dinesh/capstone_server/libiec61850/examples/server_example_dynamic /home/dinesh/capstone_server/libiec61850/build /home/dinesh/capstone_server/libiec61850/build/examples/server_example_dynamic /home/dinesh/capstone_server/libiec61850/build/examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dinesh/cyber-physical-microgrid/libiec61850 /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_dynamic /home/dinesh/cyber-physical-microgrid/libiec61850/build /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_dynamic /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : examples/server_example_dynamic/CMakeFiles/server_example_dynamic.dir/depend
 

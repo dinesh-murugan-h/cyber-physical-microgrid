@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dinesh/capstone_server/libiec61850
+CMAKE_SOURCE_DIR = /home/dinesh/cyber-physical-microgrid/libiec61850
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dinesh/capstone_server/libiec61850/build
+CMAKE_BINARY_DIR = /home/dinesh/cyber-physical-microgrid/libiec61850/build
 
 # Include any dependencies generated for this target.
 include examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/depend.make
@@ -70,32 +70,32 @@ include examples/server_example_threadless/CMakeFiles/server_example_threadless.
 include examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/flags.make
 
 examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/server_example_threadless.c.o: examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/flags.make
-examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/server_example_threadless.c.o: /home/dinesh/capstone_server/libiec61850/examples/server_example_threadless/server_example_threadless.c
+examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/server_example_threadless.c.o: /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_threadless/server_example_threadless.c
 examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/server_example_threadless.c.o: examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/capstone_server/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/server_example_threadless.c.o"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/server_example_threadless && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/server_example_threadless.c.o -MF CMakeFiles/server_example_threadless.dir/server_example_threadless.c.o.d -o CMakeFiles/server_example_threadless.dir/server_example_threadless.c.o -c /home/dinesh/capstone_server/libiec61850/examples/server_example_threadless/server_example_threadless.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/server_example_threadless.c.o"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_threadless && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/server_example_threadless.c.o -MF CMakeFiles/server_example_threadless.dir/server_example_threadless.c.o.d -o CMakeFiles/server_example_threadless.dir/server_example_threadless.c.o -c /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_threadless/server_example_threadless.c
 
 examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/server_example_threadless.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/server_example_threadless.dir/server_example_threadless.c.i"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/server_example_threadless && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/capstone_server/libiec61850/examples/server_example_threadless/server_example_threadless.c > CMakeFiles/server_example_threadless.dir/server_example_threadless.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_threadless && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_threadless/server_example_threadless.c > CMakeFiles/server_example_threadless.dir/server_example_threadless.c.i
 
 examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/server_example_threadless.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/server_example_threadless.dir/server_example_threadless.c.s"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/server_example_threadless && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/capstone_server/libiec61850/examples/server_example_threadless/server_example_threadless.c -o CMakeFiles/server_example_threadless.dir/server_example_threadless.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_threadless && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_threadless/server_example_threadless.c -o CMakeFiles/server_example_threadless.dir/server_example_threadless.c.s
 
 examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/static_model.c.o: examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/flags.make
-examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/static_model.c.o: /home/dinesh/capstone_server/libiec61850/examples/server_example_threadless/static_model.c
+examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/static_model.c.o: /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_threadless/static_model.c
 examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/static_model.c.o: examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/capstone_server/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/static_model.c.o"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/server_example_threadless && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/static_model.c.o -MF CMakeFiles/server_example_threadless.dir/static_model.c.o.d -o CMakeFiles/server_example_threadless.dir/static_model.c.o -c /home/dinesh/capstone_server/libiec61850/examples/server_example_threadless/static_model.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/static_model.c.o"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_threadless && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/static_model.c.o -MF CMakeFiles/server_example_threadless.dir/static_model.c.o.d -o CMakeFiles/server_example_threadless.dir/static_model.c.o -c /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_threadless/static_model.c
 
 examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/static_model.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/server_example_threadless.dir/static_model.c.i"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/server_example_threadless && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/capstone_server/libiec61850/examples/server_example_threadless/static_model.c > CMakeFiles/server_example_threadless.dir/static_model.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_threadless && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_threadless/static_model.c > CMakeFiles/server_example_threadless.dir/static_model.c.i
 
 examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/static_model.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/server_example_threadless.dir/static_model.c.s"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/server_example_threadless && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/capstone_server/libiec61850/examples/server_example_threadless/static_model.c -o CMakeFiles/server_example_threadless.dir/static_model.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_threadless && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_threadless/static_model.c -o CMakeFiles/server_example_threadless.dir/static_model.c.s
 
 # Object files for target server_example_threadless
 server_example_threadless_OBJECTS = \
@@ -111,18 +111,18 @@ examples/server_example_threadless/server_example_threadless: examples/server_ex
 examples/server_example_threadless/server_example_threadless: src/libiec61850.a
 examples/server_example_threadless/server_example_threadless: hal/libhal.a
 examples/server_example_threadless/server_example_threadless: examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dinesh/capstone_server/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable server_example_threadless"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/server_example_threadless && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server_example_threadless.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable server_example_threadless"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_threadless && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server_example_threadless.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/build: examples/server_example_threadless/server_example_threadless
 .PHONY : examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/build
 
 examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/clean:
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/server_example_threadless && $(CMAKE_COMMAND) -P CMakeFiles/server_example_threadless.dir/cmake_clean.cmake
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_threadless && $(CMAKE_COMMAND) -P CMakeFiles/server_example_threadless.dir/cmake_clean.cmake
 .PHONY : examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/clean
 
 examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/depend:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dinesh/capstone_server/libiec61850 /home/dinesh/capstone_server/libiec61850/examples/server_example_threadless /home/dinesh/capstone_server/libiec61850/build /home/dinesh/capstone_server/libiec61850/build/examples/server_example_threadless /home/dinesh/capstone_server/libiec61850/build/examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dinesh/cyber-physical-microgrid/libiec61850 /home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_threadless /home/dinesh/cyber-physical-microgrid/libiec61850/build /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_threadless /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : examples/server_example_threadless/CMakeFiles/server_example_threadless.dir/depend
 

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dinesh/capstone_server/libiec61850
+CMAKE_SOURCE_DIR = /home/dinesh/cyber-physical-microgrid/libiec61850
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dinesh/capstone_server/libiec61850/build
+CMAKE_BINARY_DIR = /home/dinesh/cyber-physical-microgrid/libiec61850/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/dinesh/capstone_server/libiec61850/build
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool..."
-	cd /home/dinesh/capstone_server/libiec61850/build && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool for source..."
-	cd /home/dinesh/capstone_server/libiec61850/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/dinesh/capstone_server/libiec61850/build/CPackSourceConfig.cmake
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/dinesh/cyber-physical-microgrid/libiec61850/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -162,14 +162,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/dinesh/capstone_server/libiec61850/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/dinesh/capstone_server/libiec61850/build/CMakeFiles /home/dinesh/capstone_server/libiec61850/build/examples/mms_utility//CMakeFiles/progress.marks
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/mms_utility/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dinesh/capstone_server/libiec61850/build/CMakeFiles 0
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/mms_utility//CMakeFiles/progress.marks
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/mms_utility/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/mms_utility/clean
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/mms_utility/clean
 .PHONY : clean
 
 # The main clean target
@@ -178,22 +178,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/mms_utility/preinstall
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/mms_utility/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/mms_utility/preinstall
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/mms_utility/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 examples/mms_utility/CMakeFiles/mms_utility.dir/rule:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/mms_utility/CMakeFiles/mms_utility.dir/rule
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/mms_utility/CMakeFiles/mms_utility.dir/rule
 .PHONY : examples/mms_utility/CMakeFiles/mms_utility.dir/rule
 
 # Convenience name for target.
@@ -202,7 +202,7 @@ mms_utility: examples/mms_utility/CMakeFiles/mms_utility.dir/rule
 
 # fast build rule for target.
 mms_utility/fast:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/mms_utility/CMakeFiles/mms_utility.dir/build.make examples/mms_utility/CMakeFiles/mms_utility.dir/build
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/mms_utility/CMakeFiles/mms_utility.dir/build.make examples/mms_utility/CMakeFiles/mms_utility.dir/build
 .PHONY : mms_utility/fast
 
 mms_utility.o: mms_utility.c.o
@@ -210,7 +210,7 @@ mms_utility.o: mms_utility.c.o
 
 # target to build an object file
 mms_utility.c.o:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/mms_utility/CMakeFiles/mms_utility.dir/build.make examples/mms_utility/CMakeFiles/mms_utility.dir/mms_utility.c.o
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/mms_utility/CMakeFiles/mms_utility.dir/build.make examples/mms_utility/CMakeFiles/mms_utility.dir/mms_utility.c.o
 .PHONY : mms_utility.c.o
 
 mms_utility.i: mms_utility.c.i
@@ -218,7 +218,7 @@ mms_utility.i: mms_utility.c.i
 
 # target to preprocess a source file
 mms_utility.c.i:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/mms_utility/CMakeFiles/mms_utility.dir/build.make examples/mms_utility/CMakeFiles/mms_utility.dir/mms_utility.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/mms_utility/CMakeFiles/mms_utility.dir/build.make examples/mms_utility/CMakeFiles/mms_utility.dir/mms_utility.c.i
 .PHONY : mms_utility.c.i
 
 mms_utility.s: mms_utility.c.s
@@ -226,7 +226,7 @@ mms_utility.s: mms_utility.c.s
 
 # target to generate assembly for a file
 mms_utility.c.s:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/mms_utility/CMakeFiles/mms_utility.dir/build.make examples/mms_utility/CMakeFiles/mms_utility.dir/mms_utility.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f examples/mms_utility/CMakeFiles/mms_utility.dir/build.make examples/mms_utility/CMakeFiles/mms_utility.dir/mms_utility.c.s
 .PHONY : mms_utility.c.s
 
 # Help Target
@@ -259,6 +259,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

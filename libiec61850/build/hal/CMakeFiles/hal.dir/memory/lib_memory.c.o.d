@@ -1,5 +1,5 @@
 hal/CMakeFiles/hal.dir/memory/lib_memory.c.o: \
- /home/dinesh/capstone_server/libiec61850/hal/memory/lib_memory.c \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/memory/lib_memory.c \
  /usr/include/stdc-predef.h /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -40,8 +40,8 @@ hal/CMakeFiles/hal.dir/memory/lib_memory.c.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/lib_memory.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_base.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/lib_memory.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_base.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \

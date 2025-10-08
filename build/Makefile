@@ -117,65 +117,137 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named bridge_server
+# Target rules for targets named main_app
 
 # Build rule for target.
-bridge_server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bridge_server
-.PHONY : bridge_server
+main_app: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main_app
+.PHONY : main_app
 
 # fast build rule for target.
-bridge_server/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bridge_server.dir/build.make CMakeFiles/bridge_server.dir/build
-.PHONY : bridge_server/fast
+main_app/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/build
+.PHONY : main_app/fast
 
-src/bridge_server.o: src/bridge_server.c.o
-.PHONY : src/bridge_server.o
-
-# target to build an object file
-src/bridge_server.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bridge_server.dir/build.make CMakeFiles/bridge_server.dir/src/bridge_server.c.o
-.PHONY : src/bridge_server.c.o
-
-src/bridge_server.i: src/bridge_server.c.i
-.PHONY : src/bridge_server.i
-
-# target to preprocess a source file
-src/bridge_server.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bridge_server.dir/build.make CMakeFiles/bridge_server.dir/src/bridge_server.c.i
-.PHONY : src/bridge_server.c.i
-
-src/bridge_server.s: src/bridge_server.c.s
-.PHONY : src/bridge_server.s
-
-# target to generate assembly for a file
-src/bridge_server.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bridge_server.dir/build.make CMakeFiles/bridge_server.dir/src/bridge_server.c.s
-.PHONY : src/bridge_server.c.s
-
-src/static_model.o: src/static_model.c.o
-.PHONY : src/static_model.o
+src/iec61850/iedconnectionhandler.o: src/iec61850/iedconnectionhandler.cpp.o
+.PHONY : src/iec61850/iedconnectionhandler.o
 
 # target to build an object file
-src/static_model.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bridge_server.dir/build.make CMakeFiles/bridge_server.dir/src/static_model.c.o
-.PHONY : src/static_model.c.o
+src/iec61850/iedconnectionhandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.o
+.PHONY : src/iec61850/iedconnectionhandler.cpp.o
 
-src/static_model.i: src/static_model.c.i
-.PHONY : src/static_model.i
+src/iec61850/iedconnectionhandler.i: src/iec61850/iedconnectionhandler.cpp.i
+.PHONY : src/iec61850/iedconnectionhandler.i
 
 # target to preprocess a source file
-src/static_model.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bridge_server.dir/build.make CMakeFiles/bridge_server.dir/src/static_model.c.i
-.PHONY : src/static_model.c.i
+src/iec61850/iedconnectionhandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.i
+.PHONY : src/iec61850/iedconnectionhandler.cpp.i
 
-src/static_model.s: src/static_model.c.s
-.PHONY : src/static_model.s
+src/iec61850/iedconnectionhandler.s: src/iec61850/iedconnectionhandler.cpp.s
+.PHONY : src/iec61850/iedconnectionhandler.s
 
 # target to generate assembly for a file
-src/static_model.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bridge_server.dir/build.make CMakeFiles/bridge_server.dir/src/static_model.c.s
-.PHONY : src/static_model.c.s
+src/iec61850/iedconnectionhandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.s
+.PHONY : src/iec61850/iedconnectionhandler.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/scl/static_model_1.o: src/scl/static_model_1.c.o
+.PHONY : src/scl/static_model_1.o
+
+# target to build an object file
+src/scl/static_model_1.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/src/scl/static_model_1.c.o
+.PHONY : src/scl/static_model_1.c.o
+
+src/scl/static_model_1.i: src/scl/static_model_1.c.i
+.PHONY : src/scl/static_model_1.i
+
+# target to preprocess a source file
+src/scl/static_model_1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/src/scl/static_model_1.c.i
+.PHONY : src/scl/static_model_1.c.i
+
+src/scl/static_model_1.s: src/scl/static_model_1.c.s
+.PHONY : src/scl/static_model_1.s
+
+# target to generate assembly for a file
+src/scl/static_model_1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/src/scl/static_model_1.c.s
+.PHONY : src/scl/static_model_1.c.s
+
+src/scl/static_model_2.o: src/scl/static_model_2.c.o
+.PHONY : src/scl/static_model_2.o
+
+# target to build an object file
+src/scl/static_model_2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/src/scl/static_model_2.c.o
+.PHONY : src/scl/static_model_2.c.o
+
+src/scl/static_model_2.i: src/scl/static_model_2.c.i
+.PHONY : src/scl/static_model_2.i
+
+# target to preprocess a source file
+src/scl/static_model_2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/src/scl/static_model_2.c.i
+.PHONY : src/scl/static_model_2.c.i
+
+src/scl/static_model_2.s: src/scl/static_model_2.c.s
+.PHONY : src/scl/static_model_2.s
+
+# target to generate assembly for a file
+src/scl/static_model_2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/src/scl/static_model_2.c.s
+.PHONY : src/scl/static_model_2.c.s
+
+src/scl/static_model_3.o: src/scl/static_model_3.c.o
+.PHONY : src/scl/static_model_3.o
+
+# target to build an object file
+src/scl/static_model_3.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/src/scl/static_model_3.c.o
+.PHONY : src/scl/static_model_3.c.o
+
+src/scl/static_model_3.i: src/scl/static_model_3.c.i
+.PHONY : src/scl/static_model_3.i
+
+# target to preprocess a source file
+src/scl/static_model_3.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/src/scl/static_model_3.c.i
+.PHONY : src/scl/static_model_3.c.i
+
+src/scl/static_model_3.s: src/scl/static_model_3.c.s
+.PHONY : src/scl/static_model_3.s
+
+# target to generate assembly for a file
+src/scl/static_model_3.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/src/scl/static_model_3.c.s
+.PHONY : src/scl/static_model_3.c.s
 
 # Help Target
 help:
@@ -185,13 +257,22 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... bridge_server"
-	@echo "... src/bridge_server.o"
-	@echo "... src/bridge_server.i"
-	@echo "... src/bridge_server.s"
-	@echo "... src/static_model.o"
-	@echo "... src/static_model.i"
-	@echo "... src/static_model.s"
+	@echo "... main_app"
+	@echo "... src/iec61850/iedconnectionhandler.o"
+	@echo "... src/iec61850/iedconnectionhandler.i"
+	@echo "... src/iec61850/iedconnectionhandler.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/scl/static_model_1.o"
+	@echo "... src/scl/static_model_1.i"
+	@echo "... src/scl/static_model_1.s"
+	@echo "... src/scl/static_model_2.o"
+	@echo "... src/scl/static_model_2.i"
+	@echo "... src/scl/static_model_2.s"
+	@echo "... src/scl/static_model_3.o"
+	@echo "... src/scl/static_model_3.i"
+	@echo "... src/scl/static_model_3.s"
 .PHONY : help
 
 

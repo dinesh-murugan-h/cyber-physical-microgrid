@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dinesh/capstone_server/libiec61850
+CMAKE_SOURCE_DIR = /home/dinesh/cyber-physical-microgrid/libiec61850
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dinesh/capstone_server/libiec61850/build
+CMAKE_BINARY_DIR = /home/dinesh/cyber-physical-microgrid/libiec61850/build
 
 # Include any dependencies generated for this target.
 include examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/depend.make
@@ -70,18 +70,18 @@ include examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/progress.mak
 include examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/flags.make
 
 examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/sv_subscriber_example.c.o: examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/flags.make
-examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/sv_subscriber_example.c.o: /home/dinesh/capstone_server/libiec61850/examples/sv_subscriber/sv_subscriber_example.c
+examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/sv_subscriber_example.c.o: /home/dinesh/cyber-physical-microgrid/libiec61850/examples/sv_subscriber/sv_subscriber_example.c
 examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/sv_subscriber_example.c.o: examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/capstone_server/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/sv_subscriber_example.c.o"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/sv_subscriber && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/sv_subscriber_example.c.o -MF CMakeFiles/sv_subscriber_example.dir/sv_subscriber_example.c.o.d -o CMakeFiles/sv_subscriber_example.dir/sv_subscriber_example.c.o -c /home/dinesh/capstone_server/libiec61850/examples/sv_subscriber/sv_subscriber_example.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/sv_subscriber_example.c.o"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/sv_subscriber && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/sv_subscriber_example.c.o -MF CMakeFiles/sv_subscriber_example.dir/sv_subscriber_example.c.o.d -o CMakeFiles/sv_subscriber_example.dir/sv_subscriber_example.c.o -c /home/dinesh/cyber-physical-microgrid/libiec61850/examples/sv_subscriber/sv_subscriber_example.c
 
 examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/sv_subscriber_example.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/sv_subscriber_example.dir/sv_subscriber_example.c.i"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/sv_subscriber && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/capstone_server/libiec61850/examples/sv_subscriber/sv_subscriber_example.c > CMakeFiles/sv_subscriber_example.dir/sv_subscriber_example.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/sv_subscriber && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/cyber-physical-microgrid/libiec61850/examples/sv_subscriber/sv_subscriber_example.c > CMakeFiles/sv_subscriber_example.dir/sv_subscriber_example.c.i
 
 examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/sv_subscriber_example.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/sv_subscriber_example.dir/sv_subscriber_example.c.s"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/sv_subscriber && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/capstone_server/libiec61850/examples/sv_subscriber/sv_subscriber_example.c -o CMakeFiles/sv_subscriber_example.dir/sv_subscriber_example.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/sv_subscriber && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/cyber-physical-microgrid/libiec61850/examples/sv_subscriber/sv_subscriber_example.c -o CMakeFiles/sv_subscriber_example.dir/sv_subscriber_example.c.s
 
 # Object files for target sv_subscriber_example
 sv_subscriber_example_OBJECTS = \
@@ -95,18 +95,18 @@ examples/sv_subscriber/sv_subscriber_example: examples/sv_subscriber/CMakeFiles/
 examples/sv_subscriber/sv_subscriber_example: src/libiec61850.a
 examples/sv_subscriber/sv_subscriber_example: hal/libhal.a
 examples/sv_subscriber/sv_subscriber_example: examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dinesh/capstone_server/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable sv_subscriber_example"
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/sv_subscriber && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sv_subscriber_example.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable sv_subscriber_example"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/sv_subscriber && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sv_subscriber_example.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/build: examples/sv_subscriber/sv_subscriber_example
 .PHONY : examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/build
 
 examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/clean:
-	cd /home/dinesh/capstone_server/libiec61850/build/examples/sv_subscriber && $(CMAKE_COMMAND) -P CMakeFiles/sv_subscriber_example.dir/cmake_clean.cmake
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/sv_subscriber && $(CMAKE_COMMAND) -P CMakeFiles/sv_subscriber_example.dir/cmake_clean.cmake
 .PHONY : examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/clean
 
 examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/depend:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dinesh/capstone_server/libiec61850 /home/dinesh/capstone_server/libiec61850/examples/sv_subscriber /home/dinesh/capstone_server/libiec61850/build /home/dinesh/capstone_server/libiec61850/build/examples/sv_subscriber /home/dinesh/capstone_server/libiec61850/build/examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dinesh/cyber-physical-microgrid/libiec61850 /home/dinesh/cyber-physical-microgrid/libiec61850/examples/sv_subscriber /home/dinesh/cyber-physical-microgrid/libiec61850/build /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/sv_subscriber /home/dinesh/cyber-physical-microgrid/libiec61850/build/examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : examples/sv_subscriber/CMakeFiles/sv_subscriber_example.dir/depend
 

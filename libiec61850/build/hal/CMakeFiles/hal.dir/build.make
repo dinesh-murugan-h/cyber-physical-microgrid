@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dinesh/capstone_server/libiec61850
+CMAKE_SOURCE_DIR = /home/dinesh/cyber-physical-microgrid/libiec61850
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dinesh/capstone_server/libiec61850/build
+CMAKE_BINARY_DIR = /home/dinesh/cyber-physical-microgrid/libiec61850/build
 
 # Include any dependencies generated for this target.
 include hal/CMakeFiles/hal.dir/depend.make
@@ -70,102 +70,102 @@ include hal/CMakeFiles/hal.dir/progress.make
 include hal/CMakeFiles/hal.dir/flags.make
 
 hal/CMakeFiles/hal.dir/socket/linux/socket_linux.c.o: hal/CMakeFiles/hal.dir/flags.make
-hal/CMakeFiles/hal.dir/socket/linux/socket_linux.c.o: /home/dinesh/capstone_server/libiec61850/hal/socket/linux/socket_linux.c
+hal/CMakeFiles/hal.dir/socket/linux/socket_linux.c.o: /home/dinesh/cyber-physical-microgrid/libiec61850/hal/socket/linux/socket_linux.c
 hal/CMakeFiles/hal.dir/socket/linux/socket_linux.c.o: hal/CMakeFiles/hal.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/capstone_server/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object hal/CMakeFiles/hal.dir/socket/linux/socket_linux.c.o"
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT hal/CMakeFiles/hal.dir/socket/linux/socket_linux.c.o -MF CMakeFiles/hal.dir/socket/linux/socket_linux.c.o.d -o CMakeFiles/hal.dir/socket/linux/socket_linux.c.o -c /home/dinesh/capstone_server/libiec61850/hal/socket/linux/socket_linux.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object hal/CMakeFiles/hal.dir/socket/linux/socket_linux.c.o"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT hal/CMakeFiles/hal.dir/socket/linux/socket_linux.c.o -MF CMakeFiles/hal.dir/socket/linux/socket_linux.c.o.d -o CMakeFiles/hal.dir/socket/linux/socket_linux.c.o -c /home/dinesh/cyber-physical-microgrid/libiec61850/hal/socket/linux/socket_linux.c
 
 hal/CMakeFiles/hal.dir/socket/linux/socket_linux.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/hal.dir/socket/linux/socket_linux.c.i"
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/capstone_server/libiec61850/hal/socket/linux/socket_linux.c > CMakeFiles/hal.dir/socket/linux/socket_linux.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/cyber-physical-microgrid/libiec61850/hal/socket/linux/socket_linux.c > CMakeFiles/hal.dir/socket/linux/socket_linux.c.i
 
 hal/CMakeFiles/hal.dir/socket/linux/socket_linux.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/hal.dir/socket/linux/socket_linux.c.s"
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/capstone_server/libiec61850/hal/socket/linux/socket_linux.c -o CMakeFiles/hal.dir/socket/linux/socket_linux.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/cyber-physical-microgrid/libiec61850/hal/socket/linux/socket_linux.c -o CMakeFiles/hal.dir/socket/linux/socket_linux.c.s
 
 hal/CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.o: hal/CMakeFiles/hal.dir/flags.make
-hal/CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.o: /home/dinesh/capstone_server/libiec61850/hal/ethernet/linux/ethernet_linux.c
+hal/CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.o: /home/dinesh/cyber-physical-microgrid/libiec61850/hal/ethernet/linux/ethernet_linux.c
 hal/CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.o: hal/CMakeFiles/hal.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/capstone_server/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object hal/CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.o"
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT hal/CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.o -MF CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.o.d -o CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.o -c /home/dinesh/capstone_server/libiec61850/hal/ethernet/linux/ethernet_linux.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object hal/CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.o"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT hal/CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.o -MF CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.o.d -o CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.o -c /home/dinesh/cyber-physical-microgrid/libiec61850/hal/ethernet/linux/ethernet_linux.c
 
 hal/CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.i"
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/capstone_server/libiec61850/hal/ethernet/linux/ethernet_linux.c > CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/cyber-physical-microgrid/libiec61850/hal/ethernet/linux/ethernet_linux.c > CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.i
 
 hal/CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.s"
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/capstone_server/libiec61850/hal/ethernet/linux/ethernet_linux.c -o CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/cyber-physical-microgrid/libiec61850/hal/ethernet/linux/ethernet_linux.c -o CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.s
 
 hal/CMakeFiles/hal.dir/thread/linux/thread_linux.c.o: hal/CMakeFiles/hal.dir/flags.make
-hal/CMakeFiles/hal.dir/thread/linux/thread_linux.c.o: /home/dinesh/capstone_server/libiec61850/hal/thread/linux/thread_linux.c
+hal/CMakeFiles/hal.dir/thread/linux/thread_linux.c.o: /home/dinesh/cyber-physical-microgrid/libiec61850/hal/thread/linux/thread_linux.c
 hal/CMakeFiles/hal.dir/thread/linux/thread_linux.c.o: hal/CMakeFiles/hal.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/capstone_server/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object hal/CMakeFiles/hal.dir/thread/linux/thread_linux.c.o"
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT hal/CMakeFiles/hal.dir/thread/linux/thread_linux.c.o -MF CMakeFiles/hal.dir/thread/linux/thread_linux.c.o.d -o CMakeFiles/hal.dir/thread/linux/thread_linux.c.o -c /home/dinesh/capstone_server/libiec61850/hal/thread/linux/thread_linux.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object hal/CMakeFiles/hal.dir/thread/linux/thread_linux.c.o"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT hal/CMakeFiles/hal.dir/thread/linux/thread_linux.c.o -MF CMakeFiles/hal.dir/thread/linux/thread_linux.c.o.d -o CMakeFiles/hal.dir/thread/linux/thread_linux.c.o -c /home/dinesh/cyber-physical-microgrid/libiec61850/hal/thread/linux/thread_linux.c
 
 hal/CMakeFiles/hal.dir/thread/linux/thread_linux.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/hal.dir/thread/linux/thread_linux.c.i"
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/capstone_server/libiec61850/hal/thread/linux/thread_linux.c > CMakeFiles/hal.dir/thread/linux/thread_linux.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/cyber-physical-microgrid/libiec61850/hal/thread/linux/thread_linux.c > CMakeFiles/hal.dir/thread/linux/thread_linux.c.i
 
 hal/CMakeFiles/hal.dir/thread/linux/thread_linux.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/hal.dir/thread/linux/thread_linux.c.s"
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/capstone_server/libiec61850/hal/thread/linux/thread_linux.c -o CMakeFiles/hal.dir/thread/linux/thread_linux.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/cyber-physical-microgrid/libiec61850/hal/thread/linux/thread_linux.c -o CMakeFiles/hal.dir/thread/linux/thread_linux.c.s
 
 hal/CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.o: hal/CMakeFiles/hal.dir/flags.make
-hal/CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.o: /home/dinesh/capstone_server/libiec61850/hal/filesystem/linux/file_provider_linux.c
+hal/CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.o: /home/dinesh/cyber-physical-microgrid/libiec61850/hal/filesystem/linux/file_provider_linux.c
 hal/CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.o: hal/CMakeFiles/hal.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/capstone_server/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object hal/CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.o"
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT hal/CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.o -MF CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.o.d -o CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.o -c /home/dinesh/capstone_server/libiec61850/hal/filesystem/linux/file_provider_linux.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object hal/CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.o"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT hal/CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.o -MF CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.o.d -o CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.o -c /home/dinesh/cyber-physical-microgrid/libiec61850/hal/filesystem/linux/file_provider_linux.c
 
 hal/CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.i"
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/capstone_server/libiec61850/hal/filesystem/linux/file_provider_linux.c > CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/cyber-physical-microgrid/libiec61850/hal/filesystem/linux/file_provider_linux.c > CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.i
 
 hal/CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.s"
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/capstone_server/libiec61850/hal/filesystem/linux/file_provider_linux.c -o CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/cyber-physical-microgrid/libiec61850/hal/filesystem/linux/file_provider_linux.c -o CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.s
 
 hal/CMakeFiles/hal.dir/time/unix/time.c.o: hal/CMakeFiles/hal.dir/flags.make
-hal/CMakeFiles/hal.dir/time/unix/time.c.o: /home/dinesh/capstone_server/libiec61850/hal/time/unix/time.c
+hal/CMakeFiles/hal.dir/time/unix/time.c.o: /home/dinesh/cyber-physical-microgrid/libiec61850/hal/time/unix/time.c
 hal/CMakeFiles/hal.dir/time/unix/time.c.o: hal/CMakeFiles/hal.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/capstone_server/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object hal/CMakeFiles/hal.dir/time/unix/time.c.o"
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT hal/CMakeFiles/hal.dir/time/unix/time.c.o -MF CMakeFiles/hal.dir/time/unix/time.c.o.d -o CMakeFiles/hal.dir/time/unix/time.c.o -c /home/dinesh/capstone_server/libiec61850/hal/time/unix/time.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object hal/CMakeFiles/hal.dir/time/unix/time.c.o"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT hal/CMakeFiles/hal.dir/time/unix/time.c.o -MF CMakeFiles/hal.dir/time/unix/time.c.o.d -o CMakeFiles/hal.dir/time/unix/time.c.o -c /home/dinesh/cyber-physical-microgrid/libiec61850/hal/time/unix/time.c
 
 hal/CMakeFiles/hal.dir/time/unix/time.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/hal.dir/time/unix/time.c.i"
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/capstone_server/libiec61850/hal/time/unix/time.c > CMakeFiles/hal.dir/time/unix/time.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/cyber-physical-microgrid/libiec61850/hal/time/unix/time.c > CMakeFiles/hal.dir/time/unix/time.c.i
 
 hal/CMakeFiles/hal.dir/time/unix/time.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/hal.dir/time/unix/time.c.s"
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/capstone_server/libiec61850/hal/time/unix/time.c -o CMakeFiles/hal.dir/time/unix/time.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/cyber-physical-microgrid/libiec61850/hal/time/unix/time.c -o CMakeFiles/hal.dir/time/unix/time.c.s
 
 hal/CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.o: hal/CMakeFiles/hal.dir/flags.make
-hal/CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.o: /home/dinesh/capstone_server/libiec61850/hal/serial/linux/serial_port_linux.c
+hal/CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.o: /home/dinesh/cyber-physical-microgrid/libiec61850/hal/serial/linux/serial_port_linux.c
 hal/CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.o: hal/CMakeFiles/hal.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/capstone_server/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object hal/CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.o"
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT hal/CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.o -MF CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.o.d -o CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.o -c /home/dinesh/capstone_server/libiec61850/hal/serial/linux/serial_port_linux.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object hal/CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.o"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT hal/CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.o -MF CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.o.d -o CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.o -c /home/dinesh/cyber-physical-microgrid/libiec61850/hal/serial/linux/serial_port_linux.c
 
 hal/CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.i"
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/capstone_server/libiec61850/hal/serial/linux/serial_port_linux.c > CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/cyber-physical-microgrid/libiec61850/hal/serial/linux/serial_port_linux.c > CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.i
 
 hal/CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.s"
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/capstone_server/libiec61850/hal/serial/linux/serial_port_linux.c -o CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/cyber-physical-microgrid/libiec61850/hal/serial/linux/serial_port_linux.c -o CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.s
 
 hal/CMakeFiles/hal.dir/memory/lib_memory.c.o: hal/CMakeFiles/hal.dir/flags.make
-hal/CMakeFiles/hal.dir/memory/lib_memory.c.o: /home/dinesh/capstone_server/libiec61850/hal/memory/lib_memory.c
+hal/CMakeFiles/hal.dir/memory/lib_memory.c.o: /home/dinesh/cyber-physical-microgrid/libiec61850/hal/memory/lib_memory.c
 hal/CMakeFiles/hal.dir/memory/lib_memory.c.o: hal/CMakeFiles/hal.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/capstone_server/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object hal/CMakeFiles/hal.dir/memory/lib_memory.c.o"
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT hal/CMakeFiles/hal.dir/memory/lib_memory.c.o -MF CMakeFiles/hal.dir/memory/lib_memory.c.o.d -o CMakeFiles/hal.dir/memory/lib_memory.c.o -c /home/dinesh/capstone_server/libiec61850/hal/memory/lib_memory.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object hal/CMakeFiles/hal.dir/memory/lib_memory.c.o"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT hal/CMakeFiles/hal.dir/memory/lib_memory.c.o -MF CMakeFiles/hal.dir/memory/lib_memory.c.o.d -o CMakeFiles/hal.dir/memory/lib_memory.c.o -c /home/dinesh/cyber-physical-microgrid/libiec61850/hal/memory/lib_memory.c
 
 hal/CMakeFiles/hal.dir/memory/lib_memory.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/hal.dir/memory/lib_memory.c.i"
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/capstone_server/libiec61850/hal/memory/lib_memory.c > CMakeFiles/hal.dir/memory/lib_memory.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dinesh/cyber-physical-microgrid/libiec61850/hal/memory/lib_memory.c > CMakeFiles/hal.dir/memory/lib_memory.c.i
 
 hal/CMakeFiles/hal.dir/memory/lib_memory.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/hal.dir/memory/lib_memory.c.s"
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/capstone_server/libiec61850/hal/memory/lib_memory.c -o CMakeFiles/hal.dir/memory/lib_memory.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dinesh/cyber-physical-microgrid/libiec61850/hal/memory/lib_memory.c -o CMakeFiles/hal.dir/memory/lib_memory.c.s
 
 # Object files for target hal
 hal_OBJECTS = \
@@ -189,19 +189,19 @@ hal/libhal.a: hal/CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.o
 hal/libhal.a: hal/CMakeFiles/hal.dir/memory/lib_memory.c.o
 hal/libhal.a: hal/CMakeFiles/hal.dir/build.make
 hal/libhal.a: hal/CMakeFiles/hal.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dinesh/capstone_server/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C static library libhal.a"
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && $(CMAKE_COMMAND) -P CMakeFiles/hal.dir/cmake_clean_target.cmake
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hal.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C static library libhal.a"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && $(CMAKE_COMMAND) -P CMakeFiles/hal.dir/cmake_clean_target.cmake
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hal.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 hal/CMakeFiles/hal.dir/build: hal/libhal.a
 .PHONY : hal/CMakeFiles/hal.dir/build
 
 hal/CMakeFiles/hal.dir/clean:
-	cd /home/dinesh/capstone_server/libiec61850/build/hal && $(CMAKE_COMMAND) -P CMakeFiles/hal.dir/cmake_clean.cmake
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal && $(CMAKE_COMMAND) -P CMakeFiles/hal.dir/cmake_clean.cmake
 .PHONY : hal/CMakeFiles/hal.dir/clean
 
 hal/CMakeFiles/hal.dir/depend:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dinesh/capstone_server/libiec61850 /home/dinesh/capstone_server/libiec61850/hal /home/dinesh/capstone_server/libiec61850/build /home/dinesh/capstone_server/libiec61850/build/hal /home/dinesh/capstone_server/libiec61850/build/hal/CMakeFiles/hal.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dinesh/cyber-physical-microgrid/libiec61850 /home/dinesh/cyber-physical-microgrid/libiec61850/hal /home/dinesh/cyber-physical-microgrid/libiec61850/build /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal/CMakeFiles/hal.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : hal/CMakeFiles/hal.dir/depend
 

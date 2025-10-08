@@ -1,5 +1,5 @@
 hal/CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.o: \
- /home/dinesh/capstone_server/libiec61850/hal/filesystem/linux/file_provider_linux.c \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/filesystem/linux/file_provider_linux.c \
  /usr/include/stdc-predef.h /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -70,9 +70,9 @@ hal/CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.o: \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_filesystem.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_base.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_filesystem.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_base.h \
  /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/lib_memory.h
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/lib_memory.h

@@ -1,8 +1,8 @@
 hal/CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.o: \
- /home/dinesh/capstone_server/libiec61850/hal/serial/linux/serial_port_linux.c \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/serial/linux/serial_port_linux.c \
  /usr/include/stdc-predef.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/lib_memory.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_base.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/lib_memory.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_base.h \
  /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -84,5 +84,5 @@ hal/CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.o: \
  /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/poll.h \
  /usr/include/x86_64-linux-gnu/sys/poll.h \
  /usr/include/x86_64-linux-gnu/bits/poll.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_serial.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_time.h
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_serial.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_time.h

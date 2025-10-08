@@ -1,10 +1,10 @@
 examples/goose_observer/CMakeFiles/goose_observer.dir/goose_observer.c.o: \
- /home/dinesh/capstone_server/libiec61850/examples/goose_observer/goose_observer.c \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/examples/goose_observer/goose_observer.c \
  /usr/include/stdc-predef.h \
- /home/dinesh/capstone_server/libiec61850/src/goose/goose_receiver.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/goose/goose_receiver.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_ethernet.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_base.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_ethernet.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_base.h \
  /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -53,16 +53,16 @@ examples/goose_observer/CMakeFiles/goose_observer.dir/goose_observer.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/strings.h \
- /home/dinesh/capstone_server/libiec61850/src/goose/goose_subscriber.h \
- /home/dinesh/capstone_server/libiec61850/src/common/inc/libiec61850_common_api.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_time.h \
- /home/dinesh/capstone_server/libiec61850/src/mms/inc/mms_value.h \
- /home/dinesh/capstone_server/libiec61850/src/mms/inc/mms_common.h \
- /home/dinesh/capstone_server/libiec61850/src/mms/inc/mms_types.h \
- /home/dinesh/capstone_server/libiec61850/src/r_session/r_session.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_socket.h \
- /home/dinesh/capstone_server/libiec61850/src/goose/goose_subscriber.h \
- /home/dinesh/capstone_server/libiec61850/hal/inc/hal_thread.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/goose/goose_subscriber.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/common/inc/libiec61850_common_api.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_time.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/mms/inc/mms_value.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/mms/inc/mms_common.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/mms/inc/mms_types.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/r_session/r_session.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_socket.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/src/goose/goose_subscriber.h \
+ /home/dinesh/cyber-physical-microgrid/libiec61850/hal/inc/hal_thread.h \
  /usr/include/signal.h \
  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
  /usr/include/x86_64-linux-gnu/bits/signum-arch.h \

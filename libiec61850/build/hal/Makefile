@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dinesh/capstone_server/libiec61850
+CMAKE_SOURCE_DIR = /home/dinesh/cyber-physical-microgrid/libiec61850
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dinesh/capstone_server/libiec61850/build
+CMAKE_BINARY_DIR = /home/dinesh/cyber-physical-microgrid/libiec61850/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/dinesh/capstone_server/libiec61850/build
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool..."
-	cd /home/dinesh/capstone_server/libiec61850/build && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool for source..."
-	cd /home/dinesh/capstone_server/libiec61850/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/dinesh/capstone_server/libiec61850/build/CPackSourceConfig.cmake
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/dinesh/cyber-physical-microgrid/libiec61850/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -162,14 +162,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/dinesh/capstone_server/libiec61850/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/dinesh/capstone_server/libiec61850/build/CMakeFiles /home/dinesh/capstone_server/libiec61850/build/hal//CMakeFiles/progress.marks
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dinesh/capstone_server/libiec61850/build/CMakeFiles 0
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles /home/dinesh/cyber-physical-microgrid/libiec61850/build/hal//CMakeFiles/progress.marks
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dinesh/cyber-physical-microgrid/libiec61850/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/clean
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/clean
 .PHONY : clean
 
 # The main clean target
@@ -178,22 +178,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/preinstall
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/preinstall
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 hal/CMakeFiles/hal.dir/rule:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/CMakeFiles/hal.dir/rule
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/CMakeFiles/hal.dir/rule
 .PHONY : hal/CMakeFiles/hal.dir/rule
 
 # Convenience name for target.
@@ -202,12 +202,12 @@ hal: hal/CMakeFiles/hal.dir/rule
 
 # fast build rule for target.
 hal/fast:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/build
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/build
 .PHONY : hal/fast
 
 # Convenience name for target.
 hal/CMakeFiles/hal-shared.dir/rule:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/CMakeFiles/hal-shared.dir/rule
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/CMakeFiles/hal-shared.dir/rule
 .PHONY : hal/CMakeFiles/hal-shared.dir/rule
 
 # Convenience name for target.
@@ -216,7 +216,7 @@ hal-shared: hal/CMakeFiles/hal-shared.dir/rule
 
 # fast build rule for target.
 hal-shared/fast:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/build
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/build
 .PHONY : hal-shared/fast
 
 ethernet/linux/ethernet_linux.o: ethernet/linux/ethernet_linux.c.o
@@ -224,8 +224,8 @@ ethernet/linux/ethernet_linux.o: ethernet/linux/ethernet_linux.c.o
 
 # target to build an object file
 ethernet/linux/ethernet_linux.c.o:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.o
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/ethernet/linux/ethernet_linux.c.o
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.o
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/ethernet/linux/ethernet_linux.c.o
 .PHONY : ethernet/linux/ethernet_linux.c.o
 
 ethernet/linux/ethernet_linux.i: ethernet/linux/ethernet_linux.c.i
@@ -233,8 +233,8 @@ ethernet/linux/ethernet_linux.i: ethernet/linux/ethernet_linux.c.i
 
 # target to preprocess a source file
 ethernet/linux/ethernet_linux.c.i:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.i
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/ethernet/linux/ethernet_linux.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/ethernet/linux/ethernet_linux.c.i
 .PHONY : ethernet/linux/ethernet_linux.c.i
 
 ethernet/linux/ethernet_linux.s: ethernet/linux/ethernet_linux.c.s
@@ -242,8 +242,8 @@ ethernet/linux/ethernet_linux.s: ethernet/linux/ethernet_linux.c.s
 
 # target to generate assembly for a file
 ethernet/linux/ethernet_linux.c.s:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.s
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/ethernet/linux/ethernet_linux.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/ethernet/linux/ethernet_linux.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/ethernet/linux/ethernet_linux.c.s
 .PHONY : ethernet/linux/ethernet_linux.c.s
 
 filesystem/linux/file_provider_linux.o: filesystem/linux/file_provider_linux.c.o
@@ -251,8 +251,8 @@ filesystem/linux/file_provider_linux.o: filesystem/linux/file_provider_linux.c.o
 
 # target to build an object file
 filesystem/linux/file_provider_linux.c.o:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.o
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/filesystem/linux/file_provider_linux.c.o
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.o
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/filesystem/linux/file_provider_linux.c.o
 .PHONY : filesystem/linux/file_provider_linux.c.o
 
 filesystem/linux/file_provider_linux.i: filesystem/linux/file_provider_linux.c.i
@@ -260,8 +260,8 @@ filesystem/linux/file_provider_linux.i: filesystem/linux/file_provider_linux.c.i
 
 # target to preprocess a source file
 filesystem/linux/file_provider_linux.c.i:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.i
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/filesystem/linux/file_provider_linux.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/filesystem/linux/file_provider_linux.c.i
 .PHONY : filesystem/linux/file_provider_linux.c.i
 
 filesystem/linux/file_provider_linux.s: filesystem/linux/file_provider_linux.c.s
@@ -269,8 +269,8 @@ filesystem/linux/file_provider_linux.s: filesystem/linux/file_provider_linux.c.s
 
 # target to generate assembly for a file
 filesystem/linux/file_provider_linux.c.s:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.s
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/filesystem/linux/file_provider_linux.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/filesystem/linux/file_provider_linux.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/filesystem/linux/file_provider_linux.c.s
 .PHONY : filesystem/linux/file_provider_linux.c.s
 
 memory/lib_memory.o: memory/lib_memory.c.o
@@ -278,8 +278,8 @@ memory/lib_memory.o: memory/lib_memory.c.o
 
 # target to build an object file
 memory/lib_memory.c.o:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/memory/lib_memory.c.o
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/memory/lib_memory.c.o
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/memory/lib_memory.c.o
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/memory/lib_memory.c.o
 .PHONY : memory/lib_memory.c.o
 
 memory/lib_memory.i: memory/lib_memory.c.i
@@ -287,8 +287,8 @@ memory/lib_memory.i: memory/lib_memory.c.i
 
 # target to preprocess a source file
 memory/lib_memory.c.i:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/memory/lib_memory.c.i
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/memory/lib_memory.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/memory/lib_memory.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/memory/lib_memory.c.i
 .PHONY : memory/lib_memory.c.i
 
 memory/lib_memory.s: memory/lib_memory.c.s
@@ -296,8 +296,8 @@ memory/lib_memory.s: memory/lib_memory.c.s
 
 # target to generate assembly for a file
 memory/lib_memory.c.s:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/memory/lib_memory.c.s
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/memory/lib_memory.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/memory/lib_memory.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/memory/lib_memory.c.s
 .PHONY : memory/lib_memory.c.s
 
 serial/linux/serial_port_linux.o: serial/linux/serial_port_linux.c.o
@@ -305,8 +305,8 @@ serial/linux/serial_port_linux.o: serial/linux/serial_port_linux.c.o
 
 # target to build an object file
 serial/linux/serial_port_linux.c.o:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.o
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/serial/linux/serial_port_linux.c.o
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.o
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/serial/linux/serial_port_linux.c.o
 .PHONY : serial/linux/serial_port_linux.c.o
 
 serial/linux/serial_port_linux.i: serial/linux/serial_port_linux.c.i
@@ -314,8 +314,8 @@ serial/linux/serial_port_linux.i: serial/linux/serial_port_linux.c.i
 
 # target to preprocess a source file
 serial/linux/serial_port_linux.c.i:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.i
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/serial/linux/serial_port_linux.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/serial/linux/serial_port_linux.c.i
 .PHONY : serial/linux/serial_port_linux.c.i
 
 serial/linux/serial_port_linux.s: serial/linux/serial_port_linux.c.s
@@ -323,8 +323,8 @@ serial/linux/serial_port_linux.s: serial/linux/serial_port_linux.c.s
 
 # target to generate assembly for a file
 serial/linux/serial_port_linux.c.s:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.s
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/serial/linux/serial_port_linux.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/serial/linux/serial_port_linux.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/serial/linux/serial_port_linux.c.s
 .PHONY : serial/linux/serial_port_linux.c.s
 
 socket/linux/socket_linux.o: socket/linux/socket_linux.c.o
@@ -332,8 +332,8 @@ socket/linux/socket_linux.o: socket/linux/socket_linux.c.o
 
 # target to build an object file
 socket/linux/socket_linux.c.o:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/socket/linux/socket_linux.c.o
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/socket/linux/socket_linux.c.o
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/socket/linux/socket_linux.c.o
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/socket/linux/socket_linux.c.o
 .PHONY : socket/linux/socket_linux.c.o
 
 socket/linux/socket_linux.i: socket/linux/socket_linux.c.i
@@ -341,8 +341,8 @@ socket/linux/socket_linux.i: socket/linux/socket_linux.c.i
 
 # target to preprocess a source file
 socket/linux/socket_linux.c.i:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/socket/linux/socket_linux.c.i
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/socket/linux/socket_linux.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/socket/linux/socket_linux.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/socket/linux/socket_linux.c.i
 .PHONY : socket/linux/socket_linux.c.i
 
 socket/linux/socket_linux.s: socket/linux/socket_linux.c.s
@@ -350,8 +350,8 @@ socket/linux/socket_linux.s: socket/linux/socket_linux.c.s
 
 # target to generate assembly for a file
 socket/linux/socket_linux.c.s:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/socket/linux/socket_linux.c.s
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/socket/linux/socket_linux.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/socket/linux/socket_linux.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/socket/linux/socket_linux.c.s
 .PHONY : socket/linux/socket_linux.c.s
 
 thread/linux/thread_linux.o: thread/linux/thread_linux.c.o
@@ -359,8 +359,8 @@ thread/linux/thread_linux.o: thread/linux/thread_linux.c.o
 
 # target to build an object file
 thread/linux/thread_linux.c.o:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/thread/linux/thread_linux.c.o
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/thread/linux/thread_linux.c.o
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/thread/linux/thread_linux.c.o
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/thread/linux/thread_linux.c.o
 .PHONY : thread/linux/thread_linux.c.o
 
 thread/linux/thread_linux.i: thread/linux/thread_linux.c.i
@@ -368,8 +368,8 @@ thread/linux/thread_linux.i: thread/linux/thread_linux.c.i
 
 # target to preprocess a source file
 thread/linux/thread_linux.c.i:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/thread/linux/thread_linux.c.i
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/thread/linux/thread_linux.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/thread/linux/thread_linux.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/thread/linux/thread_linux.c.i
 .PHONY : thread/linux/thread_linux.c.i
 
 thread/linux/thread_linux.s: thread/linux/thread_linux.c.s
@@ -377,8 +377,8 @@ thread/linux/thread_linux.s: thread/linux/thread_linux.c.s
 
 # target to generate assembly for a file
 thread/linux/thread_linux.c.s:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/thread/linux/thread_linux.c.s
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/thread/linux/thread_linux.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/thread/linux/thread_linux.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/thread/linux/thread_linux.c.s
 .PHONY : thread/linux/thread_linux.c.s
 
 time/unix/time.o: time/unix/time.c.o
@@ -386,8 +386,8 @@ time/unix/time.o: time/unix/time.c.o
 
 # target to build an object file
 time/unix/time.c.o:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/time/unix/time.c.o
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/time/unix/time.c.o
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/time/unix/time.c.o
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/time/unix/time.c.o
 .PHONY : time/unix/time.c.o
 
 time/unix/time.i: time/unix/time.c.i
@@ -395,8 +395,8 @@ time/unix/time.i: time/unix/time.c.i
 
 # target to preprocess a source file
 time/unix/time.c.i:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/time/unix/time.c.i
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/time/unix/time.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/time/unix/time.c.i
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/time/unix/time.c.i
 .PHONY : time/unix/time.c.i
 
 time/unix/time.s: time/unix/time.c.s
@@ -404,8 +404,8 @@ time/unix/time.s: time/unix/time.c.s
 
 # target to generate assembly for a file
 time/unix/time.c.s:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/time/unix/time.c.s
-	cd /home/dinesh/capstone_server/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/time/unix/time.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/time/unix/time.c.s
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal-shared.dir/build.make hal/CMakeFiles/hal-shared.dir/time/unix/time.c.s
 .PHONY : time/unix/time.c.s
 
 # Help Target
@@ -457,6 +457,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/dinesh/capstone_server/libiec61850/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/dinesh/cyber-physical-microgrid/libiec61850/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

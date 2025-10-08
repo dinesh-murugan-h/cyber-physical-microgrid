@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/dinesh/capstone_server/libiec61850/examples/server_example_deadband/server_example_deadband.c" "examples/server_example_deadband/CMakeFiles/server_example_deadband.dir/server_example_deadband.c.o" "gcc" "examples/server_example_deadband/CMakeFiles/server_example_deadband.dir/server_example_deadband.c.o.d"
-  "/home/dinesh/capstone_server/libiec61850/examples/server_example_deadband/static_model.c" "examples/server_example_deadband/CMakeFiles/server_example_deadband.dir/static_model.c.o" "gcc" "examples/server_example_deadband/CMakeFiles/server_example_deadband.dir/static_model.c.o.d"
+  "/home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_deadband/server_example_deadband.c" "examples/server_example_deadband/CMakeFiles/server_example_deadband.dir/server_example_deadband.c.o" "gcc" "examples/server_example_deadband/CMakeFiles/server_example_deadband.dir/server_example_deadband.c.o.d"
+  "/home/dinesh/cyber-physical-microgrid/libiec61850/examples/server_example_deadband/static_model.c" "examples/server_example_deadband/CMakeFiles/server_example_deadband.dir/static_model.c.o" "gcc" "examples/server_example_deadband/CMakeFiles/server_example_deadband.dir/static_model.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
