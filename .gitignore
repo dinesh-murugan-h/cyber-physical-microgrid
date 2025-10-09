@@ -1,0 +1,9 @@
+*.asv
+*.autosave
+*.slxc
+*.mex*
+*.mexa64
+*.mexw64
+*.mexmaci64
+*.mdl.autosave
+*.slx.autosave
