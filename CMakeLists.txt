@@ -59,8 +59,8 @@ message(STATUS "libmodbus include: ${MODBUS_INCLUDE_DIR}")
 # =========================
 set(SRC_FILES
     ${SRC_DIR}/main.cpp
-    ${SRC_DIR}/iec61850/iedconnectionhandler.cpp
-   # ${SRC_DIR}/bridge/bridge_server.cpp
+    ${SRC_DIR}/iedconnectionhandler.cpp
+    ${SRC_DIR}/modbusconnectionhandler.cpp
    # ${SRC_DIR}/modbus/modbus_server.cpp
 
     # Pre-generated static models

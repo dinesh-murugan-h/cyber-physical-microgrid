@@ -129,29 +129,29 @@ main_app/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/build
 .PHONY : main_app/fast
 
-src/iec61850/iedconnectionhandler.o: src/iec61850/iedconnectionhandler.cpp.o
-.PHONY : src/iec61850/iedconnectionhandler.o
+src/iedconnectionhandler.o: src/iedconnectionhandler.cpp.o
+.PHONY : src/iedconnectionhandler.o
 
 # target to build an object file
-src/iec61850/iedconnectionhandler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.o
-.PHONY : src/iec61850/iedconnectionhandler.cpp.o
+src/iedconnectionhandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/src/iedconnectionhandler.cpp.o
+.PHONY : src/iedconnectionhandler.cpp.o
 
-src/iec61850/iedconnectionhandler.i: src/iec61850/iedconnectionhandler.cpp.i
-.PHONY : src/iec61850/iedconnectionhandler.i
+src/iedconnectionhandler.i: src/iedconnectionhandler.cpp.i
+.PHONY : src/iedconnectionhandler.i
 
 # target to preprocess a source file
-src/iec61850/iedconnectionhandler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.i
-.PHONY : src/iec61850/iedconnectionhandler.cpp.i
+src/iedconnectionhandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/src/iedconnectionhandler.cpp.i
+.PHONY : src/iedconnectionhandler.cpp.i
 
-src/iec61850/iedconnectionhandler.s: src/iec61850/iedconnectionhandler.cpp.s
-.PHONY : src/iec61850/iedconnectionhandler.s
+src/iedconnectionhandler.s: src/iedconnectionhandler.cpp.s
+.PHONY : src/iedconnectionhandler.s
 
 # target to generate assembly for a file
-src/iec61850/iedconnectionhandler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.s
-.PHONY : src/iec61850/iedconnectionhandler.cpp.s
+src/iedconnectionhandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_app.dir/build.make CMakeFiles/main_app.dir/src/iedconnectionhandler.cpp.s
+.PHONY : src/iedconnectionhandler.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -258,9 +258,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main_app"
-	@echo "... src/iec61850/iedconnectionhandler.o"
-	@echo "... src/iec61850/iedconnectionhandler.i"
-	@echo "... src/iec61850/iedconnectionhandler.s"
+	@echo "... src/iedconnectionhandler.o"
+	@echo "... src/iedconnectionhandler.i"
+	@echo "... src/iedconnectionhandler.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

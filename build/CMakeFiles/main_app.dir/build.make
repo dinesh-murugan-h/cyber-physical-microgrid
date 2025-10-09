@@ -83,19 +83,19 @@ CMakeFiles/main_app.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main_app.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dinesh/cyber-physical-microgrid/src/main.cpp -o CMakeFiles/main_app.dir/src/main.cpp.s
 
-CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.o: CMakeFiles/main_app.dir/flags.make
-CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.o: /home/dinesh/cyber-physical-microgrid/src/iec61850/iedconnectionhandler.cpp
-CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.o: CMakeFiles/main_app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/cyber-physical-microgrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.o -MF CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.o.d -o CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.o -c /home/dinesh/cyber-physical-microgrid/src/iec61850/iedconnectionhandler.cpp
+CMakeFiles/main_app.dir/src/iedconnectionhandler.cpp.o: CMakeFiles/main_app.dir/flags.make
+CMakeFiles/main_app.dir/src/iedconnectionhandler.cpp.o: /home/dinesh/cyber-physical-microgrid/src/iedconnectionhandler.cpp
+CMakeFiles/main_app.dir/src/iedconnectionhandler.cpp.o: CMakeFiles/main_app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dinesh/cyber-physical-microgrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main_app.dir/src/iedconnectionhandler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_app.dir/src/iedconnectionhandler.cpp.o -MF CMakeFiles/main_app.dir/src/iedconnectionhandler.cpp.o.d -o CMakeFiles/main_app.dir/src/iedconnectionhandler.cpp.o -c /home/dinesh/cyber-physical-microgrid/src/iedconnectionhandler.cpp
 
-CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dinesh/cyber-physical-microgrid/src/iec61850/iedconnectionhandler.cpp > CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.i
+CMakeFiles/main_app.dir/src/iedconnectionhandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main_app.dir/src/iedconnectionhandler.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dinesh/cyber-physical-microgrid/src/iedconnectionhandler.cpp > CMakeFiles/main_app.dir/src/iedconnectionhandler.cpp.i
 
-CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dinesh/cyber-physical-microgrid/src/iec61850/iedconnectionhandler.cpp -o CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.s
+CMakeFiles/main_app.dir/src/iedconnectionhandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main_app.dir/src/iedconnectionhandler.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dinesh/cyber-physical-microgrid/src/iedconnectionhandler.cpp -o CMakeFiles/main_app.dir/src/iedconnectionhandler.cpp.s
 
 CMakeFiles/main_app.dir/src/scl/static_model_1.c.o: CMakeFiles/main_app.dir/flags.make
 CMakeFiles/main_app.dir/src/scl/static_model_1.c.o: /home/dinesh/cyber-physical-microgrid/src/scl/static_model_1.c
@@ -142,7 +142,7 @@ CMakeFiles/main_app.dir/src/scl/static_model_3.c.s: cmake_force
 # Object files for target main_app
 main_app_OBJECTS = \
 "CMakeFiles/main_app.dir/src/main.cpp.o" \
-"CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.o" \
+"CMakeFiles/main_app.dir/src/iedconnectionhandler.cpp.o" \
 "CMakeFiles/main_app.dir/src/scl/static_model_1.c.o" \
 "CMakeFiles/main_app.dir/src/scl/static_model_2.c.o" \
 "CMakeFiles/main_app.dir/src/scl/static_model_3.c.o"
@@ -151,7 +151,7 @@ main_app_OBJECTS = \
 main_app_EXTERNAL_OBJECTS =
 
 main_app: CMakeFiles/main_app.dir/src/main.cpp.o
-main_app: CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.o
+main_app: CMakeFiles/main_app.dir/src/iedconnectionhandler.cpp.o
 main_app: CMakeFiles/main_app.dir/src/scl/static_model_1.c.o
 main_app: CMakeFiles/main_app.dir/src/scl/static_model_2.c.o
 main_app: CMakeFiles/main_app.dir/src/scl/static_model_3.c.o

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.o"
-  "CMakeFiles/main_app.dir/src/iec61850/iedconnectionhandler.cpp.o.d"
+  "CMakeFiles/main_app.dir/src/iedconnectionhandler.cpp.o"
+  "CMakeFiles/main_app.dir/src/iedconnectionhandler.cpp.o.d"
   "CMakeFiles/main_app.dir/src/main.cpp.o"
   "CMakeFiles/main_app.dir/src/main.cpp.o.d"
   "CMakeFiles/main_app.dir/src/scl/static_model_1.c.o"
