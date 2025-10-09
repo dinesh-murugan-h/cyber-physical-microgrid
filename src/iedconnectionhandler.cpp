@@ -1,3 +1,4 @@
+#include <pthread.h>
 #include "iedconnectionhandler.h"
 #include <iostream>
 #include <cstdio>
@@ -17,6 +18,8 @@ CIed::~CIed()
 
 bool CIed::start()
 {
+    pthread_setname_np(pthread_self(), name_.c_str());
+
     IedServer_start(server_, port_);
     if (!IedServer_isRunning(server_)) {
         std::cerr << "IED " << name_ << " failed to start on port " << port_ << "\n";
