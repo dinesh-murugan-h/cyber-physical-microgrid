@@ -61,7 +61,7 @@ set(SRC_FILES
     ${SRC_DIR}/main.cpp
     ${SRC_DIR}/iedconnectionhandler.cpp
     ${SRC_DIR}/modbusconnectionhandler.cpp
-   # ${SRC_DIR}/modbus/modbus_server.cpp
+    ${SRC_DIR}/modbusreader.cpp
 
     # Pre-generated static models
     ${SRC_DIR}/scl/static_model_1.c

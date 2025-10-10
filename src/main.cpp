@@ -2,6 +2,7 @@
 #include "iedconnectionhandler.h"
 #include "modbusconnectionhandler.h"
 #include "hal_thread.h"
+#include "modbusreader.h"
 
 extern "C" {
 #include "static_model_1.h"
@@ -26,8 +27,15 @@ int main()
         return -1;
     }    
 
-    while (true)
-        Thread_sleep(1000);
+
+    ModbusReader m_modbusReader(modbusServer);
+    uint16_t m_value20;
+
+while (true) {
+    double voltage = m_modbusReader.readDouble(21);
+    std::cout << "Read double (regs 23–26): " << voltage << std::endl;
+    Thread_sleep(1000);
+}
 
     return 0;
 }
