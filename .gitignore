@@ -7,3 +7,8 @@
 *.mexmaci64
 *.mdl.autosave
 *.slx.autosave
+# Ignore CMake build folders
+/build/
+build/
+**/build/
+.vscode/
