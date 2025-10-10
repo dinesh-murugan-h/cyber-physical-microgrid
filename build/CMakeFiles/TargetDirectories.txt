@@ -1,3 +1,0 @@
-/home/dinesh/cyber-physical-microgrid/build/CMakeFiles/main_app.dir
-/home/dinesh/cyber-physical-microgrid/build/CMakeFiles/edit_cache.dir
-/home/dinesh/cyber-physical-microgrid/build/CMakeFiles/rebuild_cache.dir
