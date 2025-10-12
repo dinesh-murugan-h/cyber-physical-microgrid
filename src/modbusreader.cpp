@@ -1,24 +1,11 @@
 #include "modbusreader.h"
 
 ModbusReader::ModbusReader(ModbusConnectionHandler& handler)
-    : m_modbusHandler(handler)
-{
-}
+    : m_modbusHandler(handler) {}
 
-bool ModbusReader::readRegister(int regAddr, uint16_t& value)
-{
-    modbus_mapping_t* m_map = m_modbusHandler.getMapping();
-    if (!m_map) return false;
-
-    if (regAddr < 0 || regAddr >= m_map->nb_registers) {
-        std::cerr << "[ModbusReader] Invalid register: " << regAddr << "\n";
-        return false;
-    }
-
-    value = m_map->tab_registers[regAddr];
-    return true;
-}
-
+/*
+ * Internal helper to read multiple consecutive registers
+ */
 bool ModbusReader::readRegisters(int startAddr, int count, uint16_t* buffer)
 {
     modbus_mapping_t* m_map = m_modbusHandler.getMapping();
@@ -36,34 +23,68 @@ bool ModbusReader::readRegisters(int startAddr, int count, uint16_t* buffer)
 }
 
 /*
- * Read an IEEE754 double (64-bit) from 4 consecutive Modbus registers.
- * Equivalent to legacy read_double_from_registers().
+ * Generic typed read function
  */
-double ModbusReader::readDouble(int startAddr)
+bool ModbusReader::readValue(int startAddr, ModbusDataType type, void* outValue)
 {
     modbus_mapping_t* m_map = m_modbusHandler.getMapping();
-    if (!m_map) return 0.0;
+    if (!m_map || !outValue) return false;
 
-    if (startAddr < 0 || (startAddr + 3) >= m_map->nb_registers) {
-        std::cerr << "[ModbusReader] Invalid double read starting at register "
-                  << startAddr << "\n";
-        return 0.0;
+    uint16_t regs[4] = {0};
+
+    switch (type) {
+
+    case ModbusDataType::INT16: {
+        if (!readRegisters(startAddr, 1, regs)) return false;
+        int16_t val = static_cast<int16_t>(regs[0]);
+        std::memcpy(outValue, &val, sizeof(val));
+        break;
     }
 
-    uint16_t regs[4];
-    regs[0] = m_map->tab_registers[startAddr];
-    regs[1] = m_map->tab_registers[startAddr + 1];
-    regs[2] = m_map->tab_registers[startAddr + 2];
-    regs[3] = m_map->tab_registers[startAddr + 3];
+    case ModbusDataType::UINT16: {
+        if (!readRegisters(startAddr, 1, regs)) return false;
+        uint16_t val = regs[0];
+        std::memcpy(outValue, &val, sizeof(val));
+        break;
+    }
 
-    // Combine 4 x 16-bit registers into 64-bit integer (big-endian)
-    uint64_t raw = ((uint64_t)regs[0] << 48) |
-                   ((uint64_t)regs[1] << 32) |
-                   ((uint64_t)regs[2] << 16) |
-                   (uint64_t)regs[3];
+    case ModbusDataType::INT32: {
+        if (!readRegisters(startAddr, 2, regs)) return false;
+        int32_t val = ((int32_t)regs[0] << 16) | (int32_t)regs[1];
+        std::memcpy(outValue, &val, sizeof(val));
+        break;
+    }
 
-    double result;
-    std::memcpy(&result, &raw, sizeof(double));
+    case ModbusDataType::UINT32: {
+        if (!readRegisters(startAddr, 2, regs)) return false;
+        uint32_t val = ((uint32_t)regs[0] << 16) | (uint32_t)regs[1];
+        std::memcpy(outValue, &val, sizeof(val));
+        break;
+    }
 
-    return result;
+    case ModbusDataType::FLOAT: {
+        if (!readRegisters(startAddr, 2, regs)) return false;
+        float val = modbus_get_float_cdab(regs);  // CDAB = standard float order
+        std::memcpy(outValue, &val, sizeof(val));
+        break;
+    }
+
+    case ModbusDataType::DOUBLE: {
+        if (!readRegisters(startAddr, 4, regs)) return false;
+        uint64_t raw = ((uint64_t)regs[0] << 48) |
+                       ((uint64_t)regs[1] << 32) |
+                       ((uint64_t)regs[2] << 16) |
+                       (uint64_t)regs[3];
+        double val;
+        std::memcpy(&val, &raw, sizeof(val));
+        std::memcpy(outValue, &val, sizeof(val));
+        break;
+    }
+
+    default:
+        std::cerr << "[ModbusReader] Unsupported data type.\n";
+        return false;
+    }
+
+    return true;
 }

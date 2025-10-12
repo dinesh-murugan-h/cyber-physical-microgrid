@@ -4,26 +4,34 @@
 #include <cstdint>
 #include <iostream>
 #include <cstring>
+#include <modbus.h>   // for modbus_get_* helpers
+
+/*
+ * Supported Modbus Data Types
+ */
+enum class ModbusDataType {
+    INT16,
+    UINT16,
+    INT32,
+    UINT32,
+    FLOAT,     // single precision (4 bytes)
+    DOUBLE     // double precision (8 bytes)
+};
 
 /*
  * ModbusReader
  * ------------
- * Provides methods to read data (integers and doubles)
- * directly from the Modbus mapping of the running server.
+ * Provides generic reading of typed data from Modbus mapping.
  */
 class ModbusReader {
 public:
     explicit ModbusReader(ModbusConnectionHandler& handler);
 
-    // Read one 16-bit register
-    bool readRegister(int regAddr, uint16_t& value);
-
-    // Read multiple consecutive registers
-    bool readRegisters(int startAddr, int count, uint16_t* buffer);
-
-    // Read an IEEE754 double (64-bit) from 4 consecutive registers
-    double readDouble(int startAddr);
+    // Generic read function: reads based on specified type
+    bool readValue(int startAddr, ModbusDataType type, void* outValue);
 
 private:
+    bool readRegisters(int startAddr, int count, uint16_t* buffer);
+
     ModbusConnectionHandler& m_modbusHandler;
 };

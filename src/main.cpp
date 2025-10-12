@@ -29,13 +29,31 @@ int main()
 
 
     ModbusReader m_modbusReader(modbusServer);
-    uint16_t m_value20;
+   
+   // 4. Main simulation loop
+    while (true) {
+        // Example 1: Read register 21 as INT16
+        int16_t reg21_val = 0;
+        if (m_modbusReader.readValue(21, ModbusDataType::INT16, &reg21_val)) {
+            std::cout << "[MODBUS] Register 21 (INT16) = " << reg21_val << std::endl;
+        } else {
+            std::cerr << "[MODBUS] Failed to read register 21." << std::endl;
+        }
 
-while (true) {
-    double voltage = m_modbusReader.readDouble(21);
-    std::cout << "Read double (regs 23–26): " << voltage << std::endl;
-    Thread_sleep(1000);
-}
+        // Example 2: Optionally read another value, e.g. FLOAT from reg 30
+        float reg30_float = 0.0f;
+        if (m_modbusReader.readValue(30, ModbusDataType::FLOAT, &reg30_float)) {
+            std::cout << "[MODBUS] Register 30 (FLOAT) = " << reg30_float << std::endl;
+        }
+
+        // Example 3: Update Modbus mapping manually if needed
+        modbus_mapping_t* map = modbusServer.getMapping();
+        if (map) {
+            map->tab_registers[50] = (uint16_t)(reg21_val + 10);  // just an example
+        }
+
+        Thread_sleep(1000); // sleep 1s between reads
+    }
 
     return 0;
 }
