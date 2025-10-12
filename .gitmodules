@@ -1,3 +1,4 @@
 [submodule "MATLAB"]
 	path = MATLAB
-	url = https://github.com/dinesh-murugan-h/cyber-physical-microgrid-matlab.git
+	url = git@github.com:dinesh-murugan-h/cyber-physical-microgrid-matlab.git
+	ignore = all
