@@ -1,8 +1,9 @@
 #pragma once
+
 #include <string>
+
 extern "C" {
-  #include <iec61850_server.h>
-  #include <string>
+#include <iec61850_server.h>
 }
 
 class CIed {
@@ -12,6 +13,10 @@ public:
 
   bool start();
   void stop();
+
+  IedServer getServer() const {
+    return server_;
+  }
 
 private:
   static void connectionHandler(IedServer self,
