@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/server_example_basic_io.dir/link.d"
   "CMakeFiles/server_example_basic_io.dir/server_example_basic_io.c.o"
   "CMakeFiles/server_example_basic_io.dir/server_example_basic_io.c.o.d"
   "CMakeFiles/server_example_basic_io.dir/static_model.c.o"

@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/sv_subscriber_example.dir/link.d"
   "CMakeFiles/sv_subscriber_example.dir/sv_subscriber_example.c.o"
   "CMakeFiles/sv_subscriber_example.dir/sv_subscriber_example.c.o.d"
   "sv_subscriber_example"

@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/iec61850_client_example_ClientGooseControlAsync.dir/link.d"
   "CMakeFiles/iec61850_client_example_ClientGooseControlAsync.dir/client_example_ClientGooseControlAsync.c.o"
   "CMakeFiles/iec61850_client_example_ClientGooseControlAsync.dir/client_example_ClientGooseControlAsync.c.o.d"
   "iec61850_client_example_ClientGooseControlAsync"

@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/server_example_deadband.dir/link.d"
   "CMakeFiles/server_example_deadband.dir/server_example_deadband.c.o"
   "CMakeFiles/server_example_deadband.dir/server_example_deadband.c.o.d"
   "CMakeFiles/server_example_deadband.dir/static_model.c.o"

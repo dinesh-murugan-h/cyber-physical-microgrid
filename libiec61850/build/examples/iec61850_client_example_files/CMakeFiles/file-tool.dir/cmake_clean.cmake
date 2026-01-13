@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/file-tool.dir/link.d"
   "CMakeFiles/file-tool.dir/file-tool.c.o"
   "CMakeFiles/file-tool.dir/file-tool.c.o.d"
   "file-tool"

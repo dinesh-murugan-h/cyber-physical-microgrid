@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   ".1.6.1"
+  "CMakeFiles/iec61850-shared.dir/link.d"
   "CMakeFiles/iec61850-shared.dir/common/buffer_chain.c.o"
   "CMakeFiles/iec61850-shared.dir/common/buffer_chain.c.o.d"
   "CMakeFiles/iec61850-shared.dir/common/byte_buffer.c.o"

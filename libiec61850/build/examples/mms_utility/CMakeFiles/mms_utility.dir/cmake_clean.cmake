@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/mms_utility.dir/link.d"
   "CMakeFiles/mms_utility.dir/mms_utility.c.o"
   "CMakeFiles/mms_utility.dir/mms_utility.c.o.d"
   "mms_utility"

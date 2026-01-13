@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/iec61850_client_file_async.dir/link.d"
   "CMakeFiles/iec61850_client_file_async.dir/client_example_async.c.o"
   "CMakeFiles/iec61850_client_file_async.dir/client_example_async.c.o.d"
   "iec61850_client_file_async"

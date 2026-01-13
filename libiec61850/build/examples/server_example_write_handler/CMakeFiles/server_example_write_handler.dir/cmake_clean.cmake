@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/server_example_write_handler.dir/link.d"
   "CMakeFiles/server_example_write_handler.dir/server_example_write_handler.c.o"
   "CMakeFiles/server_example_write_handler.dir/server_example_write_handler.c.o.d"
   "CMakeFiles/server_example_write_handler.dir/static_model.c.o"

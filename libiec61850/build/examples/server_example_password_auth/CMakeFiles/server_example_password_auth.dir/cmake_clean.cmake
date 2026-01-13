@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/server_example_password_auth.dir/link.d"
   "CMakeFiles/server_example_password_auth.dir/server_example_password_auth.c.o"
   "CMakeFiles/server_example_password_auth.dir/server_example_password_auth.c.o.d"
   "CMakeFiles/server_example_password_auth.dir/static_model.c.o"

@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/iec61850_client_example_log.dir/link.d"
   "CMakeFiles/iec61850_client_example_log.dir/client_example_log.c.o"
   "CMakeFiles/iec61850_client_example_log.dir/client_example_log.c.o.d"
   "iec61850_client_example_log"

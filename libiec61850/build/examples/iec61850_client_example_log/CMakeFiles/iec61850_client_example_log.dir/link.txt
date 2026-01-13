@@ -1,1 +1,1 @@
-/usr/bin/cc  -Wredundant-decls -Wundef CMakeFiles/iec61850_client_example_log.dir/client_example_log.c.o -o iec61850_client_example_log  ../../src/libiec61850.a ../../hal/libhal.a -lpthread -lm -lrt 
+/usr/bin/cc  -Wredundant-decls -Wundef -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/iec61850_client_example_log.dir/link.d CMakeFiles/iec61850_client_example_log.dir/client_example_log.c.o -o iec61850_client_example_log  ../../src/libiec61850.a ../../hal/libhal.a -lpthread -lm -lrt

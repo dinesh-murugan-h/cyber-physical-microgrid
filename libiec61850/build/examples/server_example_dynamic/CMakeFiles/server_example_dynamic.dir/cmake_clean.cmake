@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/server_example_dynamic.dir/link.d"
   "CMakeFiles/server_example_dynamic.dir/server_example_dynamic.c.o"
   "CMakeFiles/server_example_dynamic.dir/server_example_dynamic.c.o.d"
   "server_example_dynamic"

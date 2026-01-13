@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/goose_publisher_example.dir/link.d"
   "CMakeFiles/goose_publisher_example.dir/goose_publisher_example.c.o"
   "CMakeFiles/goose_publisher_example.dir/goose_publisher_example.c.o.d"
   "goose_publisher_example"

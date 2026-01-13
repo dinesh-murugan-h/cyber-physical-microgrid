@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/sv_publisher_example.dir/link.d"
   "CMakeFiles/sv_publisher_example.dir/sv_publisher_example.c.o"
   "CMakeFiles/sv_publisher_example.dir/sv_publisher_example.c.o.d"
   "sv_publisher_example"

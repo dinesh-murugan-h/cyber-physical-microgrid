@@ -1,1 +1,1 @@
-/usr/bin/cc  -Wredundant-decls -Wundef "CMakeFiles/file-tool.dir/file-tool.c.o" -o file-tool  ../../src/libiec61850.a ../../hal/libhal.a -lpthread -lm -lrt 
+/usr/bin/cc  -Wredundant-decls -Wundef -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/file-tool.dir/link.d "CMakeFiles/file-tool.dir/file-tool.c.o" -o file-tool  ../../src/libiec61850.a ../../hal/libhal.a -lpthread -lm -lrt
