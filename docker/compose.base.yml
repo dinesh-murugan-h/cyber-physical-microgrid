@@ -1,0 +1,5 @@
+services: {}
+
+networks:
+  mg_macvlan:
+    external: true

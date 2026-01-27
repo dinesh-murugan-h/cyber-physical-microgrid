@@ -159,8 +159,6 @@ static inline int point_raw_in_range_i64(const pointdef_t* p, int64_t raw)
     return (raw >= p->raw_min) && (raw <= p->raw_max);
 }
 
-static inline const devmap_t* get_devmap(int unit_id);
-
 static inline const pointdef_t* find_point_by_wire(const devmap_t* dev, area_t area, uint16_t wire_addr0)
 {
     if (!dev) return NULL;
@@ -199,18 +197,20 @@ static const pointdef_t PCC1_POINTS[] = {
     { AREA_HR,    21,  REG_RW, ENC_DOUBLE, "PCC1.phiMicro", "rad",   1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
     { AREA_HR,    25,  REG_RW, ENC_DOUBLE, "PCC1.PGrid", "rad",   1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
     { AREA_HR,    29,  REG_RW, ENC_DOUBLE, "PCC1.QGrid", "kVAr",   1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
-    { AREA_COIL,  34,  REG_RW, ENC_BOOL, "PCC1.gridEnable", "",   1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL }
+    { AREA_COIL,  34,  REG_RW, ENC_BOOL, "PCC1.gridEnable", "",   1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
+    { AREA_COIL,  38,  REG_RW, ENC_BOOL, "PCC1.synchStart", "",   1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL }
 };
 
-static const devmap_t DEVICES[] = {
-    { 1, "PCC1", PCC1_POINTS, ARRAY_LEN(PCC1_POINTS) },
+
+static const devmap_t DEVICE = {
+    .unit_id = 1,
+    .device_name = "PCC1",
+    .points = PCC1_POINTS,
+    .point_count = ARRAY_LEN(PCC1_POINTS),
 };
 
-static inline const devmap_t* get_devmap(int unit_id)
+static inline const devmap_t* get_devmap(void)
 {
-    for (int i = 0; i < ARRAY_LEN(DEVICES); i++) {
-        if (DEVICES[i].unit_id == unit_id)
-            return &DEVICES[i];
-    }
-    return NULL;
+    return &DEVICE;
 }
+

@@ -1,0 +1,27 @@
+services:
+  pcc1_device:
+    container_name: pcc1_device
+    build:
+      context: ..
+      dockerfile: docker/devices/pcc1/Dockerfile
+    networks:
+      mg_macvlan:
+        ipv4_address: 192.168.1.201
+
+  gen1_device:
+    container_name: gen1_device
+    build:
+      context: ..
+      dockerfile: docker/devices/gen1/Dockerfile
+    networks:
+      mg_macvlan:
+        ipv4_address: 192.168.1.202
+
+  gen2_device:
+    container_name: gen2_device
+    build:
+      context: ..
+      dockerfile: docker/devices/gen2/Dockerfile
+    networks:
+      mg_macvlan:
+        ipv4_address: 192.168.1.203

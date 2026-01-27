@@ -1,64 +1,67 @@
-# Makefile (repo root)
+# Repo root Makefile
 #
 # PURPOSE
-#   Short commands for building and running your Modbus server stack.
+#   Simple control panel for microgrid devices.
 #
-# WHY docker-compose (hyphen) not "docker compose" (space)?
-#   On Raspberry Pi OS you installed docker-compose as a standalone binary.
-#   The V2 plugin command "docker compose" may not exist.
+# NAMING RULE
+#   Each device is ONE compose service named:
+#     <device>_device
+#
+# EXAMPLES
+#   make build              # build ALL devices
+#   make build pcc1         # build only pcc1_device
+#   make build pcc1 gen1    # build pcc1_device + gen1_device
+#
+#   make up                 # start ALL devices
+#   make up pcc1
+#   make up pcc1 gen1
+#
+#   make stop pcc1
+#   make logs gen1
 
-COMPOSE = docker-compose -f docker/mg_pair_c/docker-compose.modbus.yml
+COMPOSE_FILES = -f docker/compose.base.yml -f docker/compose.devices.yml
+DC = docker-compose $(COMPOSE_FILES)
 
-# -------------------------
-# Build (rebuild image after C code / regmap.h changes)
-# -------------------------
+# Words the user typed after "make". Example: "build pcc1 gen1"
+GOALS := $(MAKECMDGOALS)
+
+# The first word is the command (build/up/stop/...). The rest are device names.
+CMD   := $(firstword $(GOALS))
+DEVS  := $(wordlist 2,$(words $(GOALS)),$(GOALS))
+
+# Convert device names -> compose service names (<dev>_device)
+SERVICES := $(foreach d,$(DEVS),$(d)_device)
+
+.PHONY: build up stop down restart logs ps clean config $(DEVS)
+
+# Dummy targets so "make up pcc1 gen1" won't error on unknown goals
+$(DEVS):
+	@:
+
+config:
+	$(DC) config
+
 build:
-	$(COMPOSE) build
+	$(DC) build $(SERVICES)
 
-# -------------------------
-# Run servers in background (-d detached)
-# -------------------------
-run:
-	$(COMPOSE) up -d
+up:
+	$(DC) up -d $(SERVICES)
 
-# -------------------------
-# Stop servers but keep containers (fast restart)
-# -------------------------
 stop:
-	$(COMPOSE) stop
+	$(DC) stop $(SERVICES)
 
-# -------------------------
-# Stop + remove containers (clean slate)
-# -------------------------
 down:
-	$(COMPOSE) down
+	$(DC) down
 
-# -------------------------
-# Follow logs for ALL services
-# -------------------------
-logs:
-	$(COMPOSE) logs -f
-
-# -------------------------
-# Follow logs for ONE specific service (OPTION A)
-#
-# Usage examples:
-#   make logs-dev SERVICE=dev1_modbus
-#   make logs-dev SERVICE=dev2_modbus
-#   make logs-dev SERVICE=dev3_modbus
-# -------------------------
-logs-dev:
-	$(COMPOSE) logs -f $(SERVICE)
-
-# -------------------------
-# Clean restart (remove containers, then start again)
-# -------------------------
 restart:
-	$(COMPOSE) down
-	$(COMPOSE) up -d
+	$(DC) down
+	$(DC) up -d $(SERVICES)
 
-# -------------------------
-# Convenience: show running containers in this stack
-# -------------------------
+logs:
+	$(DC) logs -f $(SERVICES)
+
 ps:
-	$(COMPOSE) ps
+	$(DC) ps
+
+clean:
+	$(DC) down --remove-orphans
