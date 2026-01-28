@@ -1,4 +1,4 @@
-// docker/devices/gen2/modbus/printmap.h
+// docker/devices/PV/modbus/printmap.h
 #pragma once
 
 #include "process_image.h"

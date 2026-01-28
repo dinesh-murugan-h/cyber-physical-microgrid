@@ -25,3 +25,12 @@ services:
     networks:
       mg_macvlan:
         ipv4_address: 192.168.1.203
+
+  pv_device:
+    container_name: pv_device
+    build:
+      context: ..
+      dockerfile: docker/devices/pv/Dockerfile
+    networks:
+      mg_macvlan:
+        ipv4_address: 192.168.1.204

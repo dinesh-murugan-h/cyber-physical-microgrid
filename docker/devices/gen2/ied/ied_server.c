@@ -1,4 +1,4 @@
-// docker/devices/gen1/ied/ied_server.c
+// docker/devices/gen2/ied/ied_server.c
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -36,11 +36,13 @@ static void iec_print_state(IedServer srv)
         const char* name;
         DataAttribute* mag_f;
     } anin[] = {
-        { "GGIO1.AnIn1.mag.f (P_gen1)",      IEDMODEL_GEN1LD0_GGIO1_AnIn1_mag_f },
-        { "GGIO1.AnIn2.mag.f (P_gen1_pu)",   IEDMODEL_GEN1LD0_GGIO1_AnIn2_mag_f },
-        { "GGIO1.AnIn3.mag.f (V_gen1_pu)",   IEDMODEL_GEN1LD0_GGIO1_AnIn3_mag_f },
-        { "GGIO1.AnIn4.mag.f (Q_gen1_pu)",   IEDMODEL_GEN1LD0_GGIO1_AnIn4_mag_f },
-        { "GGIO1.AnIn5.mag.f (freq_pu)",     IEDMODEL_GEN1LD0_GGIO1_AnIn5_mag_f },
+        { "GGIO1.AnIn1.mag.f (P_gen2)",      IEDMODEL_GEN2LD0_GGIO1_AnIn1_mag_f },
+        { "GGIO1.AnIn2.mag.f (P_gen2_pu)",   IEDMODEL_GEN2LD0_GGIO1_AnIn2_mag_f },
+        { "GGIO1.AnIn3.mag.f (V_gen2_pu)",   IEDMODEL_GEN2LD0_GGIO1_AnIn3_mag_f },
+        { "GGIO1.AnIn4.mag.f (Q_gen2_pu)",   IEDMODEL_GEN2LD0_GGIO1_AnIn4_mag_f },
+        { "GGIO1.AnIn5.mag.f (freq_pu)",     IEDMODEL_GEN2LD0_GGIO1_AnIn5_mag_f },
+        { "GGIO1.AnIn6.mag.f (DroopPG2)",     IEDMODEL_GEN2LD0_GGIO1_AnIn6_mag_f },
+        { "GGIO1.AnIn7.mag.f (DroopQG2)",     IEDMODEL_GEN2LD0_GGIO1_AnIn7_mag_f },
     };
 
     for (unsigned i = 0; i < (unsigned)(sizeof(anin)/sizeof(anin[0])); i++) {
@@ -49,30 +51,30 @@ static void iec_print_state(IedServer srv)
     }
 
     /* ---- SP: DO1..DO4.setMag.f ---- */
-    for (int i = 0; i < GEN1_SETPOINT_MAP_COUNT; i++) {
-        if (!GEN1_SETPOINT_MAP[i].mag_f) continue;
-        float v = IedServer_getFloatAttributeValue(srv, GEN1_SETPOINT_MAP[i].mag_f);
+    for (int i = 0; i < GEN2_SETPOINT_MAP_COUNT; i++) {
+        if (!GEN2_SETPOINT_MAP[i].mag_f) continue;
+        float v = IedServer_getFloatAttributeValue(srv, GEN2_SETPOINT_MAP[i].mag_f);
         printf("[SP] %-28s = %.6f  (-> %s)\n",
-               (GEN1_SETPOINT_MAP[i].modbus_name ? GEN1_SETPOINT_MAP[i].modbus_name : "setpoint"),
+               (GEN2_SETPOINT_MAP[i].modbus_name ? GEN2_SETPOINT_MAP[i].modbus_name : "setpoint"),
                (double)v,
-               GEN1_SETPOINT_MAP[i].modbus_name ? GEN1_SETPOINT_MAP[i].modbus_name : "(null)");
+               GEN2_SETPOINT_MAP[i].modbus_name ? GEN2_SETPOINT_MAP[i].modbus_name : "(null)");
     }
 
-    /* ---- CO status: CBG1.stVal ---- */
-    if (GEN1_CBG1_STVAL) {
-        MmsValue* mv = IedServer_getAttributeValue(srv, GEN1_CBG1_STVAL);
+    /* ---- CO status: CBG2.stVal ---- */
+    if (GEN2_CBG2_STVAL) {
+        MmsValue* mv = IedServer_getAttributeValue(srv, GEN2_CBG2_STVAL);
         if (mv && MmsValue_getType(mv) == MMS_BOOLEAN) {
             bool b = MmsValue_getBoolean(mv);
-            printf("[CO] GGIO1.SPCSO1.stVal (CBG1) = %d\n", b ? 1 : 0);
+            printf("[CO] GGIO1.SPCSO1.stVal (CBG2) = %d\n", b ? 1 : 0);
         } else if (mv) {
-            printf("[CO] GGIO1.SPCSO1.stVal (CBG1) type=%d\n", (int)MmsValue_getType(mv));
+            printf("[CO] GGIO1.SPCSO1.stVal (CBG2) type=%d\n", (int)MmsValue_getType(mv));
         } else {
-            printf("[CO] GGIO1.SPCSO1.stVal (CBG1) = (null)\n");
+            printf("[CO] GGIO1.SPCSO1.stVal (CBG2) = (null)\n");
         }
     }
 
-    if (GEN1_CBG1_CTLMODEL) {
-        int32_t cm = IedServer_getInt32AttributeValue(srv, GEN1_CBG1_CTLMODEL);
+    if (GEN2_CBG2_CTLMODEL) {
+        int32_t cm = IedServer_getInt32AttributeValue(srv, GEN2_CBG2_CTLMODEL);
         printf("[CF] GGIO1.SPCSO1.ctlModel = %d\n", (int)cm);
     }
 
@@ -107,9 +109,9 @@ static void connectionHandler(IedServer self, ClientConnection connection, bool 
         printf("[IEC] Connection closed (%s)\n", ip ? ip : "unknown");
 }
 
-/* Control handler: CBG1 (SPCS01) -> Modbus coil */
+/* Control handler: CBG2 (SPCS01) -> Modbus coil */
 static ControlHandlerResult
-cbg1_control_handler(ControlAction action, void* parameter, MmsValue* value, bool test)
+cbg2_control_handler(ControlAction action, void* parameter, MmsValue* value, bool test)
 {
     (void) action;
 
@@ -119,12 +121,12 @@ cbg1_control_handler(ControlAction action, void* parameter, MmsValue* value, boo
         return CONTROL_RESULT_FAILED;
 
     if (test) {
-        printf("[IEC][CTL] CBG1 TEST -> rejected\n");
+        printf("[IEC][CTL] CBG2 TEST -> rejected\n");
         return CONTROL_RESULT_FAILED;
     }
 
     if (!value || MmsValue_getType(value) != MMS_BOOLEAN) {
-        printf("[IEC][CTL] CBG1 invalid type (expect BOOLEAN)\n");
+        printf("[IEC][CTL] CBG2 invalid type (expect BOOLEAN)\n");
         return CONTROL_RESULT_FAILED;
     }
 
@@ -132,23 +134,23 @@ cbg1_control_handler(ControlAction action, void* parameter, MmsValue* value, boo
     int coil01 = on ? 1 : 0;
 
     pi_lock(ctx->pi);
-    int rc = write_coil01(ctx->pi, GEN1_CBG1_COIL_NAME, coil01);
+    int rc = write_coil01(ctx->pi, GEN2_CBG2_COIL_NAME, coil01);
     pi_unlock(ctx->pi);
 
     if (rc != 0) {
-        printf("[IEC][CTL] write_coil01(%s) failed rc=%d\n", GEN1_CBG1_COIL_NAME, rc);
+        printf("[IEC][CTL] write_coil01(%s) failed rc=%d\n", GEN2_CBG2_COIL_NAME, rc);
         return CONTROL_RESULT_FAILED;
     }
 
     uint64_t ts = Hal_getTimeInMs();
 
-    if (GEN1_CBG1_T)
-        IedServer_updateUTCTimeAttributeValue(ctx->srv, GEN1_CBG1_T, ts);
+    if (GEN2_CBG2_T)
+        IedServer_updateUTCTimeAttributeValue(ctx->srv, GEN2_CBG2_T, ts);
 
-    if (GEN1_CBG1_STVAL)
-        IedServer_updateAttributeValue(ctx->srv, GEN1_CBG1_STVAL, value);
+    if (GEN2_CBG2_STVAL)
+        IedServer_updateAttributeValue(ctx->srv, GEN2_CBG2_STVAL, value);
 
-    printf("[IEC][CTL] CBG1 SUCCESS: coil=%d\n", coil01);
+    printf("[IEC][CTL] CBG2 SUCCESS: coil=%d\n", coil01);
 
     return CONTROL_RESULT_OK;
 }
@@ -157,32 +159,32 @@ cbg1_control_handler(ControlAction action, void* parameter, MmsValue* value, boo
 void iec_update_setpoints_to_modbus(IedServer srv, process_image_t* pi)
 {
     static int init = 0;
-    static float last[GEN1_SETPOINT_MAP_COUNT];
+    static float last[GEN2_SETPOINT_MAP_COUNT];
 
     if (!srv || !pi) return;
 
     if (!init) {
-        for (int i = 0; i < GEN1_SETPOINT_MAP_COUNT; i++)
+        for (int i = 0; i < GEN2_SETPOINT_MAP_COUNT; i++)
             last[i] = NAN;
         init = 1;
     }
 
-    for (int i = 0; i < GEN1_SETPOINT_MAP_COUNT; i++) {
-        DataAttribute* da = GEN1_SETPOINT_MAP[i].mag_f;
+    for (int i = 0; i < GEN2_SETPOINT_MAP_COUNT; i++) {
+        DataAttribute* da = GEN2_SETPOINT_MAP[i].mag_f;
         if (!da) continue;
 
         float v = IedServer_getFloatAttributeValue(srv, da);
 
-        if (isnan(last[i]) || fabsf(v - last[i]) > GEN1_SETPOINT_MAP[i].deadband) {
+        if (isnan(last[i]) || fabsf(v - last[i]) > GEN2_SETPOINT_MAP[i].deadband) {
 
             pi_lock(pi);
-            int rc = write_point_double(pi, GEN1_SETPOINT_MAP[i].modbus_name, (double)v);
+            int rc = write_point_double(pi, GEN2_SETPOINT_MAP[i].modbus_name, (double)v);
             pi_unlock(pi);
 
             if (rc != 0)
-                printf("[SP] write_point_double(%s) rc=%d\n", GEN1_SETPOINT_MAP[i].modbus_name, rc);
+                printf("[SP] write_point_double(%s) rc=%d\n", GEN2_SETPOINT_MAP[i].modbus_name, rc);
             else
-                printf("[SP] %s = %.6f\n", GEN1_SETPOINT_MAP[i].modbus_name, v);
+                printf("[SP] %s = %.6f\n", GEN2_SETPOINT_MAP[i].modbus_name, v);
 
             if (rc == 0) last[i] = v;
 
@@ -196,8 +198,8 @@ void iec_update_from_modbus(IedServer srv, process_image_t* pi)
     if (!srv || !pi)
         return;
 
-    for (int i = 0; i < GEN1_FLOAT_MAP_COUNT; i++) {
-        const MbToIecFloatMap* m = &GEN1_FLOAT_MAP[i];
+    for (int i = 0; i < GEN2_FLOAT_MAP_COUNT; i++) {
+        const MbToIecFloatMap* m = &GEN2_FLOAT_MAP[i];
 
         double v = 0.0;
         int rc;
@@ -227,7 +229,7 @@ IedServer iec_server_start(process_image_t* pi)
 {
     IedServer srv = IedServer_create(&iedModel);
 
-    IedServer_setServerIdentity(srv, "GEN1", "gen1_device", "1.0");
+    IedServer_setServerIdentity(srv, "GEN2", "gen2_device", "1.0");
     IedServer_setConnectionIndicationHandler(
         srv,
         (IedConnectionIndicationHandler) connectionHandler,
@@ -240,35 +242,35 @@ IedServer iec_server_start(process_image_t* pi)
     /* Allow SP writes so client can write DO1..DO4 */
     IedServer_setWriteAccessPolicy(srv, IEC61850_FC_SP, ACCESS_POLICY_ALLOW);
 
-    /* ctlModel for CBG1 */
-    if (GEN1_CBG1_CTLMODEL) {
-        IedServer_updateInt32AttributeValue(srv, GEN1_CBG1_CTLMODEL, 1);
+    /* ctlModel for CBG2 */
+    if (GEN2_CBG2_CTLMODEL) {
+        IedServer_updateInt32AttributeValue(srv, GEN2_CBG2_CTLMODEL, 1);
         printf("[IEC] GGIO1.SPCSO1.ctlModel set to 1\n");
     }
 
     g_ctl.srv = srv;
     g_ctl.pi  = pi;
 
-    /* Install control handler for CBG1 */
-    if (GEN1_CBG1_DO) {
+    /* Install control handler for CBG2 */
+    if (GEN2_CBG2_DO) {
         IedServer_setControlHandler(
             srv,
-            GEN1_CBG1_DO,
-            (ControlHandler) cbg1_control_handler,
+            GEN2_CBG2_DO,
+            (ControlHandler) cbg2_control_handler,
             (void*) &g_ctl
         );
-        printf("[IEC] Control handler installed for GGIO1.SPCSO1 (CBG1)\n");
+        printf("[IEC] Control handler installed for GGIO1.SPCSO1 (CBG2)\n");
     }
 
     /* Init IEC setpoints from Modbus (optional) */
-    for (int i = 0; i < GEN1_SETPOINT_MAP_COUNT; i++) {
+    for (int i = 0; i < GEN2_SETPOINT_MAP_COUNT; i++) {
         double v = 0.0;
         pi_lock(pi);
-        int rc = read_point_double(pi, GEN1_SETPOINT_MAP[i].modbus_name, &v);
+        int rc = read_point_double(pi, GEN2_SETPOINT_MAP[i].modbus_name, &v);
         pi_unlock(pi);
 
-        if (rc == 0 && GEN1_SETPOINT_MAP[i].mag_f) {
-            IedServer_updateFloatAttributeValue(srv, GEN1_SETPOINT_MAP[i].mag_f, (float)v);
+        if (rc == 0 && GEN2_SETPOINT_MAP[i].mag_f) {
+            IedServer_updateFloatAttributeValue(srv, GEN2_SETPOINT_MAP[i].mag_f, (float)v);
         }
     }
 

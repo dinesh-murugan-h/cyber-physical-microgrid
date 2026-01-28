@@ -18,7 +18,9 @@ IGNORE_DIRS = {
     "build",
     "libiec61850",
     "libmodbus",
-    "pcc1"
+    "pcc1",
+    "gen1",
+    "gen2"
 }
 # ==========================
 

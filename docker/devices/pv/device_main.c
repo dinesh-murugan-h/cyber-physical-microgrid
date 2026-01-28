@@ -1,4 +1,4 @@
-// docker/devices/gen2/device_main.c
+// docker/devices/PV/device_main.c
 #include <stdio.h>
 #include <signal.h>
 #include <unistd.h>

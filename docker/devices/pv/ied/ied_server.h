@@ -1,4 +1,4 @@
-// docker/devices/gen2/ied/ied_server.h
+// docker/devices/PV/ied/ied_server.h
 #pragma once
 
 #include "iec61850_server.h"

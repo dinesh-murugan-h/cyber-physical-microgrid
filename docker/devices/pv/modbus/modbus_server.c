@@ -1,4 +1,4 @@
-// docker/devices/gen2/modbus/modbus_server.c
+// docker/devices/pv/modbus/modbus_server.c
 
 #include <modbus/modbus.h>
 #include <stdio.h>

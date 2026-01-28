@@ -172,7 +172,7 @@ static inline const pointdef_t* find_point_by_wire(const devmap_t* dev, area_t a
 }
 
 /* =========================================================
-   DEVICE 1 (unit_id=1): GEN2
+   DEVICE 1 (unit_id=1): PV
    ========================================================= */
 
 /*
@@ -187,26 +187,25 @@ static inline const pointdef_t* find_point_by_wire(const devmap_t* dev, area_t a
   until it matches. (printmap will print raw words to help.)
 */
 
-static const pointdef_t GEN2_POINTS[] = {
+static const pointdef_t PV_POINTS[] = {
     /* area      addr acc    enc         name              unit  scale  wo2       wo4         byte_swap  raw_min         raw_max         init */
-    { AREA_HR,    1,  REG_RW, ENC_DOUBLE, "GEN2.P_gen2",  "V",  1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
-    { AREA_HR,    5,  REG_RW, ENC_DOUBLE, "GEN2.P_gen2_pu",  "V",  1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
-    { AREA_HR,    9,  REG_RW, ENC_DOUBLE, "GEN2.V_gen2_pu",  "A",    1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
-    { AREA_HR,    13,  REG_RW, ENC_DOUBLE, "GEN2.Q_gen2_pu", "A",   1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
-    { AREA_HR,    17,  REG_RW, ENC_DOUBLE, "GEN2.freq_gen2_pu", "rad",   1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
-    { AREA_HR,    21,  REG_RW, ENC_DOUBLE, "GEN2.PrefG2", "rad",   1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
-    { AREA_HR,    25,  REG_RW, ENC_DOUBLE, "GEN2.DroopPG2", "rad",   1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
-    { AREA_HR,    29,  REG_RW, ENC_DOUBLE, "GEN2.QrefG2", "kVAr",   1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
-    { AREA_HR,  34,  REG_RW, ENC_DOUBLE, "GEN2.DroopQG2", "",   1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
-    { AREA_COIL,  38,  REG_RW, ENC_BOOL, "GEN2.CBG2", "",   1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL }
+    { AREA_HR,    1,  REG_RW, ENC_DOUBLE, "PV.P_PV",  "V",  1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
+    { AREA_HR,    5,  REG_RW, ENC_DOUBLE, "PV.V_PV",  "V",  1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
+    { AREA_HR,    9,  REG_RW, ENC_DOUBLE, "PV.I_PV",  "A",    1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
+    { AREA_HR,    13,  REG_RW, ENC_DOUBLE, "PV.DutyCycle", "A",   1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
+    { AREA_HR,    17,  REG_RW, ENC_DOUBLE, "PV.Irradiance", "rad",   1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
+    { AREA_HR,    21,  REG_RW, ENC_DOUBLE, "PV.CurtailValue", "rad",   1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
+    { AREA_COIL,    25,  REG_RW, ENC_BOOL, "PV.CurtailEnable", "rad",   1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
+    { AREA_COIL,    29,  REG_RW, ENC_BOOL, "PV.CBPV", "kVAr",   1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
+
 };
 
 
 static const devmap_t DEVICE = {
     .unit_id = 1,
-    .device_name = "GEN2",
-    .points = GEN2_POINTS,
-    .point_count = ARRAY_LEN(GEN2_POINTS),
+    .device_name = "PV",
+    .points = PV_POINTS,
+    .point_count = ARRAY_LEN(PV_POINTS),
 };
 
 static inline const devmap_t* get_devmap(void)
