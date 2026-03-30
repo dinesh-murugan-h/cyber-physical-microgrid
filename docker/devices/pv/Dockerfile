@@ -1,4 +1,4 @@
-# docker/devices/pv/Dockerfile
+
 FROM debian:bookworm-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /opt
 
-# ---------- libmodbus (build from your repo copy) ----------
+
 COPY libmodbus /opt/libmodbus
 RUN cd /opt/libmodbus && \
     ./autogen.sh && \
@@ -23,7 +23,7 @@ RUN cd /opt/libmodbus && \
     make install && \
     ldconfig
 
-# ---------- libiec61850 (build+install headers/libs) ----------
+
 COPY libiec61850 /opt/libiec61850
 RUN cd /opt/libiec61850 && \
     rm -rf build && mkdir -p build && cd build && \
@@ -32,12 +32,12 @@ RUN cd /opt/libiec61850 && \
     make install && \
     ldconfig
 
-# ---------- app sources ----------
+
 WORKDIR /app
 COPY docker/devices/pv /app/pv
 
 
-# Build ONE combined binary
+
 WORKDIR /app/pv
 
 RUN gcc -O2 -Wall -Wextra \

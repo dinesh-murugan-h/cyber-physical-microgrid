@@ -1,8 +1,4 @@
-/*
- * static_model.h
- *
- * automatically generated from /home/dinesh/Documents/cyber-physical-microgrid/docker/devices/PV/ied/model/PV.cid
- */
+
 
 #ifndef STATIC_MODEL_H_
 #define STATIC_MODEL_H_
@@ -575,5 +571,5 @@ extern DataAttribute iedModel_PVLD0_GGIO1_DO10_t;
 #define IEDMODEL_PVLD0_GGIO1_DO10_q (&iedModel_PVLD0_GGIO1_DO10_q)
 #define IEDMODEL_PVLD0_GGIO1_DO10_t (&iedModel_PVLD0_GGIO1_DO10_t)
 
-#endif /* STATIC_MODEL_H_ */
+#endif
 

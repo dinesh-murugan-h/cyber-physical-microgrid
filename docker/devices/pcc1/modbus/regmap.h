@@ -4,38 +4,23 @@
 
 #define ARRAY_LEN(a) ((int)(sizeof(a) / sizeof((a)[0])))
 
-/*
-  IMPORTANT ABOUT ADDRESSES (Simulink vs Modbus wire)
 
-  - Simulink Modbus block "Address" is 1-based in your setup.
-  - Modbus protocol addresses on the wire are 0-based.
-    So Simulink Address N <-> wire addr (N-1)
 
-  In this regmap, pointdef_t.addr is the Simulink Address (1-based).
-  Everywhere we index libmodbus arrays, we use (addr-1).
-*/
 
-/* Modbus area */
 typedef enum {
-    AREA_COIL     = 0,  // coils (1-bit)
-    AREA_DISC_IN  = 1,  // discrete inputs (1-bit)
-    AREA_HR       = 3,  // holding registers (16-bit words)
-    AREA_IR       = 4   // input registers (16-bit words)
+    AREA_COIL     = 0,  
+    AREA_DISC_IN  = 1,  
+    AREA_HR       = 3,  
+    AREA_IR       = 4   
 } area_t;
 
-/* Access permission */
+
 typedef enum {
     REG_RO = 0,
     REG_RW = 1
 } reg_access_t;
 
-/*
-  Encoding / precision.
-  Note: Modbus registers are 16-bit words.
-  - int16/uint16 = 1 word
-  - int32/uint32/single = 2 words
-  - int64/uint64/double = 4 words
-*/
+
 typedef enum {
     ENC_BOOL   = 0,
     ENC_INT16  = 1,
@@ -44,25 +29,11 @@ typedef enum {
     ENC_UINT32 = 4,
     ENC_INT64  = 5,
     ENC_UINT64 = 6,
-    ENC_SINGLE = 7,   // IEEE-754 float32 in 2 registers
-    ENC_DOUBLE = 8    // IEEE-754 float64 in 4 registers
+    ENC_SINGLE = 7,   
+    ENC_DOUBLE = 8    
 } enc_t;
 
-/*
-  Word order for multi-register values.
 
-  For 32-bit types (2 regs):
-    WO_2_AB = [r0 r1]
-    WO_2_BA = [r1 r0]
-
-  For 64-bit types (4 regs):
-    WO_4_ABCD = [r0 r1 r2 r3]
-    WO_4_DCBA = [r3 r2 r1 r0]
-    WO_4_BADC = [r1 r0 r3 r2]   (swap pairs)
-    WO_4_CDAB = [r2 r3 r0 r1]   (swap halves)
-
-  byte_swap = swap bytes inside each 16-bit register (rare but seen).
-*/
 typedef enum {
     WO_2_AB = 0,
     WO_2_BA = 1
@@ -75,10 +46,10 @@ typedef enum {
     WO_4_CDAB = 3
 } word_order_4_t;
 
-/* One point */
+
 typedef struct {
     area_t area;
-    uint16_t addr;          // Simulink "Address" (1-based). Wire address = addr-1.
+    uint16_t addr;          
     reg_access_t access;
 
     enc_t enc;
@@ -86,10 +57,10 @@ typedef struct {
     const char* unit;
     float scale;
 
-    /* For float types, these control decoding */
-    word_order_2_t wo2;     // used when enc is ENC_SINGLE
-    word_order_4_t wo4;     // used when enc is ENC_DOUBLE
-    uint8_t byte_swap;      // 0 = normal, 1 = swap bytes within each 16-bit word
+   
+    word_order_2_t wo2;     
+    word_order_4_t wo4;     
+    uint8_t byte_swap;      
 
     int64_t raw_min;
     int64_t raw_max;
@@ -97,7 +68,7 @@ typedef struct {
     uint64_t init_raw;
 } pointdef_t;
 
-/* One device map */
+
 typedef struct {
     int unit_id;
     const char* device_name;
@@ -105,9 +76,7 @@ typedef struct {
     int point_count;
 } devmap_t;
 
-/* -------------------------
-   Helpers
-   ------------------------- */
+
 
 static inline int enc_words(enc_t enc)
 {
@@ -171,24 +140,12 @@ static inline const pointdef_t* find_point_by_wire(const devmap_t* dev, area_t a
     return NULL;
 }
 
-/* =========================================================
-   DEVICE 1 (unit_id=1): PCC1
-   ========================================================= */
 
-/*
-  IMPORTANT:
-  You MUST set the correct wo4/byte_swap for Simulink double.
 
-  Start with:
-    wo4 = WO_4_ABCD
-    byte_swap = 0
 
-  If values are wrong, you flip ONLY these in the 3 points (v/i/phi),
-  until it matches. (printmap will print raw words to help.)
-*/
 
 static const pointdef_t PCC1_POINTS[] = {
-    /* area      addr acc    enc         name              unit  scale  wo2       wo4         byte_swap  raw_min         raw_max         init */
+   
     { AREA_HR,    1,  REG_RW, ENC_DOUBLE, "PCC1.vUtility_rms",  "V",  1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
     { AREA_HR,    5,  REG_RW, ENC_DOUBLE, "PCC1.vMicro_rms",  "V",  1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },
     { AREA_HR,    9,  REG_RW, ENC_DOUBLE, "PCC1.iUtility_rms",  "A",    1.0f, WO_2_AB,  WO_4_ABCD,  0,        (int64_t)-9e18, (int64_t)9e18, 0ULL },

@@ -1,4 +1,4 @@
-// docker/devices/pcc1/modbus/printmap.c
+
 #include <stdio.h>
 #include <string.h>
 #include <stdint.h>
@@ -6,12 +6,7 @@
 
 #include "printmap.h"
 
-/*
-  LOG OUTPUT SETTINGS
-  -------------------
-  Set PRINT_RAW_WORDS to 0 to hide raw register dumps / word-order / byte-swap details.
-  Set PRINT_PRECISION to control number of decimal places shown (engineering value).
-*/
+
 #ifndef PRINT_RAW_WORDS
 #define PRINT_RAW_WORDS 0
 #endif
@@ -79,7 +74,7 @@ static void reorder4(uint16_t r0, uint16_t r1, uint16_t r2, uint16_t r3, word_or
     }
 }
 
-/* Build big-endian byte stream from ordered 16-bit words */
+
 static void words_to_bytes_be(const uint16_t w[], int nwords, uint8_t bytes[])
 {
     for (int i = 0; i < nwords; i++) {
@@ -163,7 +158,7 @@ static double decode_point_value(const pointdef_t* p, const modbus_mapping_t* mb
         return bytes_be_to_double_host(be);
     }
 
-    /* integers (treat as MSW-first big-endian word order in registers) */
+   
     uint64_t u = 0;
     for (int k = 0; k < w; k++)
         u = (u << 16) | (uint64_t)(tab[a0 + (uint16_t)k] & 0xFFFF);
@@ -178,7 +173,7 @@ static double decode_point_value(const pointdef_t* p, const modbus_mapping_t* mb
     return (double)u;
 }
 
-/* Print helper: fixed decimals, no exponent, no +00 */
+
 static void print_num_fixed(double x)
 {
     if (!isfinite(x)) {
@@ -186,7 +181,7 @@ static void print_num_fixed(double x)
         return;
     }
 
-    /* Treat very small values as 0 to avoid "-0.00" and junk */
+   
     double eps = pow(10.0, -(double)PRINT_PRECISION) * 0.5;
     if (fabs(x) < eps) x = 0.0;
 
@@ -239,9 +234,7 @@ void print_device_state(const devmap_t* dev, const modbus_mapping_t* mb)
     }
 }
 
-/* ===========================
-   Process-image accessors
-   =========================== */
+
 
 static const pointdef_t* find_point_by_name_local(const devmap_t* dev, const char* name)
 {

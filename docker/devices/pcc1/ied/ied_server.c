@@ -1,4 +1,4 @@
-// docker/devices/pcc1/ied/ied_server.c
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,7 +18,7 @@
 #include "device_map.h"
 
 #include "process_image.h"
-#include "printmap.h"   /* read_point_double/read_coil01/write_coil01 */
+#include "printmap.h"  
 
 
 
@@ -49,13 +49,7 @@ static void connectionHandler(IedServer self, ClientConnection connection, bool 
         printf("[IEC] Connection closed (%s)\n", ip ? ip : "unknown");
 }
 
-/* -----------------------------------------------------------------------------
- * Control handler for SPCS02 (synchStart)
- * - expects MMS_BOOLEAN
- * - writes Modbus coil "PCC1.synchStart"
- * - updates IEC stVal + t
- * -----------------------------------------------------------------------------
- */
+
 static ControlHandlerResult
 synchStart_control_handler(ControlAction action, void* parameter, MmsValue* value, bool test)
 {
@@ -84,7 +78,7 @@ synchStart_control_handler(ControlAction action, void* parameter, MmsValue* valu
     bool on = MmsValue_getBoolean(value);
     int coil01 = on ? 1 : 0;
 
-    /* write to Modbus coil */
+   
     pi_lock(ctx->pi);
     int rc = write_coil01(ctx->pi, PCC1_SYNCHSTART_COIL_NAME, coil01);
     pi_unlock(ctx->pi);
@@ -94,14 +88,14 @@ synchStart_control_handler(ControlAction action, void* parameter, MmsValue* valu
         return CONTROL_RESULT_FAILED;
     }
 
-    /* update IEC stVal + timestamp */
+   
     uint64_t ts = Hal_getTimeInMs();
 
     if (PCC1_SYNCHSTART_T)
         IedServer_updateUTCTimeAttributeValue(ctx->srv, PCC1_SYNCHSTART_T, ts);
 
     if (PCC1_SYNCHSTART_STVAL) {
-        /* updateAttributeValue copies internally; value is safe to reuse */
+       
         IedServer_updateAttributeValue(ctx->srv, PCC1_SYNCHSTART_STVAL, value);
     }
 
@@ -110,7 +104,7 @@ synchStart_control_handler(ControlAction action, void* parameter, MmsValue* valu
     return CONTROL_RESULT_OK;
 }
 
-/* ---- Modbus -> IEC update loop ---- */
+
 void iec_update_from_modbus(IedServer srv, process_image_t* pi)
 {
     if (!srv || !pi) return;
@@ -124,7 +118,7 @@ void iec_update_from_modbus(IedServer srv, process_image_t* pi)
         do_print = true;
     }
 
-    /* Update 8 analogue floats */
+   
     for (int i = 0; i < PCC1_FLOAT_MAP_COUNT; i++) {
 
         const MbToIecFloatMap* m = &PCC1_FLOAT_MAP[i];
@@ -164,7 +158,7 @@ void iec_update_from_modbus(IedServer srv, process_image_t* pi)
         }
     }
 
-    /* Track gridEnable status from Modbus (READ ONLY in IEC) */
+   
     if (PCC1_GRIDENABLE_STVAL) {
         int coil01 = 0;
         int rc;
@@ -192,7 +186,7 @@ void iec_update_from_modbus(IedServer srv, process_image_t* pi)
         }
     }
 
-    /* Track synchStart status from Modbus (so IEC readback matches reality) */
+   
     if (PCC1_SYNCHSTART_STVAL) {
         int coil01 = 0;
         int rc;
@@ -221,7 +215,7 @@ void iec_update_from_modbus(IedServer srv, process_image_t* pi)
     }
 }
 
-/* ---- start/stop ---- */
+
 IedServer iec_server_start(process_image_t* pi)
 {
     if (!pi) return NULL;
@@ -235,16 +229,16 @@ IedServer iec_server_start(process_image_t* pi)
         NULL
     );
 
-    /* Allow CO writes for control (Operate path) */
+   
     IedServer_setWriteAccessPolicy(srv, IEC61850_FC_CO, ACCESS_POLICY_ALLOW);
 
-    /* Make sure control model is “direct-with-normal-security” for SPCS02 (synchStart) */
+   
     if (PCC1_SYNCHSTART_CTLMODEL) {
         IedServer_updateInt32AttributeValue(srv, PCC1_SYNCHSTART_CTLMODEL, 1);
         printf("[IEC] GGIO1.SPCSO2.ctlModel set to 1 (direct-with-normal-security)\n");
     }
 
-    /* init gridEnable stVal from Modbus coil (read-only) */
+   
     if (PCC1_GRIDENABLE_STVAL) {
         int coil01 = 0;
         pi_lock(pi);
@@ -256,7 +250,7 @@ IedServer iec_server_start(process_image_t* pi)
         MmsValue_delete(b);
     }
 
-    /* init synchStart stVal from Modbus coil */
+   
     if (PCC1_SYNCHSTART_STVAL) {
         int coil01 = 0;
         pi_lock(pi);
@@ -271,7 +265,7 @@ IedServer iec_server_start(process_image_t* pi)
     g_ctl.srv = srv;
     g_ctl.pi  = pi;
 
-    /* Install control handler ONLY for SPCS02 (synchStart) */
+   
     if (PCC1_SYNCHSTART_DO) {
         IedServer_setControlHandler(
             srv,

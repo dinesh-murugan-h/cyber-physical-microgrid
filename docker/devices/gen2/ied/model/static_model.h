@@ -1,8 +1,4 @@
-/*
- * static_model.h
- *
- * automatically generated from /home/dinesh/Documents/cyber-physical-microgrid/docker/devices/gen2/ied/model/gen2.cid
- */
+
 
 #ifndef STATIC_MODEL_H_
 #define STATIC_MODEL_H_
@@ -575,5 +571,5 @@ extern DataAttribute iedModel_GEN2LD0_GGIO1_DO10_t;
 #define IEDMODEL_GEN2LD0_GGIO1_DO10_q (&iedModel_GEN2LD0_GGIO1_DO10_q)
 #define IEDMODEL_GEN2LD0_GGIO1_DO10_t (&iedModel_GEN2LD0_GGIO1_DO10_t)
 
-#endif /* STATIC_MODEL_H_ */
+#endif
 

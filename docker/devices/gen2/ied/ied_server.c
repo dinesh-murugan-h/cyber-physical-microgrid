@@ -1,4 +1,4 @@
-// docker/devices/gen2/ied/ied_server.c
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,13 +16,13 @@
 #include "device_map.h"
 
 #include "process_image.h"
-#include "printmap.h"   /* read_point_double/read_coil01/write_coil01/write_point_double */
+#include "printmap.h"  
 
 static void iec_print_state(IedServer srv)
 {
     if (!srv) return;
 
-    /* print once every 2 seconds */
+   
     static uint64_t last_ms = 0;
     uint64_t now = Hal_getTimeInMs();
     if (now - last_ms < 2000)
@@ -31,7 +31,7 @@ static void iec_print_state(IedServer srv)
 
     printf("\n=== IEC STATE (from IED model, not Modbus) ===\n");
 
-    /* ---- MX: AnIn1..AnIn5.mag.f ---- */
+   
     struct {
         const char* name;
         DataAttribute* mag_f;
@@ -50,7 +50,7 @@ static void iec_print_state(IedServer srv)
         printf("[MX] %-28s = %.6f\n", anin[i].name, (double)v);
     }
 
-    /* ---- SP: DO1..DO4.setMag.f ---- */
+   
     for (int i = 0; i < GEN2_SETPOINT_MAP_COUNT; i++) {
         if (!GEN2_SETPOINT_MAP[i].mag_f) continue;
         float v = IedServer_getFloatAttributeValue(srv, GEN2_SETPOINT_MAP[i].mag_f);
@@ -60,7 +60,7 @@ static void iec_print_state(IedServer srv)
                GEN2_SETPOINT_MAP[i].modbus_name ? GEN2_SETPOINT_MAP[i].modbus_name : "(null)");
     }
 
-    /* ---- CO status: CBG2.stVal ---- */
+   
     if (GEN2_CBG2_STVAL) {
         MmsValue* mv = IedServer_getAttributeValue(srv, GEN2_CBG2_STVAL);
         if (mv && MmsValue_getType(mv) == MMS_BOOLEAN) {
@@ -109,7 +109,7 @@ static void connectionHandler(IedServer self, ClientConnection connection, bool 
         printf("[IEC] Connection closed (%s)\n", ip ? ip : "unknown");
 }
 
-/* Control handler: CBG2 (SPCS01) -> Modbus coil */
+
 static ControlHandlerResult
 cbg2_control_handler(ControlAction action, void* parameter, MmsValue* value, bool test)
 {
@@ -155,7 +155,7 @@ cbg2_control_handler(ControlAction action, void* parameter, MmsValue* value, boo
     return CONTROL_RESULT_OK;
 }
 
-/* Mirror IEC setpoints (DO1..DO4.setMag.f) -> Modbus HR points */
+
 void iec_update_setpoints_to_modbus(IedServer srv, process_image_t* pi)
 {
     static int init = 0;
@@ -192,7 +192,7 @@ void iec_update_setpoints_to_modbus(IedServer srv, process_image_t* pi)
     }
 }
 
-/* Modbus -> IEC update loop (your working stuff) */
+
 void iec_update_from_modbus(IedServer srv, process_image_t* pi)
 {
     if (!srv || !pi)
@@ -220,11 +220,11 @@ void iec_update_from_modbus(IedServer srv, process_image_t* pi)
         }
     }
 
-        /* NEW: print IEC-side state every 2s */
+       
     iec_print_state(srv);
 }
 
-/* Start server */
+
 IedServer iec_server_start(process_image_t* pi)
 {
     IedServer srv = IedServer_create(&iedModel);
@@ -236,13 +236,13 @@ IedServer iec_server_start(process_image_t* pi)
         NULL
     );
 
-    /* Allow CO writes for control (Operate path) */
+   
     IedServer_setWriteAccessPolicy(srv, IEC61850_FC_CO, ACCESS_POLICY_ALLOW);
 
-    /* Allow SP writes so client can write DO1..DO4 */
+   
     IedServer_setWriteAccessPolicy(srv, IEC61850_FC_SP, ACCESS_POLICY_ALLOW);
 
-    /* ctlModel for CBG2 */
+   
     if (GEN2_CBG2_CTLMODEL) {
         IedServer_updateInt32AttributeValue(srv, GEN2_CBG2_CTLMODEL, 1);
         printf("[IEC] GGIO1.SPCSO1.ctlModel set to 1\n");
@@ -251,7 +251,7 @@ IedServer iec_server_start(process_image_t* pi)
     g_ctl.srv = srv;
     g_ctl.pi  = pi;
 
-    /* Install control handler for CBG2 */
+   
     if (GEN2_CBG2_DO) {
         IedServer_setControlHandler(
             srv,
@@ -262,7 +262,7 @@ IedServer iec_server_start(process_image_t* pi)
         printf("[IEC] Control handler installed for GGIO1.SPCSO1 (CBG2)\n");
     }
 
-    /* Init IEC setpoints from Modbus (optional) */
+   
     for (int i = 0; i < GEN2_SETPOINT_MAP_COUNT; i++) {
         double v = 0.0;
         pi_lock(pi);

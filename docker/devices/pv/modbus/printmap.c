@@ -1,4 +1,4 @@
-// docker/devices/PV/modbus/printmap.c
+
 #include <stdio.h>
 #include <string.h>
 #include <stdint.h>
@@ -6,12 +6,7 @@
 
 #include "printmap.h"
 
-/*
-  LOG OUTPUT SETTINGS
-  -------------------
-  Set PRINT_RAW_WORDS to 0 to hide raw register dumps / word-order / byte-swap details.
-  Set PRINT_PRECISION to control number of decimal places shown (engineering value).
-*/
+
 #ifndef PRINT_RAW_WORDS
 #define PRINT_RAW_WORDS 0
 #endif
@@ -79,7 +74,7 @@ static void reorder4(uint16_t r0, uint16_t r1, uint16_t r2, uint16_t r3, word_or
     }
 }
 
-/* Build big-endian byte stream from ordered 16-bit words */
+
 static void words_to_bytes_be(const uint16_t w[], int nwords, uint8_t bytes[])
 {
     for (int i = 0; i < nwords; i++) {
@@ -163,7 +158,7 @@ static double decode_point_value(const pointdef_t* p, const modbus_mapping_t* mb
         return bytes_be_to_double_host(be);
     }
 
-    /* integers (treat as MSW-first big-endian word order in registers) */
+   
     uint64_t u = 0;
     for (int k = 0; k < w; k++)
         u = (u << 16) | (uint64_t)(tab[a0 + (uint16_t)k] & 0xFFFF);
@@ -178,7 +173,7 @@ static double decode_point_value(const pointdef_t* p, const modbus_mapping_t* mb
     return (double)u;
 }
 
-/* Print helper: fixed decimals, no exponent, no +00 */
+
 static void print_num_fixed(double x)
 {
     if (!isfinite(x)) {
@@ -186,7 +181,7 @@ static void print_num_fixed(double x)
         return;
     }
 
-    /* Treat very small values as 0 to avoid "-0.00" and junk */
+   
     double eps = pow(10.0, -(double)PRINT_PRECISION) * 0.5;
     if (fabs(x) < eps) x = 0.0;
 
@@ -239,9 +234,7 @@ void print_device_state(const devmap_t* dev, const modbus_mapping_t* mb)
     }
 }
 
-/* ===========================
-   Process-image accessors
-   =========================== */
+
 
 static const pointdef_t* find_point_by_name_local(const devmap_t* dev, const char* name)
 {
@@ -254,18 +247,17 @@ static const pointdef_t* find_point_by_name_local(const devmap_t* dev, const cha
     return NULL;
 }
 
-/* ---------- helpers copied in spirit from your decode path (inverse operations) ---------- */
+
 
 static inline uint16_t bswap16(uint16_t x)
 {
     return (uint16_t)((x >> 8) | (x << 8));
 }
 
-/* reorder4 in your code takes r0..r3 and produces ow[4] according to WO_4_*.
-   We need the inverse: given ow[4], compute r0..r3 that should be stored. */
+
 static void unreorder4(const uint16_t ow[4], word_order_4_t wo4, uint16_t r[4])
 {
-    /* Default: ABCD means registers are [A,B,C,D] */
+   
     switch (wo4) {
     case WO_4_ABCD:
         r[0] = ow[0]; r[1] = ow[1]; r[2] = ow[2]; r[3] = ow[3];
@@ -285,14 +277,14 @@ static void unreorder4(const uint16_t ow[4], word_order_4_t wo4, uint16_t r[4])
     }
 }
 
-/* Convert double -> 8 bytes big-endian, then into 4 words ow[0..3] big-endian */
+
 static void double_to_words_be(double value, uint16_t ow[4])
 {
     union { double d; uint8_t b[8]; } u;
     u.d = value;
 
 #if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
-    /* reverse bytes into big-endian order */
+   
     uint8_t be[8];
     for (int i = 0; i < 8; i++) be[i] = u.b[7 - i];
 #else
@@ -364,14 +356,14 @@ int write_coil01(process_image_t* pi, const char* point_name, int value01)
 }
 
 
-/* Inverse of reorder2: same operation (swap is symmetric) */
+
 static void unreorder2(const uint16_t ow[2], word_order_2_t wo2, uint16_t r[2])
 {
     if (wo2 == WO_2_BA) { r[0] = ow[1]; r[1] = ow[0]; }
     else               { r[0] = ow[0]; r[1] = ow[1]; }
 }
 
-/* Convert float -> 4 bytes big-endian, then into 2 words ow[0..1] big-endian */
+
 static void float_to_words_be(float value, uint16_t ow[2])
 {
     union { float f; uint8_t b[4]; } u;
@@ -413,18 +405,18 @@ int write_point_double(process_image_t* pi, const char* point_name, double value
     if (!tab || (int)a0 + w > tab_len)
         return -5;
 
-    /* eng -> raw */
+   
     double raw = value;
     if (p->scale != 0.0f)
         raw = value / (double)p->scale;
 
-    /* clamp using p->raw_min/max */
+   
     if (raw < (double)p->raw_min) raw = (double)p->raw_min;
     if (raw > (double)p->raw_max) raw = (double)p->raw_max;
 
-    /* Encode */
+   
     if (p->enc == ENC_SINGLE) {
-        /* raw is float32 */
+       
         float f = (float)raw;
 
         uint16_t ow[2];
@@ -452,7 +444,7 @@ int write_point_double(process_image_t* pi, const char* point_name, double value
         return 0;
     }
 
-    /* Integers: store MSW-first big-endian words (same assumption as decode) */
+   
     if (p->enc == ENC_INT16 || p->enc == ENC_UINT16 ||
         p->enc == ENC_INT32 || p->enc == ENC_UINT32 ||
         p->enc == ENC_INT64 || p->enc == ENC_UINT64)
@@ -466,7 +458,7 @@ int write_point_double(process_image_t* pi, const char* point_name, double value
         if (p->enc == ENC_INT64)   u = (uint64_t)((int64_t)raw);
         if (p->enc == ENC_UINT64)  u = (uint64_t)raw;
 
-        /* write MSW-first */
+       
         for (int k = 0; k < w; k++) {
             int shift = 16 * (w - 1 - k);
             uint16_t word = (uint16_t)((u >> shift) & 0xFFFF);
@@ -475,7 +467,7 @@ int write_point_double(process_image_t* pi, const char* point_name, double value
         return 0;
     }
 
-    /* If you ever want to support HR-bool: treat raw!=0 => 1 */
+   
     if (p->enc == ENC_BOOL) {
         tab[a0] = maybe_swap_bytes16((raw != 0.0) ? 1 : 0, p->byte_swap);
         return 0;

@@ -1,21 +1,19 @@
-// docker/devices/gen2/device_map.h
+
 #pragma once
 
 #include <stdint.h>
 #include "iec61850_model.h"
 #include "static_model.h"
 
-/* ---------------------------
-   Modbus -> IEC (MX) mapping
-   --------------------------- */
+
 typedef struct {
     const char* modbus_name;
-    const char* iec_path;          /* debug prints */
-    DataAttribute* mag_f;          /* ...AnInX.mag.f */
-    DataAttribute* t;              /* ...AnInX.t */
+    const char* iec_path;         
+    DataAttribute* mag_f;         
+    DataAttribute* t;             
 } MbToIecFloatMap;
 
-/* Your existing mapping (KEEP as you have it) */
+
 static const MbToIecFloatMap GEN2_FLOAT_MAP[] = {
     { "GEN2.P_gen2",        "GEN2LD0/GGIO1.AnIn1.mag.f", IEDMODEL_GEN2LD0_GGIO1_AnIn1_mag_f, IEDMODEL_GEN2LD0_GGIO1_AnIn1_t },
     { "GEN2.P_gen2_pu",     "GEN2LD0/GGIO1.AnIn2.mag.f", IEDMODEL_GEN2LD0_GGIO1_AnIn2_mag_f, IEDMODEL_GEN2LD0_GGIO1_AnIn2_t },
@@ -28,26 +26,20 @@ static const MbToIecFloatMap GEN2_FLOAT_MAP[] = {
 
 #define GEN2_FLOAT_MAP_COUNT ((int)(sizeof(GEN2_FLOAT_MAP) / sizeof(GEN2_FLOAT_MAP[0])))
 
-/* ---------------------------
-   CONTROL: CBG2 uses SPCS01
-   --------------------------- */
+
 #define GEN2_CBG2_DO        IEDMODEL_GEN2LD0_GGIO1_SPCSO1
 #define GEN2_CBG2_STVAL     IEDMODEL_GEN2LD0_GGIO1_SPCSO1_stVal
 #define GEN2_CBG2_T         IEDMODEL_GEN2LD0_GGIO1_SPCSO1_t
 #define GEN2_CBG2_CTLMODEL  IEDMODEL_GEN2LD0_GGIO1_SPCSO1_ctlModel
 
-/* Modbus coil name for breaker command */
+
 #define GEN2_CBG2_COIL_NAME "GEN2.CBG2"
 
-/* ---------------------------
-   SETPOINTS: GGIO DO1..DO4 (SP)
-   Client writes DOx.setMag.f
-   We mirror to Modbus HR names
-   --------------------------- */
+
 typedef struct {
-    DataAttribute* mag_f;        /* DOx.setMag.f */
-    const char*    modbus_name;  /* point name in your devmap (HR) */
-    float          deadband;     /* change threshold to write Modbus */
+    DataAttribute* mag_f;       
+    const char*    modbus_name; 
+    float          deadband;    
 } IecSpToMbMap;
 
 #define GEN2_DO1_MAG_F   IEDMODEL_GEN2LD0_GGIO1_DO1_setMag_f

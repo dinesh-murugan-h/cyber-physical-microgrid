@@ -1,8 +1,4 @@
-/*
- * static_model.c
- *
- * automatically generated from /home/dinesh/Documents/cyber-physical-microgrid/docker/devices/gen2/ied/model/gen2.cid
- */
+
 #include "static_model.h"
 
 static void initializeValues();

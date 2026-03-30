@@ -1,4 +1,4 @@
-// docker/devices/pcc1/modbus/modbus_server.c
+
 
 #include <modbus/modbus.h>
 #include <stdio.h>
@@ -22,7 +22,7 @@ static void sigint_handler(int sig)
     running = 0;
 }
 
-/* ---------- helpers ---------- */
+
 
 static int max_addr_words_for_area(const devmap_t* dev, area_t area)
 {
@@ -53,7 +53,7 @@ static void init_mapping_from_regmap(const devmap_t* dev, modbus_mapping_t* mb)
         else if (p->area == AREA_HR && mb->tab_registers) {
             int w = enc_words(p->enc);
             if ((int)a0 + w <= mb->nb_registers) {
-                /* init_raw is uint64, store MSW-first into registers */
+               
                 uint64_t u = p->init_raw;
                 for (int k = w - 1; k >= 0; k--) {
                     mb->tab_registers[a0 + (uint16_t)k] = (uint16_t)(u & 0xFFFFu);
@@ -74,9 +74,7 @@ static void init_mapping_from_regmap(const devmap_t* dev, modbus_mapping_t* mb)
     }
 }
 
-/* -------------------------
-   Validation (Simulink-safe)
-   ------------------------- */
+
 
 static int validate_coil_write(const devmap_t* dev,
                                const uint8_t* req,
@@ -100,7 +98,7 @@ static int validate_coil_write(const devmap_t* dev,
     return 0;
 }
 
-/* Validate an aligned HR point write starting at wire_addr0. */
+
 static int validate_hr_point_write(const devmap_t* dev,
                                    const uint8_t* req,
                                    uint16_t wire_addr0,
@@ -133,7 +131,7 @@ static int validate_write_request(const devmap_t* dev, const uint8_t* query, mod
     uint8_t fc = query[7];
 
     if (fc == MODBUS_FC_WRITE_SINGLE_COIL) {
-        uint16_t addr = (uint16_t)((query[8] << 8) | query[9]);   /* wire addr0 */
+        uint16_t addr = (uint16_t)((query[8] << 8) | query[9]);  
         uint16_t val  = (uint16_t)((query[10] << 8) | query[11]);
 
         int bit;
@@ -148,7 +146,7 @@ static int validate_write_request(const devmap_t* dev, const uint8_t* query, mod
     }
 
     if (fc == MODBUS_FC_WRITE_MULTIPLE_COILS) {
-        uint16_t addr = (uint16_t)((query[8] << 8) | query[9]);   /* wire addr0 */
+        uint16_t addr = (uint16_t)((query[8] << 8) | query[9]);  
         uint16_t qty  = (uint16_t)((query[10] << 8) | query[11]);
         uint8_t byte_count = query[12];
         const uint8_t* data = &query[13];
@@ -168,9 +166,9 @@ static int validate_write_request(const devmap_t* dev, const uint8_t* query, mod
         return 0;
     }
 
-    /* FC06: only allow 1-word points */
+   
     if (fc == MODBUS_FC_WRITE_SINGLE_REGISTER) {
-        uint16_t addr = (uint16_t)((query[8] << 8) | query[9]);   /* wire addr0 */
+        uint16_t addr = (uint16_t)((query[8] << 8) | query[9]);  
 
         const pointdef_t* p = find_point_by_wire(dev, AREA_HR, addr);
         if (!p) {
@@ -189,9 +187,9 @@ static int validate_write_request(const devmap_t* dev, const uint8_t* query, mod
         return 0;
     }
 
-    /* FC16: step across points */
+   
     if (fc == MODBUS_FC_WRITE_MULTIPLE_REGISTERS) {
-        uint16_t addr = (uint16_t)((query[8] << 8) | query[9]);   /* wire addr0 */
+        uint16_t addr = (uint16_t)((query[8] << 8) | query[9]);  
         uint16_t qty  = (uint16_t)((query[10] << 8) | query[11]);
         uint8_t byte_count = query[12];
 
@@ -240,7 +238,7 @@ static int validate_write_request(const devmap_t* dev, const uint8_t* query, mod
     return 0;
 }
 
-/* ---- public run() function ---- */
+
 
 int modbus_server_run(int unit_id, const char* bind_ip, int port, process_image_t* out_pi)
 {
@@ -363,7 +361,7 @@ int modbus_server_run(int unit_id, const char* bind_ip, int port, process_image_
     return 0;
 }
 
-/* ---- standalone main ONLY when building modbus-only container ---- */
+
 #ifdef MODBUS_SERVER_STANDALONE
 int main(int argc, char** argv)
 {

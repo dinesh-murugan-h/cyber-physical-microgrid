@@ -1,28 +1,18 @@
-// docker/devices/pcc1/device_map.h
+
 #pragma once
 
 #include "iec61850_model.h"
 #include "static_model.h"
 
-/* Modbus -> IEC (MX) mapping for FLOAT32 mag.f + timestamp t */
+
 typedef struct {
     const char* modbus_name;
-    const char* iec_path;          /* debug prints */
-    DataAttribute* mag_f;          /* ...AnInX.mag.f */
-    DataAttribute* t;              /* ...AnInX.t */
+    const char* iec_path;         
+    DataAttribute* mag_f;         
+    DataAttribute* t;             
 } MbToIecFloatMap;
 
-/* ====== 8x analogue signals (FLOAT32) ======
- * Map order (you asked):
- *  1 vUtility
- *  2 vMicro
- *  3 iUtility
- *  4 iMicro
- *  5 phiUtility
- *  6 phiMicro
- *  7 Pgrid
- *  8 Qgrid
- */
+
 static const MbToIecFloatMap PCC1_FLOAT_MAP[] = {
     { "PCC1.vUtility_rms",   "PCC1LD0/GGIO1.AnIn1.mag.f", IEDMODEL_PCC1LD0_GGIO1_AnIn1_mag_f, IEDMODEL_PCC1LD0_GGIO1_AnIn1_t },
     { "PCC1.vMicro_rms",     "PCC1LD0/GGIO1.AnIn2.mag.f", IEDMODEL_PCC1LD0_GGIO1_AnIn2_mag_f, IEDMODEL_PCC1LD0_GGIO1_AnIn2_t },
@@ -36,23 +26,17 @@ static const MbToIecFloatMap PCC1_FLOAT_MAP[] = {
 
 #define PCC1_FLOAT_MAP_COUNT ((int)(sizeof(PCC1_FLOAT_MAP) / sizeof(PCC1_FLOAT_MAP[0])))
 
-/* =============================================================================
- * Discrete points (SPCSO)
- *
- * SPCS01 = gridEnable   (READ ONLY; reflect Modbus coil "PCC1.gridEnable")
- * SPCS02 = synchStart   (CONTROLLABLE; Operate writes Modbus coil "PCC1.synchStart")
- * =============================================================================
- */
 
-/* ----- SPCS01: gridEnable (read-only) ----- */
+
+
 #define PCC1_GRIDENABLE_COIL_NAME "PCC1.gridEnable"
 #define PCC1_GRIDENABLE_DO        (IEDMODEL_PCC1LD0_GGIO1_SPCSO1)
 #define PCC1_GRIDENABLE_STVAL     (IEDMODEL_PCC1LD0_GGIO1_SPCSO1_stVal)
 #define PCC1_GRIDENABLE_T         (IEDMODEL_PCC1LD0_GGIO1_SPCSO1_t)
-/* keep ctlModel define (not used for control now, but harmless to keep) */
+
 #define PCC1_GRIDENABLE_CTLMODEL  (IEDMODEL_PCC1LD0_GGIO1_SPCSO1_ctlModel)
 
-/* ----- SPCS02: synchStart (controllable) ----- */
+
 #define PCC1_SYNCHSTART_COIL_NAME "PCC1.synchStart"
 #define PCC1_SYNCHSTART_DO        (IEDMODEL_PCC1LD0_GGIO1_SPCSO2)
 #define PCC1_SYNCHSTART_STVAL     (IEDMODEL_PCC1LD0_GGIO1_SPCSO2_stVal)

@@ -1,4 +1,4 @@
-// docker/devices/pcc1/device_main.c
+
 #include <stdio.h>
 #include <signal.h>
 #include <unistd.h>
@@ -31,7 +31,7 @@ int main(int argc, char** argv)
     signal(SIGINT, sigint_handler);
     signal(SIGTERM, sigint_handler);
 
-    static process_image_t pi; /* initialized inside modbus_server_run */
+    static process_image_t pi;
 
     pthread_t modbus_thread;
     if (pthread_create(&modbus_thread, NULL, modbus_thread_fn, &pi) != 0) {
@@ -39,7 +39,7 @@ int main(int argc, char** argv)
         return 1;
     }
 
-    /* Wait until modbus thread has called pi_init */
+   
     while (running && (pi.mb == NULL || pi.dev == NULL))
         usleep(10 * 1000);
 
@@ -57,7 +57,7 @@ int main(int argc, char** argv)
     printf("[DEVICE] Modbus server running on port 502\n");
 
     while (running) {
-        /* shared PI -> IEC (SCADA reads) */
+       
         iec_update_from_modbus(iedServer, &pi);
         usleep(200 * 1000);
     }
